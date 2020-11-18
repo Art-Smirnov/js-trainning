@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Привет, мир!</h1>
+    <p>Моя первая веб-страничка.</p>
+    <script>
+      var name = "Ник"
+      console.log("Привет, " + name)
+      if (name.length > 6) {
+        console.log("Ну и длиннющее же у вас имя!")
+      } else {
+        console.log("Имя у вас не из длинных.")
+      }
+    </script>
+    <!-- Китайський рест -->
+    <script>
+      var lemonChiken = false
+      var beefWithBlackBean = true
+      var sweetAndSourPork = true
+
+      if (lemonChiken) {
+        console.log("Отлично! Я буду курицу с лимоном!")
+      } else if (beefWithBlackBean) {
+        console.log("Заказываю говядину.")
+      } else if (sweetAndSourPork) {
+        console.log("Ладно, закажу свинину.")
+      } else {
+        console.log("Что ж, остается рис с яйцом.")
+      }
+    </script>
+    <!-- Вітання з родичами -->
+    <script>
+      var name = "Artem"
+
+      if (name === "Artem") {
+        console.log("Hello, me!")
+      } else if (name === "Alik") {
+        console.log("Hello, Alik!")
+      } else if (name === "Tanya") {
+        console.log("Hello, Tanya!")
+      } else {
+        console.log("Hello, stranger!")
+      }
+    </script>
+    <!-- рахуєм овець -->
+    <script>
+      var sheepCounted = 0
+      while (sheepCounted < 10) {
+        console.log("Посчитано овец: " + sheepCounted + "!")
+        sheepCounted++
+      }
+      console.log("Хрррррррррр-псссс")
+    </script>
+    <script>
+      for (var sheepCounted = 0; sheepCounted < 10; sheepCounted++) {
+        console.log("Посчитано овец: " + sheepCounted + "!")
+      }
+      console.log("Хрррррррррр-псссс")
+    </script>
+  </body>
+</html>
