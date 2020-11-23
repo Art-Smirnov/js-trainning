@@ -141,15 +141,24 @@ console.log(`'Выбран «${name}», цена за штуку ${price} кре
 
 // console.log(typeof SD);
 
-let input
+// let input
+// let total = 0;
+
+// do {
+//   total += Number(prompt('Введите произвольное число:')) ;
+// } while (prompt('Введите произвольное число:') !== null);
+
+// alert(`Общая сумма чисел равна ${total}`)
+
+// console.log(total);
+
+
 let total = 0;
-
-// const userNumber = prompt('Введите произвольное число:');
-
-do {
-  total = total + Number(prompt('Введите произвольное число:')) ;
-} while (prompt('Введите произвольное число:') !== null);
-
-alert(`Общая сумма чисел равна ${total}`)
-
-console.log(total);
+ while (true) {
+  let input = +prompt('Введите произвольное число:');
+  if (input === 0) {
+   break;
+  }
+  total += input;
+  alert(`Общая сумма чисел равна ${total}`)
+ }
