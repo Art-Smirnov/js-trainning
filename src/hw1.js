@@ -41,28 +41,115 @@ console.log(`'Выбран «${name}», цена за штуку ${price} кре
 
 // Задание 4
 
-const credits = 23580;
-const pricePerDroid = 3000;
-let totalPrice;
-const promptLabel = 'Укажите количество дроидов которые хочите купить:';
-let userUnswer = prompt(promptLabel);
-let message;
+// const credits = 23580;
+// const pricePerDroid = 3000;
+// let totalPrice;
+// const promptLabel = 'Укажите количество дроидов которые хочите купить:';
+// let userUnswer = prompt(promptLabel);
+// let message;
 
-if (userUnswer === null) {
-  message ='Отменено пользователем!'
-  console.log(message);
+// if (userUnswer === null) {
+//   message = 'Отменено пользователем!'
+//   console.log(message);
 
-  } else {
-  totalPrice = userUnswer * pricePerDroid;
+// } else {
+//   totalPrice = userUnswer * pricePerDroid;
+
+//  if (totalPrice > credits) {
+//   message = 'Недостаточно средств на счету!'
+//   console.log(message);
+
+// } else {
+//   const creditsLeft = credits - totalPrice;
+//   message = `Вы купили ${userUnswer} дроидов, на счету осталось ${creditsLeft} кредитов.`;
+//   console.log(message);
+// }
+// }
+
+// Задание 5
+
+// let message;
+
+// const userUnswer = prompt("Укажите страну доставки:")
+// const userUnswerLC = userUnswer.toLocaleLowerCase();
+
+// const china = "Китай";
+// const chinaLC = china.toLocaleLowerCase();
+// const chinaPrice = 100;
+
+// const chile = "Чили";
+// const chileLC = chile.toLocaleLowerCase();
+// const chilePrice = 250;
+
+// const australia = "Австралия";
+// const australiaLC = australia.toLocaleLowerCase();
+// const australiaPrice = 170;
+
+// const india = "Индия";
+// const indiaLC = india.toLocaleLowerCase();
+// const indiaPrice = 80;
+
+// const jamaica = "Ямайка";
+// const jamaicaLC = jamaica.toLocaleLowerCase();
+// const jamaicaPrice = 120;
+
+// switch (userUnswerLC) {
+//   case chinaLC:
+//   message = `'Доставка в ${china} будет стоить ${chinaPrice} кредитов'`
+//   break;
   
-  } if (totalPrice > credits) {
-  message ='Недостаточно средств на счету!'
-  console.log(message);
+//   case chileLC:
+//   message = `'Доставка в ${chile} будет стоить ${chilePrice} кредитов'`
+//   break;
   
-  } else {
-    const creditsLeft = credits - totalPrice;
-    message = `'Вы купили ${userUnswer} дроидов, на счету осталось ${creditsLeft} кредитов.'`;
-    console.log(message);
-  }
+//   case australiaLC:
+//   message = `'Доставка в страну ${australia} будет стоить ${australiaPrice} кредитов'`
+//   break;
+  
+//   case indiaLC:
+//   message = `'Доставка в страну ${india} будет стоить ${indiaPrice} кредитов'`
+//   break;
+  
+//   case jamaicaLC:
+//   message = `'Доставка в страну ${jamaica} будет стоить ${jamaicaPrice} кредитов'`
+//   break;
+
+//   default:
+//     alert("'В вашей стране доставка не доступна'")
+// }
+// alert(message);
 
 
+// Задание 6
+
+// const userNumber = Number(prompt('Введите произвольное число:'))  ;
+
+// let total = 0;
+
+// do {
+//   total += userNumber;
+
+// } while (userNumber === !null) 
+
+// console.log(total);
+
+// for (total; userNumber === !null; total += userNumber);
+
+// console.log(total);
+
+// const SD = Number(prompt('Dc'));
+
+// console.log(typeof SD);
+
+let input
+let total = 0;
+
+// const userNumber = prompt('Введите произвольное число:');
+
+do {
+  total = total + Number(prompt('Введите произвольное число:')) ;
+} while (prompt('Введите произвольное число:') !== null);
+
+alert(`Общая сумма чисел равна ${total}`)
+
+console.log(total);
