@@ -5,6 +5,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <!-- <script>
+      const clients = ['Mango', 'Ajax', 'Poly'];
+
+      for (let i = 0; i < clients.length; i += 1) {
+        console.log('Logging clients: ', clients[i]);
+      }
+    </script>
+
+    <script>
+      const numbers = [];
+
+      for (let i = 0; i < 3; i += 1) {
+        numbers.push(`list-${i}`);
+      }
+      console.log('numbers: ', numbers);
+    </script> -->
+
+    <!-- <script>
+      const clients = ['Mango', 'Ajax', 'Poly'];
+
+      for (const client of clients) {
+        console.log(client);
+      }
+    </script>
+    <script>
+      const string = 'javascript';
+
+      for (const character of string) {
+        console.log(character);
+      }
+    </script> -->
+
+    <!-- <script>
+      const products = ['tv', 'fridge', 'washing machine'];
+      const clientsChoise = 'tv';
+      let message = 'Такого товара немає';
+      for (const product of products) {
+        if (product === clientsChoise) {
+          message = 'Такий товар є на складі';
+          break;
+        }
+      }
+      console.log(message);
+    </script> -->
+
+    <!-- <script>
+      const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
+      const threshold = 15;
+      for (let i = 0; i < numbers.length; i += 1) {
+        if (numbers[i] > threshold) {
+          continue;
+        }
+        console.log(`Числа менші за ${threshold}: ${numbers[i]}`);
+      }
+    </script> -->
+
+    <!-- <script>
+      const matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      let total = 0;
+
+      for (let i = 0; i < matrix.length; i += 1) {
+        console.log('Подмассив matrix[i]: ', matrix[i]);
+
+        for (let j = 0; j < matrix[i].length; j += 1) {
+          console.log('Елемент подмассива matrix[i][j]: ', matrix[i][j]);
+          total += matrix[i][j];
+        }
+      }
+      console.log(total);
+    </script> -->
+
+    <!-- <script>
+      const clients = ['Mango', 'Ajax', 'Poly'];
+
+      console.log(clients.shift()); // Mango
+      console.log(clients); // ["Ajax", "Poly"]
+
+      console.log(clients.unshift('Kiwi'));
+      console.log(clients); // ["Kiwi", "Ajax", "Poly"]
+    </script> -->
+
+    <!-- <script>
+      const users = ['Katya', 'Artem', 'Vanya'];
+      const login = prompt('Введите логин');
+
+      const isRegistrated = users.includes(login);
+      if (isRegistrated) {
+        console.log('Welcome');
+      } else {
+        console.log('Wrong login!');
+      }
+    </script> -->
+
+    <!-- <script>
+      let userInput;
+
+      do {
+        userInput = prompt('Вееди число 10!');
+        console.log(userInput);
+      } while (userInput !== null && Number(userInput) !== 10);
+    </script> -->
+
+    <!-- Вибирайєм найдовше слово -->
+
+    <!-- <script>
+      const message = 'May the force be with you';
+      const words = message.split(' ');
+      let longestWord = words[0];
+
+      for (let i = 1; i < words.length; i += 1) {
+        const currentWord = words[i];
+        const currentWordLength = currentWord.length;
+        const longesttWordLength = longestWord.length;
+
+        if (currentWordLength > longesttWordLength) {
+          longestWord = currentWord;
+        }
+      }
+      console.log(longestWord);
+    </script> -->
+
+    <!-- Інший варіант: -->
+    <!-- <script>
+      const message = 'May the force be with you';
+      const words = message.split(' ');
+      let longestWord = words[0];
+
+      for (const word of words) {
+        if (word.length > longestWord.length) {
+          longestWord = word;
+        }
+      }
+      console.log(longestWord);
+    </script> -->
+
+    <!-- вибираєм найменше число -->
+
+    <!-- <script>
+      const numbers = [12, 213, 4, 346, 75, 0, -8];
+      let shortestWord = numbers[0];
+
+      for (const number of numbers) {
+        if (number < shortestWord) {
+          shortestWord = number;
+        }
+      }
+      console.log(shortestWord);
+    </script> -->
+
+    <!-- шукаэм слово в якого з лыва стоъть слова з 4 букв, а з права - з 5 -->
+
+    <!-- <script>
+      const message = 'dkcm mmm kjdu dd kdidh d dd';
+      const words = message.split(' ');
+      const max = words.length - 1;
+      const leftCount = 4;
+      const rightCount = 5;
+      let target;
+
+      for (let i = 1; i < max; i += 1) {
+        const prevElLength = words[i - 1].length;
+        const nextElLength = words[i + 1].length;
+
+        if (prevElLength === leftCount && nextElLength === rightCount) {
+          target = words[i];
+        }
+      }
+      console.log(target);
+    </script> -->
+  </body>
+  <script src="hw2.js"></script>
+  <script src="hw1.js"></script>
   <script src="app.js"></script>
+  <script src="functions.js"></script>
 </html>

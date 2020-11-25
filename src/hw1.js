@@ -1,12 +1,12 @@
 // Задание 1
-const name = 'Генератор защитного поля';
-let price = 1000;
+// const name = 'Генератор защитного поля';
+// let price = 1000;
 
-console.log(`'Выбран «${name}», цена за штуку ${price} кредитов'`);
+// console.log(`'Выбран «${name}», цена за штуку ${price} кредитов'`);
 
-price = 2000;
+// price = 2000;
 
-console.log(`'Выбран «${name}», цена за штуку ${price} кредитов'`);
+// console.log(`'Выбран «${name}», цена за штуку ${price} кредитов'`);
 
 // Задание 2
 
@@ -152,13 +152,37 @@ console.log(`'Выбран «${name}», цена за штуку ${price} кре
 
 // console.log(total);
 
+// =========================================Final
+// let total = 0;
+//  while (true) {
+//   let input = Number(prompt('Введите произвольное число:')) ;
+//   if (input === 0) {
+//    break;
+//   }
+//   total += input;
+//  }
+//  alert(`Общая сумма чисел равна ${total}`)
 
-let total = 0;
- while (true) {
-  let input = +prompt('Введите произвольное число:');
-  if (input === 0) {
-   break;
-  }
-  total += input;
-  alert(`Общая сумма чисел равна ${total}`)
- }
+
+// 1. виводим промт з проханням ввести число.
+// 2. 
+// let total = 0;
+
+// let input = Number(prompt('Введите произвольное число:'));
+// while (input !== 0){
+//   total += input;
+// }
+
+//  alert(`Общая сумма чисел равна ${total}`)
+
+
+// let total = 0;
+// let input = Number(prompt('Введите произвольное число:'));
+// do{
+//   total += input;
+//   console.log(input)
+//   console.log(total)
+
+// } while (input !== 0);
+
+// alert(`Общая сумма чисел равна ${total}`)

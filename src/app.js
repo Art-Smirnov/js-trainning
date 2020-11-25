@@ -14,5 +14,5 @@ const isActive = true;
 
 // ===========================
 
-const input = prompt('Enter your neme!')
-console.log(isGoing);
+// const input = prompt('Enter your neme!')
+// console.log(isGoing);
