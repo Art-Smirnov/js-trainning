@@ -41,3 +41,85 @@
 // const numbers = [1,2,3,4,5];
 // double(numbers)
 // console.log('numbers: ', numbers);
+
+
+
+//функція додавання рандомної кількості чисел (з використанням arguments)
+
+// const add = function(){
+//   let total = 0;
+//   for (let i = 0; i< arguments.length; i += 1){
+//   total += arguments[i];
+//   }
+//   return total;
+// };
+
+// console.log(add(1,2,3,4,5));
+// console.log(add(1,2,3,4,5,6,7,8));
+// console.log(add(1,2,3,4,5,6,7,8,9));
+
+//сучасний варіант (операція rest):
+
+// const add = function(...args){
+//   let total = 0;
+//   for (let i = 0; i< args.length; i += 1){
+//   total += args[i];
+//   }
+//   return total;
+// };
+
+
+
+// console.log(add(1,2,3,4,5));
+// console.log(add(1,2,3,4,5,6,7,8));
+// console.log(add(1,2,3,4,5,6,7,8,9));
+
+
+//те саме тільки з множником
+
+// const add = function() {
+//   let total = 0;
+//   const mult = arguments[0];
+
+//   for (let i = 1; i< arguments.length; i += 1){
+//     total += arguments[i];
+//     }
+//     return total * mult;
+//   };
+  
+//   console.log(add(5,1,2,3,4,5));
+//   console.log(add(10, 1,2,3,4,5,6,7,8));
+//   console.log(add(15, 1,2,3,4,5,6,7,8,9));
+
+//інший варіант:
+
+// const add = function() {
+//   let args = Array.from(arguments);
+//   const mult = args[0];
+//   args.shift();
+//   let total = 0;
+
+//   for (let i = 0; i< args.length; i += 1){
+//     total += args[i];
+//     }
+//     return total * mult;
+//   };
+  
+//   console.log(add(5, 1, 2, 3, 4, 5));
+//   console.log(add(10, 1,2,3,4,5,6,7,8));
+//   console.log(add(15, 1,2,3,4,5,6,7,8,9));
+
+  //і найкращий варіант (операція rest):
+
+// const add = function(mult, ...args) {
+//   let total = 0;
+//   for (let i = 0; i< args.length; i += 1){
+//     total += args[i];
+//     }
+//     return total * mult;
+// };
+  
+//   console.log(add(5, 1, 2, 3, 4, 5));
+//   console.log(add(10, 1,2,3,4,5,6,7,8));
+//   console.log(add(15, 1,2,3,4,5,6,7,8,9));
+
