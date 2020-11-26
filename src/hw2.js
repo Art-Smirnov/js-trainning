@@ -1,19 +1,15 @@
 // Задание 1
-const logItems = function(array) {
-  for (let i = 0; i < array.length; i += 1){
-    const arrayItemNumber = String(i + 1) + ' - ';
-    let arrayItem = arrayItemNumber + array[i];
-    console.log(arrayItem);
-  }
-}
-;
+// const logItems = function(array) {
+//   for (let i = 0; i < array.length; i += 1){
+//     const arrayItemNumber = String(i + 1);
+//     const arrayItem = `'${arrayItemNumber} - ${array[i]}'`;
+//     console.log(arrayItem);
+//   }
+// }
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
-logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+// logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
 
-logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+// logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 
 
 
@@ -76,6 +72,8 @@ logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 // console.log(findLongestWord('May the force be with you')); 
 
 
+
+
 // Задание 4
 
 // const formatString = function(string) {
@@ -101,9 +99,55 @@ logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 //   ),
 // );
 
+
+
+// Задание 5
+
+
+// const checkForSpam = function(message) {
+//   const messageLC = message.toLowerCase();
+//   if (messageLC.includes('spam')){  
+//     return true;
+//   } else if (messageLC.includes('sale')){
+//     return true;
+//   }
+//   return false;
+// };
+
+// console.log(checkForSpam('Latest technology news')); 
+
+// console.log(checkForSpam('JavaScript weekly newsletter')); 
+
+// console.log(checkForSpam('Get best sale offers now!')); 
+
+// console.log(checkForSpam('[SPAM] How to earn fast money?')); 
+
+
+
+// Задание 6
+
+
+let input;
+const numbers = [];
+let total = 0;
+
+input = prompt('Ведите число:');
+
+while (prompt !== null) {
+  numbers.push(input)
+  continue;
+}
+console.log(numbers);
+
+// do { numbers.push(input)
+// }  while (prompt !== null)
+
+// console.log(numbers);
+
+
+
+
 // Задание 7
-// 55хв
-// https://www.youtube.com/watch?v=xFCtQ_2f4yQ&list=PLgJQrLdtxI16RIImPlnkOXJsG16mHNPZ6&index=6
 
 // const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
