@@ -127,20 +127,73 @@
 // Задание 6
 
 
+// let input;
+// const numbers = [];
+// let total = 0;
+
+// do {
+//   input = prompt('Ведите число:') ;
+//   numbers.push(Number(input));
+//  } while (input !== null);
+ 
+//  for(const number of numbers){
+//    total += number; 
+//  }
+
+// console.log(`'Общая сумма чисел равна ${total}'`);
+
+//варіант з додатковою умовою (не завершений):
+
 let input;
 const numbers = [];
 let total = 0;
 
-input = prompt('Ведите число:');
+do {
+  input = prompt('Ведите число:') ;
+  if (Number(input) !== NaN){
+    numbers.push(Number(input));
+  } else if (Number(input) === NaN)
+    alert('Было введено не число, попробуйте еще раз');
 
-while (prompt !== null) {
-  numbers.push(input)
-  continue;
-}
-console.log(numbers);
+ } while (input !== null);
+ 
+ for(const number of numbers){
+   total += number; 
+ }
 
-// do { numbers.push(input)
-// }  while (prompt !== null)
+console.log(`'Общая сумма чисел равна ${total}'`);
+
+
+// let userInput;
+
+// const numbers = [];
+
+// let total = 0;
+
+ 
+
+// do {
+
+//   userInput = prompt(`Введите ${numbers.length + 1}-e число`, '');
+
+
+//   if (userInput == +userInput && userInput.trim() ) { numbers.push(+userInput) }
+
+//   else  if(userInput !== null) alert('Было введено не число, попробуйте еще раз');
+
+
+// } while (userInput !== null);
+
+ 
+
+// for (const value of numbers) {
+
+//   total = total + value;
+
+// }
+
+
+// alert(`Общая сумма ${numbers.length} чисел равна ${total}`);
 
 // console.log(numbers);
 

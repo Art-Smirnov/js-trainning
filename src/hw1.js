@@ -122,67 +122,29 @@
 
 // Задание 6
 
-// const userNumber = Number(prompt('Введите произвольное число:'))  ;
 
 // let total = 0;
-
+// let input;
+ 
 // do {
-//   total += userNumber;
-
-// } while (userNumber === !null) 
-
-// console.log(total);
-
-// for (total; userNumber === !null; total += userNumber);
-
-// console.log(total);
-
-// const SD = Number(prompt('Dc'));
-
-// console.log(typeof SD);
-
-// let input
-// let total = 0;
-
-// do {
-//   total += Number(prompt('Введите произвольное число:')) ;
-// } while (prompt('Введите произвольное число:') !== null);
-
-// alert(`Общая сумма чисел равна ${total}`)
-
-// console.log(total);
-
-// =========================================Final
-// let total = 0;
-//  while (true) {
-//   let input = Number(prompt('Введите произвольное число:')) ;
-//   if (input === 0) {
-//    break;
-//   }
+//   input = Number(prompt('Введи число:'));
 //   total += input;
-//  }
-//  alert(`Общая сумма чисел равна ${total}`)
-
-
-// 1. виводим промт з проханням ввести число.
-// 2. 
-// let total = 0;
-
-// let input = Number(prompt('Введите произвольное число:'));
-// while (input !== 0){
-//   total += input;
-// }
-
-//  alert(`Общая сумма чисел равна ${total}`)
-
-
-// let total = 0;
-// let input = Number(prompt('Введите произвольное число:'));
-// do{
-//   total += input;
-//   console.log(input)
-//   console.log(total)
-
+//   console.log(total);
 // } while (input !== 0);
+// alert(`Общая сумма чисел равна ${total}`);
 
-// alert(`Общая сумма чисел равна ${total}`)
+// варіант з додатковою умовою, але з тим що ми ще не вчили:
+
+// let total = 0;
+// let input;
+ 
+// do {
+//   input = Number(prompt('Введи число'));
+//   if (isFinite(input)) {
+//     total += input;
+//     console.log(total);
+//   } else {
+//     alert('Было введено не число, попробуйте еще раз');
+//   }
+// } while (input !== 0);
+// alert(`Общая сумма чисел равна ${total}`);
