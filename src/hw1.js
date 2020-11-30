@@ -18,6 +18,8 @@
 
 // console.log(message);
 
+
+
 // Задание 3
 
 // const ADMIN_PASSWORD = 'jqueryismyjam';
@@ -148,3 +150,4 @@
 //   }
 // } while (input !== 0);
 // alert(`Общая сумма чисел равна ${total}`);
+

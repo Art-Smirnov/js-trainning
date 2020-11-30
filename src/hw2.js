@@ -144,25 +144,26 @@
 
 //варіант з додатковою умовою (не завершений):
 
-let input;
-const numbers = [];
-let total = 0;
+// let input;
+// const numbers = [];
+// let total = 0;
 
-do {
-  input = prompt('Ведите число:') ;
-  if (Number(input) !== NaN){
-    numbers.push(Number(input));
-  } else if (Number(input) === NaN)
-    alert('Было введено не число, попробуйте еще раз');
+// do {
+//   input = prompt('Ведите число:');
+//   if (Number(input) !== NaN){
+//     numbers.push(Number(input));
+//   } else if (Number(input) === NaN)
+//     alert('Было введено не число, попробуйте еще раз');
 
- } while (input !== null);
+//  } while (input !== null);
  
- for(const number of numbers){
-   total += number; 
- }
+//  for(const number of numbers){
+//    total += number; 
+//  }
 
-console.log(`'Общая сумма чисел равна ${total}'`);
+// console.log(`'Общая сумма чисел равна ${total}'`);
 
+//=================================================================
 
 // let userInput;
 
