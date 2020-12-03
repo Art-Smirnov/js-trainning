@@ -1,10 +1,10 @@
-'use strict';
+// 'use strict';
 
-const number = 29.5;
+// const number = 29.5;
 
-const name = 'Mango'
+// const name = 'Mango'
 
-const isActive = true;
+// const isActive = true;
 
 
 // ===========================
