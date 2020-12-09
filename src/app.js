@@ -1,18 +1,18 @@
-// 'use strict';
-
-// const number = 29.5;
-
-// const name = 'Mango'
-
-// const isActive = true;
+//якщо фу-ція об'являє багато параметрів, їх треба записувати в такі
+//патерни(об'єкт настройок):
 
 
-// ===========================
+// const someFunction = function({
+//   uploads, 
+//   maxTreshold,
+//   minTheshold,
+// }){}
 
-// const isGoing = confirm('Вы точно летите?')
-// console.log(isGoing);
+//   someFunction({
+//     uploads, 
+//     maxTreshold: 10,
+//     minTheshold: 20,
+//   });
 
-// ===========================
 
-// const input = prompt('Enter your neme!')
-// console.log(isGoing);
+//прийом "перечисление" на прикаді .

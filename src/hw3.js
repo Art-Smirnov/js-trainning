@@ -158,31 +158,59 @@
 //=======   Здадача 5   ========
 
 
-const products = [
-  { name: 'Радар', price: 1300, quantity: 4 },
-  { name: 'Сканер', price: 2700, quantity: 3 },
-  { name: 'Дроид', price: 400, quantity: 7 },
-  { name: 'Захват', price: 1200, quantity: 2 },
-];
+// const products = [
+//   { name: 'Радар', price: 1300, quantity: 4 },
+//   { name: 'Сканер', price: 2700, quantity: 3 },
+//   { name: 'Дроид', price: 400, quantity: 7 },
+//   { name: 'Захват', price: 1200, quantity: 2 },
+// ];
 
-const getAllPropValues = function(arr, prop) {
-  const values = [];
+// const getAllPropValues = function(arr, prop) {
+//   const values = [];
 
-  for (const obj of arr){
-    // console.log(obj[prop]);
+//   for (const obj of arr){
 
-    if (prop in obj) {
-      values.push(obj[prop]);
-    }
-  }
-  return values;
-};
+//     if (prop in obj) {
+//       values.push(obj[prop]);
+//     }
+//   }
+//   return values;
+// };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
-console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
 
-console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
+// console.log(getAllPropValues(products, 'name')); 
 
-console.log(getAllPropValues(products, 'category')); // []
+// console.log(getAllPropValues(products, 'quantity')); 
+
+// console.log(getAllPropValues(products, 'category')); 
+
+
+//=======   Здадача 6   ========
+
+
+// const products = [
+//   { name: 'Радар', price: 1300, quantity: 4 },
+//   { name: 'Сканер', price: 2700, quantity: 3 },
+//   { name: 'Дроид', price: 400, quantity: 7 },
+//   { name: 'Захват', price: 1200, quantity: 2 },
+// ];
+
+// const calculateTotalPrice = function(allProdcuts, productName) {
+//   let totalPrice = 0;
+
+//   for (const product of allProdcuts) {
+//     // console.log(product.price);
+//     if (productName in product){
+//       console.log(product.quantity);
+//       totalPrice = product.price * product.quantity;
+//     }
+//   }
+//   return totalPrice;
+//   }
+
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(calculateTotalPrice(products, 'Радар')); // 5200
+
+// console.log(calculateTotalPrice(products, 'Дроид')); // 2800
