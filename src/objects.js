@@ -98,6 +98,38 @@
 // console.table(filterUploadsWithTheshold(uploads, 20)); 
 
 
+//використання рекурсії замісь цикла.
+//повертаєм суму перших n елементів масива arr
+//(матеріал для розуміння рекурсії https://habr.com/ru/post/337030/)
+
+// function sum(arr, n) {
+//   // console.log(arr, n);
+//   console.log(arr[n -1]);
+// if (n <=0 ) {
+//   return 0;
+// } else {
+//   return sum(arr, n - 1) + arr[n -1];
+// }
+// }
+
+// console.log(sum([1], 0));  //should equal 0.
+
+// console.log(sum([2, 3, 4], 1));  //should equal 2.
+
+// console.log(sum([2, 3, 4, 5], 3));  //should equal 9.
+
+//те саме тільки множить
+
+// function multiply(arr, n) {
+//   if (n <= 0) {
+//     return 1;
+//   } else {
+//     return multiply(arr, n - 1) * arr[n - 1];
+//   }
+// }
+
+
+
 
 //Є два масива з іменами і цінами товарів. Функція яка замість них вертає
 //масив об'єктів з їх даними 
@@ -129,7 +161,7 @@
 
 // const products = combine(names, prices);
 
-// console.table(products);
+// console.log(products);
 
 
 //треба зробть те саме тільки щоб ключем була назва а значенням - вартість
@@ -145,22 +177,23 @@
 //   const prices = [1000, 2000, 1500, 2700, 1600, 8000];
   
 //   const combine = function(names, prices) {
-  
-  
+
+//     const comnbined = [];
+    
 //     for(let i = 0; i < names.length; i += 1) {
-     
 //       const obj = {};
 //       obj.names[i] = prices[i];
-//       console.log(prices[i]);
-    
 //     }
-//     return obj;
+//     combined.push(obj);
+//     return comnbined;
 //   }
   
 //   const products = combine(names, prices);
   
 //   console.table(products);
   
+
+
 // додаємо інфу в колекцію музикальних альбомів
 
 // var collection = {
