@@ -166,7 +166,8 @@
 // console.log(products);
 
 
-//треба зробть те саме тільки щоб ключем була назва а значенням - вартість
+//треба зробть те саме тільки щоб ключем була назва а значенням - вартість і повертала
+//об'ект (не виконано)
 
 // const names = [
 //     "Радар",
@@ -180,19 +181,22 @@
   
 //   const combine = function(names, prices) {
 
-//     const comnbined = [];
+//     const combined = [];
     
 //     for(let i = 0; i < names.length; i += 1) {
-//       const obj = {};
-//       obj.names[i] = prices[i];
+//       const obj = {
+//         [names[i]]: prices[i],
+//       };
+      
+//       combined.push(obj);
 //     }
-//     combined.push(obj);
-//     return comnbined;
+    
+//     return combined;
 //   }
   
 //   const products = combine(names, prices);
   
-//   console.table(products);
+//   console.log(products);
   
 
 

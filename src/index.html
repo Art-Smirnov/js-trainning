@@ -179,6 +179,31 @@
       }
       console.log(target);
     </script> -->
+
+    <!-- вичисляєм скидку на товар в %
+    <script>
+      const totalExpenses = 20000;
+      let payment = 500;
+      let discount = 0;
+      if (totalExpenses >= 100 && totalExpenses < 1000) {
+        discount = 0.02; //щоб отримати 2% з числа, потрыбно помножити його на 0.02
+        console.log('Бронзовый партнер, скидка 2%');
+      } else if (totalExpenses >= 1000 && totalExpenses < 5000) {
+        discount = 0.05;
+        console.log('Сеоебряный партнер, скидка 5%');
+      } else if (totalExpenses >= 5000) {
+        discount = 0.1;
+        console.log('Золотой партнер, скидка 10%');
+      } else {
+        console.log('У вас нет партнерской скидки');
+      }
+
+      payment = payment - payment * discount;
+      console.log(payment);
+      console.log(
+        `Оформление заказ на сумму ${payment} со скидкой ${discount * 100}%`,
+      );
+    </script> -->
   </body>
 
   <script src="js/objects.js"></script>

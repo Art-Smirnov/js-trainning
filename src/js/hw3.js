@@ -10,7 +10,7 @@
 //   age: 20,
 //   hobby: 'html',
 //   premium: true,
-//   [key]: value,
+//   [key]: value,  //вебінар 7, 22:41
 // };
 
 // user.hobby = 'skydiving';
@@ -216,3 +216,5 @@
 // console.log(calculateTotalPrice(products, 'Радар')); // 5200
 
 // console.log(calculateTotalPrice(products, 'Дроид')); // 2800
+
+//=======   Здадача 7  ======== ??? вебінар 7, прибл. 37хв
