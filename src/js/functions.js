@@ -1,3 +1,4 @@
+'use strict';
 //  функція додавання двох чисел
 
 // const add = function (x, y) {
