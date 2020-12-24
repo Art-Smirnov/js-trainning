@@ -217,4 +217,13 @@
 
 // console.log(calculateTotalPrice(products, 'Дроид')); // 2800
 
-//=======   Здадача 7  ======== ??? вебінар 7, прибл. 37хв
+
+
+
+//=======   Здадача 7  ======== ??? вебінар 7, прибл. 37хв, 1:48 і приблзно 1:54
+
+
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
+// };
