@@ -20,20 +20,20 @@
 
 //Глибока деструктуризація 
 
-const profile = {
-  name: 'Mango',
-  email: 'mail@mail.com',
-  address: {
-    country: 'Ukraine',
-    city: 'Berezan',
-    street: 'Shevchenka'
-  }
-}
+// const profile = {
+//   name: 'Mango',
+//   email: 'mail@mail.com',
+//   address: {
+//     country: 'Ukraine',
+//     city: 'Berezan',
+//     street: 'Shevchenka'
+//   }
+// }
 
-const {
-  name, 
-  email, 
-  address: {country, city, street},
-} = profile; 
+// const {
+//   name, 
+//   email, 
+//   address: {country, city, street},
+// } = profile; 
 
-console.log(city);
+// console.log(city);

@@ -40,6 +40,10 @@
 //робота з масивами об'єктів(колекцією). 
 //+Метод який додає новий продукт в масив нашого склада
 //+Метод який видаляє продукт
+//+Метод зміниціни ціну продукта
+//+Метод зміни імені
+//+Метод який отримує всі імена на складі
+//+Метод що фільтрує по ціні
 
 
 // const storage = {
@@ -56,23 +60,80 @@
 //     this.items.push(product);
 //   },
 
+//   findProduct(id){
+//     for(let i = 0; i < this.items.length; i += 1) {
+//       const product = this.items[i];
+//       if (product.id === id) {
+//         return product;
+//       }
+//     }
+//   },
+
 //   removeProduct(id){
 //     for(let i = 0; i < this.items.length; i += 1) {
 //       const product = this.items[i];
 //       if (product.id === id) {
 //         this.items.splice(i, 1);
+//         return; //знайшовши потрібний ІД відразу виходим, бо далі шукати нема сенсу
 //       }
 //     }
 //   },
+
+//   changePrice(id, price){
+//     const product = this.findProduct(id);
+//     product.price = price;
+//   },
+
+//   changeName(id, name) {
+//     const product = this.findProduct(id);
+
+//     //guard close
+//     if (!product) { //додаєм іф щоб визов ф-ції з не ічнуючим ід не давав undefined
+//       //веб 8, 1:17 -1:19
+//       return;
+//     }
+//     product.name = name;
+//   },
+
+//   getProductsNames(){
+//     const names = []
+
+//     for (const {name} of this.items) { //з використанням деструктуризації веб 8, 1:22
+//       names.push(name);
+//     }
+//     return names;
+//   },
+
+//   filterWithPrice(threshold){
+//     const filtered = [];
+//     for (const item of this.items){
+//       if (item.price <= threshold){
+//         filtered.push(item);
+//       }
+//     }
+//     return filtered;
+//   }
 // }
+
+// console.table(storage.getItems());
 
 // storage.addProducts({id: 'id-3', name: 'carrot', price: 20})
 // console.table(storage.getItems());
 
-// storage.removeProduct('id-2');
+
+// storage.removeProduct('id-1');
 // console.table(storage.getItems());
 
+// storage.changePrice('id-3', 100);
+// console.table(storage.getItems());
 
+// storage.changeName('id-3', 'peaches');
+// console.table(storage.getItems());
+
+// console.table(storage.getProductsNames());
+
+// storage.filterWithPrice(40);
+// console.table(storage.getItems());
 
 //Треба зі статистики загрузок вибрати ті що > 10%
 
