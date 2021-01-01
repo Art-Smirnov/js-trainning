@@ -260,7 +260,7 @@
 // console.log(getAllPropValues(products, 'category')); 
 
 
-//=======   Здадача 6   ========
+//=======   Здадача 6   ======== 
 
 
 // const products = [
@@ -274,9 +274,8 @@
 //   let totalPrice = 0;
 
 //   for (const product of allProdcuts) {
-//     // console.log(product.price);
-//     if (productName in product){
-//       console.log(product.quantity);
+
+//     if (productName === product.name){
 //       totalPrice = product.price * product.quantity;
 //     }
 //   }
@@ -289,6 +288,7 @@
 // console.log(calculateTotalPrice(products, 'Радар')); // 5200
 
 // console.log(calculateTotalPrice(products, 'Дроид')); // 2800
+
 
 
 
