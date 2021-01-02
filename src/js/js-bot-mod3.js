@@ -507,18 +507,301 @@
 
 
 //===========26=============
+
+
+// // Пиши код ниже этой строки
+// function calculateMeanTemperature(forecast) {
+
+//   const {
+//     today: {
+//       low: todayLow,
+//       high: todayHigh    
+//     },
+
+//     tomorrow: {
+//       low: tomorrowLow,
+//       high: tomorrowHigh  
+//     } 
+//   } = forecast;
+
+//   // Пиши код выше этой строки
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+
+// console.log(calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} }));
+
+
+
+
 //===========27=============
+
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Пиши код ниже этой строки
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+
 //===========28=============
+
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Пиши код ниже этой строки
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+
 //===========29=============
+
+
+// const defaultSettings = {
+//   theme: 'light',
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Пиши код ниже этой строки
+// const finalSettings = {...defaultSettings, ...overrideSettings};
+
+
+
 //===========30=============
+
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = 'Общее';
+//   const priority = 'Обычный';
+//   // Пиши код ниже этой строки
+// 	const finalTask = {
+//       completed,
+//       category,
+//       priority,
+//       ...data
+//     }
+//     return finalTask;
+//   // Пиши код выше этой строки
+// }
+
+// console.log(makeTask({}));
+// console.log(makeTask({ category: 'Домашнее', priority: 'Низкий', text: 'Вынести мусор' }));
+
+
 //===========31=============
+
+// // Пиши код ниже этой строки
+// function add(...args) {
+//   let sum = 0;
+//   for (const arg of args) {
+//   	sum += arg;
+//   }  
+//   return sum;
+//   // Пиши код выше этой строки
+// }
+
+
+
 //===========32=============
+
+// // Пиши код ниже этой строки
+// function addOverNum(num, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+    
+//     if (arg > num) {
+//     total += arg;
+//   }
+//   }
+//   return total;
+//   // Пиши код выше этой строки
+// }
+
+
 //===========33=============
+
+
+// // Пиши код ниже этой строки
+// function findMatches(arr, ...args) {
+//   const matches = []; // Не изменяй эту строку
+// for (const arg of args) {
+// 	if (arr.includes(arg)) {
+//     matches.push(arg);
+//     }
+// }
+//   // Пиши код выше этой строки
+//   return matches;
+// }
+
+
+
 //===========34=============
+
+
+// const bookShelf = {
+//   // Пиши код ниже этой строки
+//   books: ['Последнее королевство', 'Страж снов'],
+//   getBooks() {
+//     return 'Возвращаем все книги';
+//   },
+//   addBook(bookName) {
+//     return `Добавляем книгу ${bookName}`;
+//   },
+//   removeBook(bookName) {
+//   	return `Удаляем книгу ${bookName}`;
+//   },
+//   updateBook(oldName, newName) {
+//   	return `Обновляем книгу ${oldName} на ${newName}`;
+//   }
+  
+//   // Пиши код выше этой строки
+// };
+
+
+
 //===========35=============
+
+// const bookShelf = {
+//   books: ['Последнее королевство', 'Мгла', 'Страж снов'],
+//   updateBook(oldName, newName) {
+//     // Пиши код ниже этой строки
+
+// 	const bookIndex = this.books.indexOf(oldName);
+// 	this.books.splice(bookIndex, 1, newName);
+	
+//     // Пиши код выше этой строки
+//   },
+// };
+
+
 //===========36=============
+
+
+// const atTheOldToad = {
+//   // Пиши код ниже этой строки
+//   potions: []
+//   // Пиши код выше этой строки
+// };
+
+
 //===========37=============
+
+// const atTheOldToad = {
+//   // Пиши код ниже этой строки
+//   potions: ['Зелье скорости', 'Дыхание дракона', 'Каменная кожа'],
+//   getPotions() {
+//   return this.potions;
+//   }
+//   // Пиши код выше этой строки
+// };
+
+
 //===========38=============
+
+
+// const atTheOldToad = {
+//   potions: ['Зелье скорости', 'Дыхание дракона', 'Каменная кожа'],
+//   addPotion(potionName) {
+//     // Пиши код ниже этой строки
+//     return this.potions.push(potionName);
+//     // Пиши код выше этой строки
+//   },
+// };
+
+
+
 //===========39=============
+
+
+// const atTheOldToad = {
+//   potions: ['Зелье скорости', 'Дыхание дракона', 'Каменная кожа'],
+//   removePotion(potionName) {
+//     // Пиши код ниже этой строки
+//     const potionIndex = this.potions.indexOf(potionName);
+//     return this.potions.splice(potionIndex, 1);
+//     // 🔥 Оставляем три пустые строки для студента
+//     // Пиши код выше этой строки
+//   },
+// };
+
+
+
 //===========40=============
+
+
+// const atTheOldToad = {
+//   potions: ['Зелье скорости', 'Дыхание дракона', 'Каменная кожа'],
+//   updatePotionName(oldName, newName) {
+//     // Пиши код ниже этой строки
+//     const potionsIndex = this.potions.indexOf(oldName);
+//     return this.potions.splice(potionsIndex, 1, newName);
+//     // 🔥 Оставляем три пустые строки для студента
+//     // Пиши код выше этой строки
+//   },
+// };
+
+
+
 //===========41============
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Зелье скорости', price: 460 },
+//     { name: 'Дыхание дракона', price: 780 },
+//     { name: 'Каменная кожа', price: 520 },
+//   ],
+//   // Пиши код ниже этой строки
+//   getPotions() {
+//     return this.potions;
+//   },
+
+//   addPotion(potionName) {
+//     for (const potion of this.potions) { 
+//       if (potion.name === potionName) {
+//       return `Зелье ${potionName} уже есть в инвентаре!`;
+//     }
+//   }
+//     this.potions.push(potionName);
+//   },
+
+//   removePotion(potionName) {
+//     let potionIndex;
+//     for (const potion of this.potions) {
+//       if(potion.name === potionName) {
+//         potionIndex = this.potions.indexOf(potion);
+//       }
+//     }
+  
+//     if (potionIndex === undefined) {
+//       return `Зелья ${potionName} нет в инвентаре!`;
+//     }
+
+//     this.potions.splice(potionIndex, 1);
+//   },
+  
+//   updatePotionName(oldName, newName) {
+//     let potionIndex;
+//     for (const potion of this.potions) {
+//       if(potion.name === oldName) {
+//         potionIndex = this.potions.indexOf(potion);
+//       }
+//     }
+  
+//     if (potionIndex === undefined) {
+//       return `Зелья ${oldName} нет в инвентаре!`;
+//     }
+
+//     this.potions[potionIndex].name = newName;
+//   },
+//   // Пиши код выше этой строки
+// };
+

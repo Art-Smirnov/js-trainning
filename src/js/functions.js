@@ -63,12 +63,12 @@
 
 // const add = function(...args){
 //   let total = 0;
-//   for (let i = 0; i< args.length; i += 1){
-//   total += args[i];
+
+//   for (const arg of args){
+//   total += arg;
 //   }
 //   return total;
 // };
-
 
 
 // console.log(add(1,2,3,4,5));
@@ -114,8 +114,8 @@
 
 // const add = function(mult, ...args) {
 //   let total = 0;
-//   for (let i = 0; i< args.length; i += 1){
-//     total += args[i];
+//   for (const arg of args){
+//     total += arg;
 //     }
 //     return total * mult;
 // };
