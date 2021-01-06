@@ -59,3 +59,22 @@
 // //найпопулярніший варіант
 
 // const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+
+
+
+
+// Your task is to make a function that can take any non-negative 
+//integer as an argument and return it with its digits in 
+//descending order. Essentially, rearrange the digits to create the 
+//highest possible number.
+
+// function descendingOrder(n){
+//   let result = 0;
+//   const arr = String(n).split('');
+//   // console.log(arr);
+// for (const el of arr) {
+//   console.log(el);
+// }
+// }
+// console.log(descendingOrder(1));//1
+// console.log(descendingOrder(123456789));//987654321
