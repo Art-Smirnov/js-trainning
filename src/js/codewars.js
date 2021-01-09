@@ -68,15 +68,21 @@
 //descending order. Essentially, rearrange the digits to create the 
 //highest possible number.
 
-//НЕ ЗАКІНЧЕННО
-
 
 // function descendingOrder(n){
-//   let newN = n.toString().split(' ').sort(function(a,b){return b-a}).join();
-//   return parseInt(newN);
+
+// const numArr = String(n).split('').sort(function(a,b){return b-a}).join('');
+// return parseInt(numArr);
+
 // }
 // console.log(descendingOrder(1));//1
 // console.log(descendingOrder(123456789));//987654321
+
+// //найпопулярніший варіант
+
+// function descendingOrder(n){
+//   return parseInt(String(n).split('').sort().reverse().join(''))
+// }
 
 
 /*Complete the solution so that it returns true if the first argument(string) 
@@ -514,3 +520,286 @@ present in list b.*/
 // console.log(arrayDiff([], [4,5]));//[]
 // console.log(arrayDiff([1,8,2], []));//[1,8,2]
 // console.log(arrayDiff([1,8,2], [1,2]));//[8]
+
+
+
+
+
+/*There was a test in your class and you passed it. 
+Congratulations!
+But you're an ambitious person. You want to know 
+if you're better than the average student in your class.
+
+You receive an array with your peers' test scores. 
+Now calculate the average and compare your score!
+
+Return True if you're better, else False!
+
+Note:
+Your points are not included in the array of 
+your class's points. For calculating the average
+ point you may add your point to the given array!*/
+
+//  function betterThanAverage(classPoints, yourPoints) {
+//   let allPoints = classPoints;
+//   allPoints.push(yourPoints);
+//   let total = 0;
+
+//   for (let i = 0; i < allPoints.length; i += 1) {
+//     total += allPoints[i];
+//   }
+  
+//   return total/allPoints.length < yourPoints;
+  
+//  }
+// console.log(betterThanAverage([2, 3], 5));//true
+// console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));//false
+
+//найпопулярніший варіант
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
+// }
+
+
+/*Write a function that accept 3 parameters, health, 
+reduction, and damage. Your task is calculate the 
+damage taken by your enemy and return 'Survived!' 
+if result > 0, otherwise return 'Dead!'.*/
+
+
+//НЕ ЗАВЕРШЕНО!!!!!!!!!!!!!!!!!!
+
+// function currentLife(health, reduction, damage) {
+//   const currentHealth = Number(health.slice(0,3));
+//   const maximumHealth = Number(health.slice(-3));
+
+//   console.log(damage.includes('%'));
+//   if(damage.includes('%')) {
+//    const dmg = maximumHealth * (Number.parseFloat(damage) / 100);
+
+//    if(Math.round(currentHealth - (dmg * (reduction / 100))) > 0 ) {
+//      return 'Survived!';
+//    } else {
+//     return 'Dead!';
+//    }
+//   } else {
+//     if(Math.round(currentHealth - (Number(damage) * (reduction / 100)) > 0)) {
+//       return 'Survived!';
+//    } else {
+//     return 'Dead!';
+//     }
+//   }
+// }
+
+// console.log(currentLife('246/977', 42, '322'));//'Survived!'
+// console.log(currentLife('246/977', 42, '44%'));//'Dead!'
+
+
+
+/*If we list all the natural numbers below 10 that are 
+multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of
+ these multiples is 23.
+
+Finish the solution so that it returns the sum of all 
+the multiples of 3 or 5 below the number passed in.
+
+Note: If the number is a multiple of both 3 and 5, only 
+count it once. Also, if a number is negative, return
+ 0(for languages that do have them)*/
+
+
+//  function solution(number){
+//   let result = []
+//   let sum = 0;
+//   for (let i = 1; i < number; i += 1) {
+//     if(i % 3 === 0) {
+//       result.push(i);
+//       // console.log(i);
+//     } else if (i % 5 === 0) {
+//       result.push(i);
+//       // console.log(i);
+//   }
+// }
+// result.forEach(obj => 
+//  sum += obj
+// );
+//   return sum;
+// }
+
+// console.log(solution(10));
+// console.log(solution(30));
+
+
+// //найпопулярніший варіант
+
+// function solution(number){
+//   var sum = 0;
+  
+//   for(var i = 1;i< number; i++){
+//     if(i % 3 == 0 || i % 5 == 0){
+//       sum += i
+//     }
+//   }
+//   return sum;
+// }
+
+
+/*Boltabek starts his first day at the new job.
+ He is going to refactor some data structures 
+ created by his ancestor on this position, who 
+ seems to be not known about the data normalization.
+
+The first task is rather easy, write a function
+ that expands the usernames packed in the one
+ string:*/
+
+//НЕ ЗАВЕРШЕНО!!!!!!!!!!!!!!!!!!
+
+//  const expandUsernames = data => {
+//   const result = [];
+
+//   for (let i = 0; i < data.length; i += 1) {
+//     const splited = data[i][0].split(',');
+
+//     const splitedNames = [];
+
+//    for(const el of splited) {
+//       if(el.length > 0) {
+//         splitedNames.push(el);
+//       }
+//     }
+    
+//     for (let j = 0; j < splitedNames.length; j += 1) {
+      
+//       if(splitedNames.length > 1) {
+//         let subArr = [];
+//         subArr.push(splitedNames[j], data[i][1]) ;
+//         result.push(subArr)
+//       } else {
+//         result.push(data[i]);
+//       }
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(expandUsernames([
+//   ['Marek,Honza',2],
+//   ['Petr',4],
+//   ['Marija,Daniel',8],
+//   ['Mr. Karasek,Lukáš,Jan',16],
+//   ['Igor',32],
+//   ['Petra,Evgeniy',64],
+//   ['Karel',128],
+// ]));
+
+// console.log(expandUsernames([[',,,John,,Boris,,,,', 64]]));
+
+
+
+
+
+/*You are given an array with positive numbers 
+and a non-negative number N. You should find 
+the N-th power of the element in the array with 
+the index N. If N is outside of the array, then 
+return -1. Don't forget that the first element 
+has the index 0.*/
+
+// function index(array, n){
+//   if (n < array.length) {
+//     return Math.pow(array[n], n);
+//   } else {
+//     return -1;
+//   }
+// }
+
+// console.log(index([1, 2, 3, 4] ,2));//9
+// console.log(index([1, 2, 3] ,3));//-1
+
+// //найпопулярніший варіант
+
+// const index = (array, n) => array.length > n ? Math.pow(array[n], n) : -1;
+
+
+/*Provided is a function find which accepts two parameters 
+in the following order: array, element and returns the index
+ of the element if found and "Not found" otherwise. Your 
+ task is to shorten the code as much as possible in order 
+ to meet the strict character count requirements of the Kata. 
+ (no more than 85) You may assume that all array elements are
+  unique.*/
+
+// const find = (array, element) => array.includes(element) ? 
+// array.indexOf(element) : "Not found";
+
+// console.log(find([2,3,5,7,11],5));//2
+
+
+// //найпопулярніший варіант
+// const find = (a, x) => (x = a.indexOf(x)) < 0 ? 'Not found' : x
+
+
+
+/*You are required to create a simple calculator that returns 
+the result of addition, subtraction, multiplication or division 
+of two numbers.
+
+Your function will accept three arguments:
+The first and second argument should be numbers.
+The third argument should represent a sign indicating the 
+operation to perform on these two numbers.
+
+if the variables are not numbers or the sign does not belong to
+ the list above a message "unknown value" must be returned.*/
+
+//  function calculator(a,b,sign){
+//   if (isNaN(a) || isNaN(b)) {
+//     return "unknown value"
+//   } 
+//     switch (sign) {
+//       case "+":
+//         return a + b;   
+//       case "-":
+//         return a - b;    
+//       case "*":
+//         return a * b;     
+//       case "+":
+//         return a + b;   
+//       case "/":
+//         return a / b;
+//         default:
+//       return "unknown value"
+//     }
+//  }
+
+// console.log(calculator(1,2,"+")) ; //=> result will be 3
+// console.log(calculator(1,2,"&")) ; //=> result will be "unknown value"
+// console.log(calculator(1,"k","*")); //=> result will be "unknown value"
+
+ //найпопулярніший варіант
+
+// function calculator(a,b,sign) {
+//   try
+//     { return eval(a+sign+b); }
+//   catch(e)
+//     { return "unknown value"; }
+// }
+
+
+/*Complete the function that takes two integers (a, b, where a < b)
+ and return an array of all integers between the input parameters,
+ including them.*/
+
+
+
+//  function between(a, b) {
+//   const arr = []
+//     for (let i = a; i <= b; i += 1)
+//     arr.push(i);
+//   return arr;
+// }
+
+// console.log(between(1, 4));//[1, 2, 3, 4]
+// console.log(between(-2, 2));//[-2, -1, 0, 1, 2]
