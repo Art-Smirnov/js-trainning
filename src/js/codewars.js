@@ -1,7 +1,7 @@
 'use strict';
 
-//даэться строка з набором цифр, треба вернути строку з 
-//найбільшим і найменшим числом 
+//даэться строка з набором цифр, треба вернути строку з
+//найбільшим і найменшим числом
 
 // function highAndLow(numbers){
 
@@ -15,7 +15,7 @@
 // console.log(highAndLow("1 2 -3 4 5"));  // return "5 -3"
 // console.log(highAndLow("1 9 3 4 -5")) ; // return "9 -5"
 
-
+//=============================================================
 
 //треба повернути імена з 4 буквами
 
@@ -41,10 +41,10 @@
 
 // console.log(friend(["Ryan", "Kieran", "Mark"]) ); //["Ryan", "Mark"]
 
+//=============================================================
 
-
-// нульові індекси підмасивів додаєм в 
-//змінну, а перші віднімаємо 
+// нульові індекси підмасивів додаєм в
+//змінну, а перші віднімаємо
 
 // const number = function(busStops){
 //  let total = 0;
@@ -60,14 +60,12 @@
 
 // const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
 
+//=============================================================
 
-
-
-// Your task is to make a function that can take any non-negative 
-//integer as an argument and return it with its digits in 
-//descending order. Essentially, rearrange the digits to create the 
+// Your task is to make a function that can take any non-negative
+//integer as an argument and return it with its digits in
+//descending order. Essentially, rearrange the digits to create the
 //highest possible number.
-
 
 // function descendingOrder(n){
 
@@ -84,20 +82,19 @@
 //   return parseInt(String(n).split('').sort().reverse().join(''))
 // }
 
+//=============================================================
 
 /*Complete the solution so that it returns true if the first argument(string) 
 passed in ends with the 2nd argument (also a string).*/
 
-
 // function solution(str, ending){
-  
+
 //   if (ending === ''){
 //     return true;
 //   } else {
 //     return str.slice((-ending.length)) === ending;
 //   }
 // }
-
 
 // solution('abc', 'bc') // returns true
 // solution('abc', 'd') // returns false
@@ -109,14 +106,12 @@ passed in ends with the 2nd argument (also a string).*/
 //   return str.endsWith(ending);
 // }
 
-
-
+//=============================================================
 
 /*You are going to be given a word. Your job is to return the
  middle character of the word. If the word's length is odd, 
  return the middle character. If the word's length is even, return 
  the middle 2 characters. */
-
 
 //  function getMiddle(s) {
 //   if(s.length % 2 === 0) {
@@ -130,7 +125,6 @@ passed in ends with the 2nd argument (also a string).*/
 // console.log(getMiddle("testing"));//should return "t"
 // console.log(getMiddle("test") );// should return "es"
 
-
 //найпопулярніший варіант
 
 // function getMiddle(s)
@@ -138,7 +132,7 @@ passed in ends with the 2nd argument (also a string).*/
 //   return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
 // }
 
-//і ще один цікавий 
+//і ще один цікавий
 // function getMiddle(s)
 // {
 //   return s.slice((s.length-1)/2, s.length/2+1);
@@ -148,8 +142,7 @@ passed in ends with the 2nd argument (also a string).*/
 // console.log(getMiddle("testing"));//should return "t"
 // console.log(getMiddle("test") );// should return "es"
 
-
-
+//=============================================================
 
 /*You are given an odd-length array of integers, in which all of them are the same, 
 except for one single number.
@@ -165,7 +158,7 @@ The input array will always be valid! (odd-length >= 3)*/
 //     if (numbers[0] !== numbers[1] && numbers[0] !== numbers[2]) {
 //       return numbers[0];
 //     } else if (numbers[0] !== numbers[i]) {
-      
+
 //       return numbers[i];
 //     }
 //   }
@@ -183,8 +176,7 @@ The input array will always be valid! (odd-length >= 3)*/
 //   }
 // }
 
-
-
+//=============================================================
 
 /*Given two numbers and an arithmetic operator (the name of it, as a string), return
 the result of the two numbers having that operator used on them.
@@ -235,6 +227,8 @@ The four operators are "add", "subtract", "divide", "multiply".*/
 //   }
 // }
 
+//=============================================================
+
 /*Every month, a random number of students take the driving test at 
 Fast & Furious (F&F) Driving School. To pass the test, a student 
 cannot accumulate more than 18 demerit points.
@@ -251,35 +245,35 @@ passed the test that month, return 'No pass scores registered.'.*/
 // for (const el of list) {
 //   if (el <= 18) {
 //     passed.push(el);
-//   } 
+//   }
 // }
 // if (passed.length === 0) {
 //   return 'No pass scores registered.';
 // }
 // const average = passed.reduce((result, amount, index, array) => {
 //   result += amount;
-//   if( index === array.length-1) { 
+//   if( index === array.length-1) {
 //     return result/array.length;
-//   }else { 
+//   }else {
 //     return result;
 //   }
 // });
 
 // return Math.round(average);
-// } 
+// }
 
 // console.log(passed([10,10,10,18,20,20] ));//12
 // console.log(passed([40,22,22,20,20] ));//12
 
-
 // //найпопулярніший варіант
-// function passed (list) { 
+// function passed (list) {
 
 //   //Good luck!
 //     var res = list.filter(v => v <= 18);
 //     return res.length ? Math.round(res.reduce((s, v) => s + v, 0)/res.length) : 'No pass scores registered.';
-//   } 
+//   }
 
+//=============================================================
 
 /*You will be given an array of objects (associative arrays in PHP) 
 representing data about developers who have signed up to attend the
@@ -290,102 +284,161 @@ Your task is to return either:
 true if all developers in the list code in the same language; or
 false otherwise.*/
 
-//НЕ ЗАВЕРШЕНО!!!!!!!!!!!!!!!!!!
-
 // function isSameLanguage(list) {
-//   let result;
-// if (Object.keys(list[0]).includes('language') && Object.keys(list[1]).includes('language')
-//    && Object.keys(list[2]).includes('language')) {
-//   if(Object.keys(list[0]).language === Object.keys(list[1]).language 
-//     && Object.keys(list[0]).language === Object.keys(list[2]).language ) {
-//     result = true;
-//   } else result = false;
-// } else {
-//   result = false;
-// }
+//   const isEqual = lang => lang.language === list[0].language;
 
-// return result;
-// console.log(result);
-//   // let result;
-
-//   // list.forEach(obj => {
-
-//   //   const objKeys = Object.keys(obj);
-//   //   const objValues = Object.values(obj)
-
-//   //   if (objKeys.includes('language')) {
-      
-//   //     const value = list[0].language;
-//   //     if(objValues.includes(value)) {
-//   //       result = true;
-//   //     }
-
-//   //   } else {
-//   //     result = false;
-//   //   }
-//   // });
-  
-//   // return result;
-// //=======================================================
-// // const lang = list[1].language;
-// // for (const el of list){
-// // if(el.language !== lang) {
-// //     return false;
-// //   } else {
-// //     return true;
-// //   }
-// // }
+//   return list.every(isEqual);
 // }
 
 // var list1 = [
-//   { firstName: 'Daniel', lastName: 'J.', country: 'Aruba', continent: 'Americas', age: 42, language: 'JavaScript' },
-//   { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: 'JavaScript' },
-//   { firstName: 'Hanna', lastName: 'L.', country: 'Hungary', continent: 'Europe', age: 65, language: 'JavaScript' },
+//   {
+//     firstName: 'Daniel',
+//     lastName: 'J.',
+//     country: 'Aruba',
+//     continent: 'Americas',
+//     age: 42,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Kseniya',
+//     lastName: 'T.',
+//     country: 'Belarus',
+//     continent: 'Europe',
+//     age: 22,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Hanna',
+//     lastName: 'L.',
+//     country: 'Hungary',
+//     continent: 'Europe',
+//     age: 65,
+//     language: 'JavaScript',
+//   },
 // ];
 
 // var list2 = [
-//   { firstName: 'Mariami', lastName: 'G.', country: 'Georgia', continent: 'Europe', age: 29, language: 'Python' },
-//   { firstName: 'Mia', lastName: 'H.', country: 'Germany', continent: 'Europe', age: 39, language: 'Ruby' },
-//   { firstName: 'Maria', lastName: 'I.', country: 'Greece', continent: 'Europe', age: 32, language: 'C' },
+//   {
+//     firstName: 'Mariami',
+//     lastName: 'G.',
+//     country: 'Georgia',
+//     continent: 'Europe',
+//     age: 29,
+//     language: 'Python',
+//   },
+//   {
+//     firstName: 'Mia',
+//     lastName: 'H.',
+//     country: 'Germany',
+//     continent: 'Europe',
+//     age: 39,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Maria',
+//     lastName: 'I.',
+//     country: 'Greece',
+//     continent: 'Europe',
+//     age: 32,
+//     language: 'C',
+//   },
 // ];
 // var list3 = [
-//   { firstName:"Emily",lastName:"N.", country:"Ireland", continent:"Europe", age:38, language :"Java"},
-//   { firstName:"Joao", lastName:"D.", country:"Portugal", continent:"Europe", age:35, language:"Java"},
-//   { firstName:"Gabriel", lastName:"T.", country :"Luxembourg", continent:"Europe", age:28}];
-  
-//   var list4 = [
-//     { firstName: 'Mariami', lastName: 'G.', country: 'Georgia', continent: 'Europe', age: 29, language: 'Python' },
-//     { firstName: 'Mia', lastName: 'H.', country: 'Germany', continent: 'Europe', age: 39, language: 'C' },
-//     { firstName: 'Maria', lastName: 'I.', country: 'Greece', continent: 'Europe', age: 32, language: 'C' },
-//   ];
+//   {
+//     firstName: 'Emily',
+//     lastName: 'N.',
+//     country: 'Ireland',
+//     continent: 'Europe',
+//     age: 38,
+//     language: 'Java',
+//   },
+//   {
+//     firstName: 'Joao',
+//     lastName: 'D.',
+//     country: 'Portugal',
+//     continent: 'Europe',
+//     age: 35,
+//     language: 'Java',
+//   },
+//   {
+//     firstName: 'Gabriel',
+//     lastName: 'T.',
+//     country: 'Luxembourg',
+//     continent: 'Europe',
+//     age: 28,
+//   },
+// ];
 
-//   console.log(isSameLanguage(list1));
-//   console.log(isSameLanguage(list2));
-//   console.log(isSameLanguage(list3));
-//   console.log(isSameLanguage(list4));
+// var list4 = [
+//   {
+//     firstName: 'Mariami',
+//     lastName: 'G.',
+//     country: 'Georgia',
+//     continent: 'Europe',
+//     age: 29,
+//     language: 'Python',
+//   },
+//   {
+//     firstName: 'Mia',
+//     lastName: 'H.',
+//     country: 'Germany',
+//     continent: 'Europe',
+//     age: 39,
+//     language: 'C',
+//   },
+//   {
+//     firstName: 'Maria',
+//     lastName: 'I.',
+//     country: 'Greece',
+//     continent: 'Europe',
+//     age: 32,
+//     language: 'C',
+//   },
+// ];
 
+// console.log(isSameLanguage(list1)); //true
+// console.log(isSameLanguage(list2));
+// console.log(isSameLanguage(list3)); //false
+// console.log(isSameLanguage(list4));
 
+// //найпопулярніший варіант
+// function isSameLanguage(list) {
+//   return list.every(e => e.language === list[0].language);
+// }
+
+//=============================================================
 
 /*Give you an obj, it can be 3 types: string, number and 
 number array, Check that they are symmetrical or not, return
  a boolean value.*/
 
-
 //  //НЕ ЗАВЕРШЕНО!!!!!!!!!!!!!!!!!!
 
-//  function sc(obj){
-    
-//   if(typeof obj === 'object'){
-//     return obj.slice(0, (obj.length-1)/2) === obj.slice(obj.length/2+1);
-//   }
+// function sc(obj){
+//   if(typeof obj === 'object' && obj.length % 2 !== 0) {
+//       if (obj.length === 0) {
+//         return true;
+//       } else {
+//         return String(obj.slice(0, (obj.length-1)/2))  === String(obj.slice(obj.length/2+1).reverse());
+//       };
 
-//     const stringObj = String(obj);
-   
-//     if(stringObj.length === 2) {
-//       return stringObj.slice(0,1) === stringObj.slice(-1);
+//      } else if(typeof obj === 'object' && obj.length % 2 === 0) {
+//       if (obj.length === 0) {
+//         return true;
+//      } else {
+
+//       return String(obj.slice(obj.length/2).reverse()) === String(obj.slice(0, (obj.length)/2));
+//      }
 //     }
-//     return stringObj.slice(0, (stringObj.length-1)/2) === stringObj.slice(stringObj.length/2+1);
-// }
+//      const stringObj = String(obj);
+
+//       for (let i = 0; i < stringObj.length / 2; i++) {
+//      if (stringObj[i] != stringObj[stringObj.length - i - 1]) {
+//          return false;
+//      }
+//     }
+//     return true;
+//   }
 
 // console.log(sc(""));//true
 // console.log(sc("1"));//true
@@ -397,7 +450,17 @@ number array, Check that they are symmetrical or not, return
 // console.log(sc(11));//true
 // console.log(sc(15));//false
 // console.log(sc([11,12,13,12,11])); // true
+// console.log(sc([11,12,21,11]));//false
+// console.log(sc([1,77,60,46,24,5,56,56,5,24,46,60,77,1]));//true
 
+//кращий варыант
+
+// function sc(obj){
+//   return Array.isArray(obj) ? obj.toString() === obj.reverse().toString()
+//    : obj.toString().split('').reverse().join('') === obj.toString();
+// }
+
+//=============================================================
 
 /*You probably know the "like" system from Facebook and other 
 pages. People can "like" blog posts, pictures or other items.
@@ -409,9 +472,8 @@ take in input array, containing the names of people who like
 an item. It must return the display text as shown in the 
 examples:*/
 
-
 // function likes(names) {
-  
+
 //   if(names.length === 0) {
 //     return 'no one likes this';
 //   } else if (names.length >= 4) {
@@ -432,13 +494,14 @@ examples:*/
 // console.log(likes(['Max', 'John', 'Mark'])); //'Max, John and Mark like this';
 // console.log(likes(['Alex', 'Jacob', 'Mark', 'Max'])); //'Alex, Jacob and 2 others like this';
 
+//=============================================================
 
 /*Given n, take the sum of the digits of n. If that value has more 
 than one digit, continue reducing in this way until a single-digit 
 number is produced. The input will be a non-negative integer.*/
 
 // function digital_root(n) {
-  
+
 //   const fn = num => {
 //     let result = 0;
 //     const arr = String(num).split('');
@@ -462,13 +525,13 @@ number is produced. The input will be a non-negative integer.*/
 // console.log(digital_root(132189));   //-->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
 // console.log(digital_root(493193));  //-->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 
-
 // //найпопулярніший варіант
 
 // function digital_root(n) {
 //   return (n - 1) % 9 + 1;
 // }
 
+//=============================================================
 
 /*Given a month as an integer from 1 to 12, return to which 
 quarter of the year it belongs as an integer number.
@@ -498,8 +561,6 @@ For example: month 2 (February), is part of the first quarter;
 
 // const quarterOf = m => Math.ceil(m/3);
 
-
-
 /*Your goal in this kata is to implement a difference 
 function, which subtracts one list from another and 
 returns the result.
@@ -507,11 +568,10 @@ returns the result.
 It should remove all values from list a, which are 
 present in list b.*/
 
-
 // function arrayDiff(a, b) {
 
 //   let difference = a.filter(x => !b.includes(x));
- 
+
 //   return difference;
 // }
 
@@ -521,9 +581,7 @@ present in list b.*/
 // console.log(arrayDiff([1,8,2], []));//[1,8,2]
 // console.log(arrayDiff([1,8,2], [1,2]));//[8]
 
-
-
-
+//=============================================================
 
 /*There was a test in your class and you passed it. 
 Congratulations!
@@ -548,9 +606,9 @@ your class's points. For calculating the average
 //   for (let i = 0; i < allPoints.length; i += 1) {
 //     total += allPoints[i];
 //   }
-  
+
 //   return total/allPoints.length < yourPoints;
-  
+
 //  }
 // console.log(betterThanAverage([2, 3], 5));//true
 // console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));//false
@@ -558,15 +616,15 @@ your class's points. For calculating the average
 //найпопулярніший варіант
 
 // function betterThanAverage(classPoints, yourPoints) {
-//   return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
+//   return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length;
 // }
 
+//=============================================================
 
 /*Write a function that accept 3 parameters, health, 
 reduction, and damage. Your task is calculate the 
 damage taken by your enemy and return 'Survived!' 
 if result > 0, otherwise return 'Dead!'.*/
-
 
 //НЕ ЗАВЕРШЕНО!!!!!!!!!!!!!!!!!!
 
@@ -595,7 +653,7 @@ if result > 0, otherwise return 'Dead!'.*/
 // console.log(currentLife('246/977', 42, '322'));//'Survived!'
 // console.log(currentLife('246/977', 42, '44%'));//'Dead!'
 
-
+//=============================================================
 
 /*If we list all the natural numbers below 10 that are 
 multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of
@@ -607,7 +665,6 @@ the multiples of 3 or 5 below the number passed in.
 Note: If the number is a multiple of both 3 and 5, only 
 count it once. Also, if a number is negative, return
  0(for languages that do have them)*/
-
 
 //  function solution(number){
 //   let result = []
@@ -621,7 +678,7 @@ count it once. Also, if a number is negative, return
 //       // console.log(i);
 //   }
 // }
-// result.forEach(obj => 
+// result.forEach(obj =>
 //  sum += obj
 // );
 //   return sum;
@@ -630,12 +687,11 @@ count it once. Also, if a number is negative, return
 // console.log(solution(10));
 // console.log(solution(30));
 
-
 // //найпопулярніший варіант
 
 // function solution(number){
 //   var sum = 0;
-  
+
 //   for(var i = 1;i< number; i++){
 //     if(i % 3 == 0 || i % 5 == 0){
 //       sum += i
@@ -644,6 +700,7 @@ count it once. Also, if a number is negative, return
 //   return sum;
 // }
 
+//=============================================================
 
 /*Boltabek starts his first day at the new job.
  He is going to refactor some data structures 
@@ -669,9 +726,9 @@ The first task is rather easy, write a function
 //         splitedNames.push(el);
 //       }
 //     }
-    
+
 //     for (let j = 0; j < splitedNames.length; j += 1) {
-      
+
 //       if(splitedNames.length > 1) {
 //         let subArr = [];
 //         subArr.push(splitedNames[j], data[i][1]) ;
@@ -696,9 +753,7 @@ The first task is rather easy, write a function
 
 // console.log(expandUsernames([[',,,John,,Boris,,,,', 64]]));
 
-
-
-
+//=============================================================
 
 /*You are given an array with positive numbers 
 and a non-negative number N. You should find 
@@ -722,6 +777,7 @@ has the index 0.*/
 
 // const index = (array, n) => array.length > n ? Math.pow(array[n], n) : -1;
 
+//=============================================================
 
 /*Provided is a function find which accepts two parameters 
 in the following order: array, element and returns the index
@@ -731,16 +787,15 @@ in the following order: array, element and returns the index
  (no more than 85) You may assume that all array elements are
   unique.*/
 
-// const find = (array, element) => array.includes(element) ? 
+// const find = (array, element) => array.includes(element) ?
 // array.indexOf(element) : "Not found";
 
 // console.log(find([2,3,5,7,11],5));//2
 
-
 // //найпопулярніший варіант
 // const find = (a, x) => (x = a.indexOf(x)) < 0 ? 'Not found' : x
 
-
+//=============================================================
 
 /*You are required to create a simple calculator that returns 
 the result of addition, subtraction, multiplication or division 
@@ -754,52 +809,287 @@ operation to perform on these two numbers.
 if the variables are not numbers or the sign does not belong to
  the list above a message "unknown value" must be returned.*/
 
-//  function calculator(a,b,sign){
+// function calculator(a, b, sign) {
 //   if (isNaN(a) || isNaN(b)) {
-//     return "unknown value"
-//   } 
-//     switch (sign) {
-//       case "+":
-//         return a + b;   
-//       case "-":
-//         return a - b;    
-//       case "*":
-//         return a * b;     
-//       case "+":
-//         return a + b;   
-//       case "/":
-//         return a / b;
-//         default:
-//       return "unknown value"
-//     }
-//  }
+//     return 'unknown value';
+//   }
+//   switch (sign) {
+//     case '+':
+//       return a + b;
+//     case '-':
+//       return a - b;
+//     case '*':
+//       return a * b;
+//     case '+':
+//       return a + b;
+//     case '/':
+//       return a / b;
+//     default:
+//       return 'unknown value';
+//   }
+// }
 
 // console.log(calculator(1,2,"+")) ; //=> result will be 3
 // console.log(calculator(1,2,"&")) ; //=> result will be "unknown value"
 // console.log(calculator(1,"k","*")); //=> result will be "unknown value"
 
- //найпопулярніший варіант
+//найпопулярніший варіант
 
-// function calculator(a,b,sign) {
-//   try
-//     { return eval(a+sign+b); }
-//   catch(e)
-//     { return "unknown value"; }
+// function calculator(a, b, sign) {
+//   try {
+//     return eval(a + sign + b);
+//   } catch (e) {
+//     return 'unknown value';
+//   }
 // }
 
+//=============================================================
 
 /*Complete the function that takes two integers (a, b, where a < b)
  and return an array of all integers between the input parameters,
  including them.*/
 
-
-
-//  function between(a, b) {
-//   const arr = []
-//     for (let i = a; i <= b; i += 1)
-//     arr.push(i);
+// function between(a, b) {
+//   const arr = [];
+//   for (let i = a; i <= b; i += 1) arr.push(i);
 //   return arr;
 // }
 
-// console.log(between(1, 4));//[1, 2, 3, 4]
-// console.log(between(-2, 2));//[-2, -1, 0, 1, 2]
+// console.log(between(1, 4)); //[1, 2, 3, 4]
+// console.log(between(-2, 2)); //[-2, -1, 0, 1, 2]
+
+//=============================================================
+
+/*Tribonacci Sequence*/
+
+// function tribonacci(signature, n) {
+//   const result = [];
+//   result.push(signature[0], signature[1], signature[2]);
+
+//   if (n === 0) {
+//     return [];
+//   } else if (n === 1) {
+//     return [signature[0]];
+//   } else if (n === 2) {
+//     return [signature[0], signature[1]];
+//   } else if (n === 3) {
+//     return [signature[0], signature[1], signature[2]];
+//   } else {
+//     do {
+//       result.push(result.slice(-3).reduce((a, b) => a + b, 0));
+//     } while (result.length < n);
+//     for (let i = 3; i < n; i += 1) {}
+//   }
+
+//   return result;
+// }
+
+// console.log(tribonacci([1, 1, 1], 10)); //[1,1,1,3,5,9,17,31,57,105]
+// console.log(tribonacci([300, 200, 100], 0)); //[]
+// console.log(tribonacci([1, 1, 1], 1)); //[1]
+// console.log(tribonacci([6, 10, 13], 1)); //[6]
+
+//найпопулярніший варіант
+
+// function tribonacci(signature, n) {
+//   for (var i = 0; i < n - 3; i++) {
+//     // iterate n times
+//     signature.push(signature[i] + signature[i + 1] + signature[i + 2]); // add last 3 array items and push to trib
+//   }
+//   return signature.slice(0, n); //return trib - length of n
+// }
+
+//=============================================================
+
+/*You have to create a function calcType, which receives 3 arguments: 
+2 numbers, and the result of an unknown operation performed on them (also a number).
+
+Based on those 3 values you have to return a string, that describes 
+which operation was used to get the given result.
+
+The possible return strings are: "addition", "subtraction", 
+"multiplication", "division".*/
+
+// function calcType(a, b, res) {
+//   if (a + b === res) {
+//     return 'addition';
+//   } else if (a - b === res) {
+//     return 'subtraction';
+//   } else if (a * b === res) {
+//     return 'multiplication';
+//   } else if (a / b === res) {
+//     return 'division';
+//   }
+// }
+
+// console.log(calcType(1, 2, 3)); //'addition'
+// console.log(calcType(10, 4, 40)); //'multiplication'
+
+//=============================================================
+
+/*Write a function called sumIntervals/sum_intervals() 
+that accepts an array of intervals, and returns the sum
+ of all the interval lengths. Overlapping intervals 
+ should only be counted once.
+
+Intervals
+Intervals are represented by a pair of integers in the 
+form of an array. The first value of the interval will 
+always be less than the second value. Interval example: 
+[1, 5] is an interval from 1 to 5. The length of this 
+interval is 4.*/
+
+//НЕ ЗАВЕРШЕНО!!!!!!!!!!!!!!!!!!
+
+// console.log(
+//   sumIntervals([
+//     [1, 2],
+//     [6, 10],
+//     [11, 15],
+//   ]),
+// ); // => 9
+
+// console.log(
+//   sumIntervals([
+//     [1, 4],
+//     [7, 10],
+//     [3, 5],
+//   ]),
+// ); // => 7
+
+// console.log(
+//   sumIntervals([
+//     [1, 5],
+//     [10, 20],
+//     [1, 6],
+//     [16, 19],
+//     [5, 11],
+//   ]),
+// ); // => 19
+
+//=============================================================
+
+/*Given an array (a list in Python) of integers and an integer n, 
+find all occurrences of n in the given array and return another 
+array containing all the index positions of n in the given array.
+
+If n is not in the given array, return an empty array [].
+
+Assume that n and all values in the given array will always 
+be integers.*/
+
+// const findAll = (array, n) => {
+//   const result = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] === n) {
+//       result.push(i);
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(findAll([6, 9, 3, 4, 3, 82, 11], 3)); //[2, 4]
+// console.log(findAll([6, 9, 4, 82, 11], 3)); //[]
+
+// //найпопулярніший варіант
+
+// const findAll = (nums, find) => nums
+//   .reduce((acc, num, index) => num === find ? [...acc, index] : acc, [])
+
+//=============================================================
+
+/*I'm creating a scoreboard on my game website, but I want 
+the score to be displayed as tally marks instead of Roman 
+numerals. Write a function that translates the numeric score 
+into tally marks.
+
+My tally mark font uses the letters a, b, c, d, e to 
+represent tally marks for 1, 2, 3, 4, 5, respectively.
+ I want a space and line break ( ) after each completed tally (5).
+
+Assume that the score you receive will be an integer.
+ This function should return an HTML string that I can 
+ insert into my website that represents the correct score.*/
+
+// var scoreToTally = function (score) {
+//   switch (score) {
+//     case 1:
+//       return 'a';
+//     case 2:
+//       return 'b';
+//     case 3:
+//       return 'c';
+//     case 4:
+//       return 'd';
+//   }
+
+//   const result = [];
+//   for (let i = 1; i <= score; i += 1) {
+//     if (i % 5 === 0) {
+//       result.push('e <br>');
+//     }
+//   }
+//   switch (score % 5) {
+//     case 1:
+//       result.push('a');
+//       break;
+//     case 2:
+//       result.push('b');
+//       break;
+//     case 3:
+//       result.push('c');
+//       break;
+//     case 4:
+//       result.push('d');
+//       break;
+//   }
+//   return result.join('');
+// };
+
+// console.log(scoreToTally(3)); //'c'
+// console.log(scoreToTally(10)); //'e <br>e <br>'
+// console.log(scoreToTally(11)); //'e <br>e <br> a'
+
+// //найпопулярніший варіант
+
+// scoreToTally = score =>
+//   'e <br>'.repeat((score / 5) | 0) + ['', 'a', 'b', 'c', 'd'][score % 5];
+
+//теж класний варіант
+
+// const scoreToTally = score => {
+//   let str = '';
+//   for(let i = score; 0 < i; i -= 5) {
+//     if(i >= 5) str += 'e <br>';
+//     if(i === 4) str += 'd';
+//     if(i === 3) str += 'c';
+//     if(i === 2) str += 'b';
+//     if(i === 1) str += 'a';
+//   }
+//   return str;
+// };
+
+//=========================================================================
+/*The following code could use a bit of object-oriented artistry.
+ While it's a simple method and works just fine as it is, in a 
+ larger system it's best to organize methods into classes/objects.
+  (Or, at least, something similar depending on your language)
+
+Refactor the following code so that it belongs to a Person class/object. 
+Each Person instance will have a greet method. The Person instance should be 
+instantiated with a name so that it no longer has to be passed into each greet 
+method call.*/
+
+// const Person = function (myName) {
+//   this.name = myName;
+// };
+
+// Person.prototype.greet = function (yourName) {
+//   return 'Hello ' + yourName + ', my name is ' + this.name;
+// };
+
+// var joe = new Person('Joe');
+
+// joe.greet('Kate'); // should return 'Hello Kate, my name is Joe'
+// console.log(joe.greet('Kate'));
+// joe.name; // should == 'Joe'

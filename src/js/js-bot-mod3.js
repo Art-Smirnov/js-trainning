@@ -9,10 +9,7 @@
 //   	tags: ['premium', 'promoted', 'top']
 // };
 
-
 //===========2=============
-
-
 
 // const apartment = {
 //   imgUrl: 'https://via.placeholder.com/640x480',
@@ -26,8 +23,6 @@
 //       email: 'henry.carter@aptmail.com'
 //   }
 // };
-
-
 
 //===========3=============
 
@@ -46,9 +41,7 @@
 // const aptTags = apartment.tags;
 // // Пиши код выше этой строки
 
-
 //===========4=============
-
 
 // const apartment = {
 //   imgUrl: 'https://via.placeholder.com/640x480',
@@ -72,9 +65,7 @@
 // const lastTag = apartment.tags[apartment.tags.length -1];
 // // Пиши код выше этой строки
 
-
 //===========5=============
-
 
 // const apartment = {
 //   imgUrl: 'https://via.placeholder.com/640x480',
@@ -91,9 +82,7 @@
 // const aptTags = apartment['tags'];
 // // Пиши код выше этой строки
 
-
 //===========6=============
-
 
 // const apartment = {
 //   imgUrl: 'https://via.placeholder.com/640x480',
@@ -113,7 +102,6 @@
 // apartment.rating = 4.7;
 // apartment.owner.name = 'Генри Сибола';
 // apartment.tags.push('trusted');
-
 
 //===========7=============
 
@@ -138,9 +126,7 @@
 //  city: 'Кингстон'
 // }
 
-
 //===========8=============
-
 
 // const name = 'Ремонтный дроид';
 // const price = 2500;
@@ -156,9 +142,7 @@
 //   // Пиши код выше этой строки
 // };
 
-
 //===========9=============
-
 
 // const emailInputName = 'email';
 // const passwordInputName = 'password';
@@ -166,14 +150,12 @@
 // const credentials = {
 //   // Пиши код ниже этой строки
 //   [emailInputName]:'henry.carter@aptmail.com',
-  
+
 //   [passwordInputName]:'jqueryismyjam'
 //   // Пиши код выше этой строки
 // };
 
-
 //===========10=============
-
 
 // const apartment = {
 //   descr: 'Просторная квартира в центре',
@@ -188,9 +170,7 @@
 //   values.push(apartment[key]);
 // }
 
-
 //===========11=============
-
 
 // const keys = [];
 // const values = [];
@@ -204,24 +184,21 @@
 
 // for (const key in apartment) {
 //   // Пиши код ниже этой строки
-// if (apartment.hasOwnProperty(key)) { 
-  
+// if (apartment.hasOwnProperty(key)) {
+
 //   keys.push(key);
 //   values.push(apartment[key]);}
- 
+
 //   // Пиши код выше этой строки
 // }
 
-
-
 //===========12=============
-
 
 // function countProps(object) {
 //   let propCount = 0;
 //   // Пиши код ниже этой строки
 //   for (const key in object){
-  
+
 // if(object.hasOwnProperty(key)){
 //   propCount += 1;
 // }
@@ -230,9 +207,7 @@
 //   return propCount;
 // }
 
-
 //===========13=============
-
 
 // const apartment = {
 //   descr: 'Просторная квартира в центре',
@@ -249,16 +224,13 @@
 
 //===========14=============
 
-
 // function countProps(object) {
 //   // Пиши код ниже этой строки
 //   return Object.keys(object).length;
 //   // Пиши код выше этой строки
 // }
 
-
 //===========15=============
-
 
 // const apartment = {
 //   descr: 'Просторная квартира в центре',
@@ -269,9 +241,6 @@
 // const keys = Object.keys(apartment);
 // const values = Object.values(apartment);
 
-
-
-
 //===========16=============
 
 // function countTotalSalary(salaries) {
@@ -281,8 +250,8 @@
 
 //   for (const value of salaryArr) {
 //   	totalSalary += value;
-//   } 
-  
+//   }
+
 //   // Пиши код выше этой строки
 //   return totalSalary;
 // }
@@ -302,15 +271,14 @@
 // const rgbColors = [];
 // // Пиши код ниже этой строки
 // for (const color of colors) {
-  
-//  hexColors.push(color.hex);	
-//  rgbColors.push(color.rgb); 
+
+//  hexColors.push(color.hex);
+//  rgbColors.push(color.rgb);
 // }
 // console.log(hexColors);
 // console.log(rgbColors);
 
 //===========18=============
-
 
 // const products = [
 //   { name: 'Радар', price: 1300, quantity: 4 },
@@ -325,8 +293,8 @@
 //   for (const product of products) {
 //     if (product.name === productName) {
 //       price = product.price;
-//     } 
-//   } 
+//     }
+//   }
 //   if (price === 0){
 //     price = null;
 //   }
@@ -337,7 +305,6 @@
 // console.log(getProductPrice('Радар'));
 // console.log(getProductPrice('Двигатель'));
 // console.log(getProductPrice('Захват'));
-
 
 //===========19=============
 
@@ -352,13 +319,13 @@
 //   // Пиши код ниже этой строки
 //   const propArr = [];
 // for (const product of products){
-  
+
 //   if(propName in product) {
 //     console.log(product);
 //     propArr.push(product[propName]);
 //   }
 // }
-  
+
 //   return propArr;
 //   // Пиши код выше этой строки
 // }
@@ -366,9 +333,7 @@
 // console.log(getAllPropValues('name'));
 // console.log(getAllPropValues('category'));
 
-
 //===========20=============
-
 
 // const products = [
 //   { name: 'Радар', price: 1300, quantity: 4 },
@@ -382,13 +347,13 @@
 // let totalPrice = 0;
 
 // for (const product of products){
-  
+
 //   // console.log(product.name);
 //   if(productName === product.name) {
 //     totalPrice = product.price * product.quantity;
 //   }
 // }
-  
+
 //   return totalPrice;
 //   // Пиши код выше этой строки
 // }
@@ -396,9 +361,7 @@
 // console.log(calculateTotalPrice('Бластер'));
 // console.log(calculateTotalPrice('Захват'));
 
-
 //===========21=============
-
 
 // const highTemperatures = {
 //   yesterday: 28,
@@ -411,10 +374,7 @@
 // // Пиши код выше этой строки
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
 
-
-
 //===========22============
-
 
 // const highTemperatures = {
 //   yesterday: 28,
@@ -432,11 +392,7 @@
 // // Пиши код выше этой строки
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
 
-
-
-
 //===========23=============
-
 
 // const highTemperatures = {
 //   yesterday: 28,
@@ -454,10 +410,7 @@
 // // Пиши код выше этой строки
 // const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
 
-
-
 //===========24=============
-
 
 // const colors = [
 //   { hex: '#f44336', rgb: '244,67,54' },
@@ -474,7 +427,6 @@
 //   hexColors.push(hex);
 //   rgbColors.push(rgb);
 // }
-
 
 //===========25=============
 
@@ -504,10 +456,7 @@
 //   }
 // } = forecast;
 
-
-
 //===========26=============
-
 
 // // Пиши код ниже этой строки
 // function calculateMeanTemperature(forecast) {
@@ -515,13 +464,13 @@
 //   const {
 //     today: {
 //       low: todayLow,
-//       high: todayHigh    
+//       high: todayHigh
 //     },
 
 //     tomorrow: {
 //       low: tomorrowLow,
-//       high: tomorrowHigh  
-//     } 
+//       high: tomorrowHigh
+//     }
 //   } = forecast;
 
 //   // Пиши код выше этой строки
@@ -530,20 +479,14 @@
 
 // console.log(calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} }));
 
-
-
-
 //===========27=============
-
 
 // const scores = [89, 64, 42, 17, 93, 51, 26];
 // // Пиши код ниже этой строки
 // const bestScore = Math.max(...scores);
 // const worstScore = Math.min(...scores);
 
-
 //===========28=============
-
 
 // const firstGroupScores = [64, 42, 93];
 // const secondGroupScores = [89, 14, 51, 26];
@@ -553,9 +496,7 @@
 // const bestScore = Math.max(...allScores);
 // const worstScore = Math.min(...allScores);
 
-
 //===========29=============
-
 
 // const defaultSettings = {
 //   theme: 'light',
@@ -572,10 +513,7 @@
 // // Пиши код ниже этой строки
 // const finalSettings = {...defaultSettings, ...overrideSettings};
 
-
-
 //===========30=============
-
 
 // function makeTask(data) {
 //   const completed = false;
@@ -595,7 +533,6 @@
 // console.log(makeTask({}));
 // console.log(makeTask({ category: 'Домашнее', priority: 'Низкий', text: 'Вынести мусор' }));
 
-
 //===========31=============
 
 // // Пиши код ниже этой строки
@@ -603,12 +540,10 @@
 //   let sum = 0;
 //   for (const arg of args) {
 //   	sum += arg;
-//   }  
+//   }
 //   return sum;
 //   // Пиши код выше этой строки
 // }
-
-
 
 //===========32=============
 
@@ -617,7 +552,7 @@
 //   let total = 0;
 
 //   for (const arg of args) {
-    
+
 //     if (arg > num) {
 //     total += arg;
 //   }
@@ -626,9 +561,7 @@
 //   // Пиши код выше этой строки
 // }
 
-
 //===========33=============
-
 
 // // Пиши код ниже этой строки
 // function findMatches(arr, ...args) {
@@ -642,10 +575,7 @@
 //   return matches;
 // }
 
-
-
 //===========34=============
-
 
 // const bookShelf = {
 //   // Пиши код ниже этой строки
@@ -662,11 +592,9 @@
 //   updateBook(oldName, newName) {
 //   	return `Обновляем книгу ${oldName} на ${newName}`;
 //   }
-  
+
 //   // Пиши код выше этой строки
 // };
-
-
 
 //===========35=============
 
@@ -677,21 +605,18 @@
 
 // 	const bookIndex = this.books.indexOf(oldName);
 // 	this.books.splice(bookIndex, 1, newName);
-	
+
 //     // Пиши код выше этой строки
 //   },
 // };
 
-
 //===========36=============
-
 
 // const atTheOldToad = {
 //   // Пиши код ниже этой строки
 //   potions: []
 //   // Пиши код выше этой строки
 // };
-
 
 //===========37=============
 
@@ -704,9 +629,7 @@
 //   // Пиши код выше этой строки
 // };
 
-
 //===========38=============
-
 
 // const atTheOldToad = {
 //   potions: ['Зелье скорости', 'Дыхание дракона', 'Каменная кожа'],
@@ -717,10 +640,7 @@
 //   },
 // };
 
-
-
 //===========39=============
-
 
 // const atTheOldToad = {
 //   potions: ['Зелье скорости', 'Дыхание дракона', 'Каменная кожа'],
@@ -733,10 +653,7 @@
 //   },
 // };
 
-
-
 //===========40=============
-
 
 // const atTheOldToad = {
 //   potions: ['Зелье скорости', 'Дыхание дракона', 'Каменная кожа'],
@@ -748,8 +665,6 @@
 //     // Пиши код выше этой строки
 //   },
 // };
-
-
 
 //===========41============
 
@@ -765,7 +680,7 @@
 //   },
 
 //   addPotion(potionName) {
-//     for (const potion of this.potions) { 
+//     for (const potion of this.potions) {
 //       if (potion.name === potionName) {
 //       return `Зелье ${potionName} уже есть в инвентаре!`;
 //     }
@@ -780,14 +695,14 @@
 //         potionIndex = this.potions.indexOf(potion);
 //       }
 //     }
-  
+
 //     if (potionIndex === undefined) {
 //       return `Зелья ${potionName} нет в инвентаре!`;
 //     }
 
 //     this.potions.splice(potionIndex, 1);
 //   },
-  
+
 //   updatePotionName(oldName, newName) {
 //     let potionIndex;
 //     for (const potion of this.potions) {
@@ -795,7 +710,7 @@
 //         potionIndex = this.potions.indexOf(potion);
 //       }
 //     }
-  
+
 //     if (potionIndex === undefined) {
 //       return `Зелья ${oldName} нет в инвентаре!`;
 //     }
@@ -804,4 +719,3 @@
 //   },
 //   // Пиши код выше этой строки
 // };
-
