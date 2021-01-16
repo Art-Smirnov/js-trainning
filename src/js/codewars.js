@@ -1071,25 +1071,125 @@ Assume that the score you receive will be an integer.
 
 //=========================================================================
 /*The following code could use a bit of object-oriented artistry.
- While it's a simple method and works just fine as it is, in a 
- larger system it's best to organize methods into classes/objects.
-  (Or, at least, something similar depending on your language)
+While it's a simple method and works just fine as it is, in a 
+larger system it's best to organize methods into classes/objects.
+(Or, at least, something similar depending on your language)
 
 Refactor the following code so that it belongs to a Person class/object. 
 Each Person instance will have a greet method. The Person instance should be 
 instantiated with a name so that it no longer has to be passed into each greet 
 method call.*/
 
-// const Person = function (myName) {
-//   this.name = myName;
-// };
-
-// Person.prototype.greet = function (yourName) {
-//   return 'Hello ' + yourName + ', my name is ' + this.name;
-// };
+// class Person {
+//   constructor(myName) {
+//     this.name = myName;
+//   }
+//   greet(yourName) {
+//     return 'Hello ' + yourName + ', my name is ' + this.name;
+//   }
+// }
 
 // var joe = new Person('Joe');
 
 // joe.greet('Kate'); // should return 'Hello Kate, my name is Joe'
 // console.log(joe.greet('Kate'));
 // joe.name; // should == 'Joe'
+
+//=========================================================================
+
+/*Write simple .camelCase method (camel_case function in PHP, CamelCase 
+  in C# or camelCase in Java) for strings. All words must have their
+  first letter capitalized without spaces.*/
+
+// String.prototype.camelCase = function () {
+//   if (this === '') {
+//     return '';
+//   }
+//   const arrOfWords = this.split(' ');
+//   const result = [];
+//   for (const word of arrOfWords) {
+//     if (word === '') {
+//       continue;
+//     }
+
+//     result.push(word[0].toUpperCase() + word.slice(1));
+//   }
+//   return result.join('');
+// };
+
+// // console.log('hello case'.camelCase()); //HelloCase
+// // console.log('camel case word'.camelCase()); // CamelCaseWord
+// // console.log(''.camelCase()); // ""
+// console.log(' camel case word'.camelCase()); //"CamelCaseWord"
+
+//найпопулярніший варіант
+
+// String.prototype.camelCase=function(){
+//   return this.split(' ').map(function(word){
+//    return word.charAt(0).toUpperCase() + word.slice(1);
+//  }).join('');
+// }
+
+//=========================================================================
+/*I will give you an integer (N) and a string. Break the string up into as 
+many substrings of N as you can without spaces. If there are leftover 
+characters, include those as well.*/
+
+// function stringBreakers(n, string) {
+//   const splitedArrFromStr = string.split(' ').join('').split('');
+//   const splitedArr = [];
+//   for (let i = 0; i < splitedArrFromStr.length; i += n) {
+//     splitedArr.push(splitedArrFromStr.slice(i, i + n).join(''));
+//     console.log(splitedArr);
+//   }
+//   return splitedArr.join('\n');
+// }
+
+// console.log(stringBreakers(5, 'This is an example string'));
+
+// //найпопулярніший варіант
+// function stringBreakers(n, s){
+//   return s.replace(/\s/g,'').replace(new RegExp('.{'+n+'}','g'),'$&\n').trim()
+// }
+
+//=========================================================================
+/*As you can tell, each Student has some fives, tens, and twenties. 
+Your job is to return the name of the student with the most money. 
+If every student has the same amount, then return "all".*/
+
+class Student {
+  constructor(name, fives, tens, twenties) {
+    this.name = name;
+    this.fives = fives;
+    this.tens = tens;
+    this.twenties = twenties;
+  }
+}
+function mostMoney(students) {
+  const studentsArr = [];
+  let result = '';
+
+  for (const student of students) {
+    const studentValues = Object.values(student);
+    const studentName = student.name;
+
+    const studentTotalSum =
+      studentValues[1] * 5 + studentValues[2] * 10 + studentValues[3] * 20;
+    studentsArr.push({ name: studentName, sum: studentTotalSum });
+  }
+  result = studentsArr.reduce((acc, curr) => (acc.sum > curr.sum ? acc : curr));
+  console.log(result);
+}
+
+const andy = new Student('Andy', 0, 0, 2);
+const stephen = new Student('Stephen', 0, 4, 0);
+const eric = new Student('Eric', 8, 1, 0);
+const david = new Student('David', 2, 0, 1);
+const phil = new Student('Phil', 0, 2, 1);
+const cam = new Student('Cameron', 2, 2, 0);
+const geoff = new Student('Geoff', 0, 3, 0);
+
+console.log(mostMoney([andy, stephen, eric, david, phil])); //"Eric"
+console.log(mostMoney([cam, geoff, andy, stephen, eric, david, phil])); //"Eric"
+console.log(mostMoney([andy])); //'Andy'
+console.log(mostMoney([cam, geoff])); //"all"
