@@ -213,7 +213,6 @@
 //   price: 2153,
 // };
 // const values = [];
-// // Пиши код ниже этой строки
 // const keys = Object.keys(apartment);
 
 // for (const key of keys) {
@@ -269,9 +268,8 @@
 // const rgbColors = [];
 // // Пиши код ниже этой строки
 // for (const color of colors) {
-
-//  hexColors.push(color.hex);
-//  rgbColors.push(color.rgb);
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
 // }
 // console.log(hexColors);
 // console.log(rgbColors);
@@ -319,7 +317,6 @@
 // for (const product of products){
 
 //   if(propName in product) {
-//     console.log(product);
 //     propArr.push(product[propName]);
 //   }
 // }

@@ -1,7 +1,6 @@
 'use strict';
 //======1======
 
-
 // function checkAge(age) {
 //   if (age >= 18) { // Дополни эту строку
 //     return 'Вы совершеннолетний человек';
@@ -10,9 +9,7 @@
 //   return 'Вы не совершеннолетний человек';
 // }
 
-
 //=====2======
-
 
 // function checkPassword(password) {
 //   const ADMIN_PASSWORD = 'jqueryismyjam';
@@ -20,12 +17,11 @@
 
 //   if (password === ADMIN_PASSWORD) {
 //     return 'Добро пожаловать!';
-//   } 
+//   }
 
 //   return 'Доступ запрещен, неверный пароль!'
 //   // Пиши код выше этой строки
 // }
-
 
 //=====3=======
 
@@ -36,14 +32,12 @@
 //     return 'В заказе еще нет товаров';
 //   } if (ordered > available) {
 //     return 'Слишком большой заказ, на складе недостаточно товаров!';
-//   } 
+//   }
 //   return 'Заказ оформлен, с вами свяжется менеджер';
 //   // Пиши код выше этой строки
 // }
 
 // console.log(checkStorage(70, 0));
-
-
 
 //=======4========
 
@@ -51,18 +45,15 @@
 
 // const fruits = ['яблоко', 'слива', 'груша', 'апельсин'];
 
-
 //=========5=========
 
 // // Стартовый код
 // const fruits = ['яблоко', 'слива', 'груша', 'апельсин'];
 // // Пиши код ниже этой строки
 
-
 // const firstElement = fruits[0];
 // const secondElement = fruits[1];
 // const lastElement = fruits[fruits.length-1];
-
 
 //========6============
 
@@ -74,16 +65,12 @@
 
 // fruits[3] = 'банан';
 
-
-
 //========7============
 
 // // Стартовый код
 // const fruits = ['яблоко', 'персик', 'груша', 'банан'];
 // // Пиши код ниже этой строки
 // const fruitsArrayLength = fruits.length;
-
-
 
 //========8============
 
@@ -94,9 +81,7 @@
 //  const lastElementIndex = fruits.length-1;
 // const lastElement = fruits[lastElementIndex];
 
-
 //========9============
-
 
 // function getExtremeElements(array) {
 //     // Пиши код ниже этой строки
@@ -111,22 +96,16 @@
 
 // console.log(getExtremeElements([1, 2, 3, 4, 5]));
 
-
-
 //========10============
-
 
 // function splitMessage(message, delimeter) {
 //   let words;
 //   // Пиши код ниже этой строки
 //   words = message.split(delimeter);
 
-
 //   // Пиши код выше этой строки
 //   return words;
 // }
-
-
 
 //========11============
 
@@ -140,9 +119,6 @@
 
 // console.log(calculateEngravingPrice('JavaScript у меня в крови', 10));
 
-
-
-
 //========12============
 
 // function makeStringFromArray(array, delimeter) {
@@ -150,16 +126,11 @@
 //   // Пиши код ниже этой строки
 //  string = array.join(delimeter);
 
-
 //   // Пиши код выше этой строки
 //   return string;
 // }
 
-
-
 //========13============
-
-
 
 // function slugify(title) {
 //   // Пиши код ниже этой строки
@@ -180,17 +151,12 @@
 // const nonExtremeEls = fruits.slice(1,-1);
 // const lastThreeEls = fruits.slice(-3);;
 
-
-
 //========15============
-
 
 // const oldClients = ['Манго', 'Аякс', 'Поли', 'Киви'];
 // const newClients = ['Персик', 'Хьюстон'];
 
 // const allClients = oldClients.concat(newClients); // Дополни эту строку
-
-
 
 //========16============
 
@@ -199,7 +165,7 @@
 // const array = firstArray.concat(secondArray);
 // if (array.length <= maxLength) {
 //   return array;
-// } 
+// }
 
 // return array.slice(0, maxLength);
 //   // Пиши код выше этой строки
@@ -208,9 +174,7 @@
 // console.log(makeArray(['Манго', 'Поли'], ['Аякс', 'Челси'], 3));
 // console.log(makeArray(['Манго', 'Поли', 'Хьюстон'], ['Аякс', 'Челси'], 4));
 
-
 //========17============
-
 
 // const start = 3;
 // const end = 7;
@@ -218,8 +182,6 @@
 // for (let i = start; i <= end; i += 1) { // Дополни эту строку
 //   console.log(i);
 // }
-
-
 
 //========18============
 
@@ -245,7 +207,6 @@
 //   console.log(fruit);
 // }
 
-
 //========20============
 
 // function calculateTotalPrice(order) {
@@ -260,7 +221,6 @@
 
 //========21============
 
-
 // function findLongestWord(string) {
 //   // Пиши код ниже этой строки
 //   const arrFromString = string.split(' ');
@@ -274,7 +234,6 @@
 //   // Пиши код выше этой строки
 // }
 // console.log(findLongestWord('The quick brown fox  jumped over the lazy dog'));
-
 
 //========22============
 
@@ -304,17 +263,13 @@
 // }
 // console.log(filterArray([1, 2, 3, 4, 5], 3));
 
-
 //========24============
-
-
 
 // function checkFruit(fruit) {
 //   const fruits = ['яблоко', 'слива', 'груша', 'апельсин'];
 
 //   return fruits.includes(fruit);// Дополни эту строку
 // }
-
 
 //========25============
 
@@ -332,7 +287,6 @@
 // }
 
 //========26============
-
 
 // function calculateTotalPrice(order) {
 //   let total = 0;
@@ -388,7 +342,6 @@
 
 // console.log(getEvenNumbers(3, 11));
 
-
 //========30============
 
 // const start = 6;
@@ -418,13 +371,12 @@
 
 //========32============
 
-
 // function includes(array, value) {
 //   // Пиши код ниже этой строки
 // for (let i = 0; i < array.length; i += 1){
 // 	if (array[i] === value) {
 //     return  true;
-//   } 
+//   }
 // }
 // 	return false;
 //   // Пиши код выше этой строки

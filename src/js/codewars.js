@@ -1154,42 +1154,98 @@ characters, include those as well.*/
 
 //=========================================================================
 /*As you can tell, each Student has some fives, tens, and twenties. 
-Your job is to return the name of the student with the most money. 
-If every student has the same amount, then return "all".*/
+  Your job is to return the name of the student with the most money. 
+  If every student has the same amount, then return "all".*/
 
-class Student {
-  constructor(name, fives, tens, twenties) {
-    this.name = name;
-    this.fives = fives;
-    this.tens = tens;
-    this.twenties = twenties;
-  }
-}
-function mostMoney(students) {
-  const studentsArr = [];
-  let result = '';
+//   class Student {
+//     constructor(name, fives, tens, twenties) {
+//       this.name = name;
+//       this.fives = fives;
+//       this.tens = tens;
+//       this.twenties = twenties;
+//     }
+//   }
+//   function mostMoney(students) {
+//     const studentsArr = [];
+//     let result;
 
-  for (const student of students) {
-    const studentValues = Object.values(student);
-    const studentName = student.name;
+//     for (const student of students) {
+//       const studentValues = Object.values(student);
+//       const studentName = student.name;
 
-    const studentTotalSum =
-      studentValues[1] * 5 + studentValues[2] * 10 + studentValues[3] * 20;
-    studentsArr.push({ name: studentName, sum: studentTotalSum });
-  }
-  result = studentsArr.reduce((acc, curr) => (acc.sum > curr.sum ? acc : curr));
-  console.log(result);
-}
+//       const studentTotalSum =
+//       studentValues[1] * 5 + studentValues[2] * 10 + studentValues[3] * 20;
+//       studentsArr.push({ name: studentName, sum: studentTotalSum });
+//     }
+//     if (
+//       studentsArr.every(
+//         e => e.sum === studentsArr[0].sum && studentsArr.length > 1,
+//         )
+//         ) {
+//           return 'all';
+//         }
 
-const andy = new Student('Andy', 0, 0, 2);
-const stephen = new Student('Stephen', 0, 4, 0);
-const eric = new Student('Eric', 8, 1, 0);
-const david = new Student('David', 2, 0, 1);
-const phil = new Student('Phil', 0, 2, 1);
-const cam = new Student('Cameron', 2, 2, 0);
-const geoff = new Student('Geoff', 0, 3, 0);
+//         return studentsArr.sort((a, b) => b.sum - a.sum)[0].name;
+//       }
 
-console.log(mostMoney([andy, stephen, eric, david, phil])); //"Eric"
-console.log(mostMoney([cam, geoff, andy, stephen, eric, david, phil])); //"Eric"
-console.log(mostMoney([andy])); //'Andy'
-console.log(mostMoney([cam, geoff])); //"all"
+//       const andy = new Student('Andy', 0, 0, 2);
+//       const stephen = new Student('Stephen', 0, 4, 0);
+//       const eric = new Student('Eric', 8, 1, 0);
+//       const david = new Student('David', 2, 0, 1);
+//       const phil = new Student('Phil', 0, 2, 1);
+//       const cam = new Student('Cameron', 2, 2, 0);
+//       const geoff = new Student('Geoff', 0, 3, 0);
+
+//       console.log(mostMoney([andy, stephen, eric, david, phil])); //"Eric"
+//       console.log(mostMoney([cam, geoff, andy, stephen, eric, david, phil])); //"Eric"
+//       console.log(mostMoney([andy])); //'Andy'
+//       console.log(mostMoney([cam, geoff])); //"all"
+
+// //найпопулярніший варіант
+// function mostMoney(s) {
+//   s.sort((x,y)=>sum(y)-sum(x));
+//   if(s.length>1 && sum(s[0])==sum(s[1]))return 'all';
+//   return s[0].name;
+// }
+
+// const sum = (s) => (s.fives*5)+(s.tens*10)+(s.twenties*20);
+
+//========================================================================
+/*Given two arrays of strings, return the number of times each 
+string of the second array appears in the first array.*/
+
+// function solve(a, b) {
+//   for (let i = 0; i < b.length; i += 1) {
+//     if (a.includes(b[i])) {
+//       return a.reduce((acc, el) => {
+//         if (el === b[i]) {
+
+//           acc.push(el);
+//           return acc;
+//         }
+//       }, []);
+//     } else {
+//       continue;
+//     }
+//   }
+//==================================================
+// return b.forEach(element => {
+
+//   if (a.includes(element)) {
+//     return a.reduce((acc, el) => {
+//       if (el === element) {
+//         acc.push(el);
+//         return acc;
+//       }
+//     }, []);
+//   }
+// });
+// }
+
+// console.log(solve(['abc', 'abc', 'xyz', 'abcd', 'cde'], ['abc', 'cde', 'uap'])); // [2, 1, 0]);
+// console.log(solve(['abc', 'xyz', 'abc', 'xyz', 'cde'], ['abc', 'cde', 'xyz'])); // [2, 1, 2])
+// console.log(
+//   solve(['quick', 'brown', 'fox', 'is', 'quick'], ['quick', 'abc', 'fox']),
+// ); // [2, 0, 1])
+// console.log(solve(['quick', 'brown', 'fox', 'is', 'quick'], ['abc'])); // [0])
+// //(el === element ? acc.push(el) : acc.push(0))

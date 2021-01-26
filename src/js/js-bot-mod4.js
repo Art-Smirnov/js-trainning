@@ -10,7 +10,6 @@
 // const result = makePizza();
 // const pointer = makePizza;
 
-
 //=============2=============
 
 // function deliverPizza(pizzaName) {
@@ -26,8 +25,8 @@
 //   return callback(pizzaName);
 // }
 
-// console.log(makeMessage('Роял гранд', makePizza)); 
-// console.log(makeMessage('Ультрасыр', deliverPizza)); 
+// console.log(makeMessage('Роял гранд', makePizza));
+// console.log(makeMessage('Ультрасыр', deliverPizza));
 
 //=============3=============
 
@@ -45,7 +44,6 @@
 
 //   console.log(`Едим пиццу ${pizzaName}.`)
 // });
-
 
 //=============4=============
 
@@ -77,10 +75,7 @@
 // console.log(pizzaPalace.order('Биг майк', makePizza, onOrderError));
 // pizzaPalace.order('Венская', makePizza, onOrderError);
 
-
-
 //=============5=============
-
 
 // const pizzaPalace = {
 //   pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
@@ -101,14 +96,10 @@
 //   // Пиши код выше этой строки
 // };
 
-// console.log(pizzaPalace.order('Аль Копчино')); 
+// console.log(pizzaPalace.order('Аль Копчино'));
 // console.log(pizzaPalace.order('Биг майк'));
 
-
-
-
 //=============6=============
-
 
 // const customer = {
 //   username: 'Mango',
@@ -141,10 +132,7 @@
 // console.log(customer.getBalance()); // 19750
 // console.log(customer.getOrders()); // ['Burger', 'Pizza', 'Salad', 'Steak']
 
-
-
 //=============7=============
-
 
 // const orders = [
 //   { email: 'solomon@topmail.ua', dish: 'Burger' },
@@ -157,9 +145,7 @@
 //   return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
 // }
 
-// const messages = orders.map((order, i) =>
-//  composeMessage.call(order, i + 1)
-// );
+// const messages = orders.map((order, i) => composeMessage.call(order, i + 1));
 
 // console.log(messages);
 
@@ -180,10 +166,7 @@
 //   composeMessage.apply(order, [index + 1])
 // );
 
-
-
 //=============9=============
-
 
 // const pizzaPalace = {
 //   company: 'Pizza Palace',
@@ -204,10 +187,7 @@
 // const burgerShackComposer = composeMessage.bind(burgerShack);
 // const burgerShackMessage = burgerShackComposer('Поли');
 
-
-
 //=============10=============
-
 
 // const service = {
 //   mailingList: ['mango@mail.com', 'poly@hotmail.de', 'ajax@jmail.net'],
@@ -230,9 +210,9 @@
 // // Почта kiwi@mail.uk добавлена в рассылку.
 
 // console.log(service.mailingList);
-// /* ['mango@mail.com', 
-//     'poly@hotmail.de', 
-//     'ajax@jmail.net', 
+// /* ['mango@mail.com',
+//     'poly@hotmail.de',
+//     'ajax@jmail.net',
 //     'kiwi@mail.uk']*/
 
 // console.log(logAndInvokeAction('poly@hotmail.de', service.unsubscribe.bind(service)));
