@@ -285,16 +285,14 @@
 
 // function getProductPrice(productName) {
 //   // Пиши код ниже этой строки
-//   let price = 0;
+
 //   for (const product of products) {
 //     if (product.name === productName) {
-//       price = product.price;
+//       return product.price;
 //     }
 //   }
-//   if (price === 0){
-//     price = null;
-//   }
-//   return price;
+
+//   return null;
 //   // Пиши код выше этой строки
 // }
 

@@ -25,7 +25,6 @@
 //   console.log(`${key}: ${value}`);
 // }
 
-
 //з деструктуризацією
 
 // const key = 'mood';
@@ -58,11 +57,9 @@
 
 // console.log(countProps({}));
 
-// console.log(countProps({ name: 'Mango', age: 2 })); 
+// console.log(countProps({ name: 'Mango', age: 2 }));
 
 // console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }));
-
-
 
 //=======   Здадача 3   ========
 //перший варіант
@@ -87,7 +84,7 @@
 //     helen: 1,
 //     lorence: 99,
 //   }),
-// ); 
+// );
 
 // console.log(
 //   findBestEmployee({
@@ -95,7 +92,7 @@
 //     mango: 17,
 //     ajax: 4,
 //   }),
-// ); 
+// );
 
 // console.log(
 //   findBestEmployee({
@@ -104,8 +101,7 @@
 //     kiwi: 19,
 //     chelsy: 38,
 //   }),
-// ); 
-
+// );
 
 // //кращий варіант:
 
@@ -118,7 +114,7 @@
 //     if (max < entry[1]){
 //       max = entry[1];
 //       name = entry[0]
-//     } 
+//     }
 //   }
 //   return name;
 // };
@@ -152,27 +148,25 @@
 //   }),
 // ); // lux
 
-
-
 //і самий топовий варік з використанням деструктуризації
 
-// const findBestEmployee = function(employees) {
+// const findBestEmployee = function (employees) {
 //   let max = 0;
 //   let bestEmployee;
 //   const entries = Object.entries(employees);
 
 //   for (const [name, value] of entries) {
-//     if (max < value){
+//     if (max < value) {
 //       max = value;
 //       bestEmployee = name;
-//     } 
+//     }
 //   }
 //   return bestEmployee;
 // };
 
-// /*
-//  * Вызовы функции для проверки работоспособности твоей реализации.
-//  */
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
 // console.log(
 //   findBestEmployee({
 //     ann: 29,
@@ -210,7 +204,7 @@
 //   return total;
 // };
 
-// console.log(countTotalSalary({})); 
+// console.log(countTotalSalary({}));
 
 // console.log(
 //   countTotalSalary({
@@ -218,7 +212,7 @@
 //     poly: 150,
 //     alfred: 80,
 //   }),
-// ); 
+// );
 
 // console.log(
 //   countTotalSalary({
@@ -226,12 +220,9 @@
 //     lux: 50,
 //     chelsy: 150,
 //   }),
-//   ); 
-
-
+//   );
 
 //=======   Здадача 5   ========
-
 
 // const products = [
 //   { name: 'Радар', price: 1300, quantity: 4 },
@@ -252,16 +243,13 @@
 //   return values;
 // };
 
+// console.log(getAllPropValues(products, 'name'));
 
-// console.log(getAllPropValues(products, 'name')); 
+// console.log(getAllPropValues(products, 'quantity'));
 
-// console.log(getAllPropValues(products, 'quantity')); 
+// console.log(getAllPropValues(products, 'category'));
 
-// console.log(getAllPropValues(products, 'category')); 
-
-
-//=======   Здадача 6   ======== 
-
+//=======   Здадача 6   ========
 
 // const products = [
 //   { name: 'Радар', price: 1300, quantity: 4 },
@@ -289,13 +277,8 @@
 
 // console.log(calculateTotalPrice(products, 'Дроид')); // 2800
 
-
-
-
-
-//=======   Здадача 7  ======== ??? вебінар 7, прибл. 37хв, 1:48 і приблзно 1:54 
+//=======   Здадача 7  ======== ??? вебінар 7, прибл. 37хв, 1:48 і приблзно 1:54
 //веб.8 1:05хв
-
 
 // const Transaction = {
 //   DEPOSIT: 'deposit',
@@ -326,7 +309,7 @@
 
 //     return obj;
 //   },
-  
+
 //   /*
 //    * Метод отвечающий за добавление суммы к балансу.
 //    * Принимает сумму танзакции.
@@ -382,7 +365,7 @@
 //    */
 //   getTransactionTotal(type) {
 //     let total = 0;
-    
+
 //     for(const transaction of this.transactions) {
 //       if (transaction.type === type) {
 //         total += transaction.amount;
