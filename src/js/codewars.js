@@ -1249,3 +1249,22 @@ string of the second array appears in the first array.*/
 // ); // [2, 0, 1])
 // console.log(solve(['quick', 'brown', 'fox', 'is', 'quick'], ['abc'])); // [0])
 // //(el === element ? acc.push(el) : acc.push(0))
+
+//==========================
+/**Write a function named sumDigits which takes a number as input and returns the
+ * sum of the absolute value of each of the number's decimal digits./ */
+// function sumDigits(number) {
+//   const posNum = number < 0 ? number * -1 : number;
+//   return posNum
+//     .toString()
+//     .split('')
+//     .map(el => Number(el))
+//     .reduce((acc, value) => {
+//       acc += value;
+//       return acc;
+//     });
+// }
+
+// console.log(sumDigits(10)); // Returns 1
+// console.log(sumDigits(99)); // Returns 18
+// console.log(sumDigits(-32)); // Returns 5
