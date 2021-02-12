@@ -1268,3 +1268,208 @@ string of the second array appears in the first array.*/
 // console.log(sumDigits(10)); // Returns 1
 // console.log(sumDigits(99)); // Returns 18
 // console.log(sumDigits(-32)); // Returns 5
+
+//==========================
+
+/**Reversed Words
+ * Complete the solution so that it reverses all of the words within the string passed in./ */
+
+// function reverseWords(str) {
+//   return str.split(' ').reverse().join(' ');
+// }
+
+// console.log(
+//   reverseWords('The greatest victory is that which requires no battle'),
+// ); // should return "battle no requires which that is victory greatest The"
+
+//=====================================
+/**Return the average of the given array rounded down to its nearest integer./ */
+// function getAverage(marks) {
+//   return Math.floor(marks.reduce((acc, mark) => acc + mark) / marks.length);
+// }
+// console.log(getAverage([1, 2, 3, 4, 5])); //3
+
+//=============================================================
+/**Double Sort
+ * Simple enough this one - you will be given an array. The values in the array will 
+ * either be numbers or strings, or a mix of both. You will not get an empty array, nor a sparse one.
+
+Your job is to return a single array that has first the numbers sorted in ascending 
+order, followed by the strings sorted in alphabetic order. The values must maintain their original type.
+
+Note that numbers written as strings are strings and must be sorted with the other strings./ */
+
+// function dbSort(a) {
+//   let ascendingNumbers = a
+//     .filter(item => typeof item === 'number')
+//     .sort((a, b) => a - b);
+//   let alphabeticOrderStrings = a
+//     .filter(item => typeof item === 'string')
+//     .sort();
+//   return [...ascendingNumbers, ...alphabeticOrderStrings];
+// }
+// console.log(dbSort([6, 2, 3, 4, 5])); //[2, 3, 4, 5, 6]
+// console.log(dbSort(['Banana', 'Orange', 'Apple', 'Mango', 0, 2, 2])); //[0,2,2,"Apple","Banana","Mango","Orange"])
+// console.log(dbSort([3, 5, 5, 14, 32]));
+
+// //цыкавий варыант
+
+// const dbSort = ( arr ) => [...arr.filter(el => typeof el === 'number').sort((a, b)=> a - b)]
+//                           .concat([...arr.filter(el => typeof el === 'string').sort()])
+
+//================================================================
+/**Numbers to Objects
+ * You will be given an array of numbers.
+
+For each number in the array you will need to create an object.
+
+The object key will be the number, as a string. The value will be the corresponding character code, as a string.
+
+Return an array of the resulting objects.
+
+All inputs will be arrays of numbers. All character codes are valid lower case letters. The input array will not be empty./ */
+
+// function numObj(s) {
+//   return s.map(num => {
+//     const obj = {};
+//     const key = `${num}`;
+//     obj[key] = String.fromCharCode(num);
+
+//     return obj;
+//   });
+// }
+
+// console.log(numObj([118, 117, 120])); //[{'118':'v'}, {'117':'u'}, {'120':'x'}]);
+// console.log(numObj([101, 121, 110, 113, 113, 103])); //[{'101':'e'}, {'121':'y'}, {'110':'n'}, {'113':'q'}, {'113':'q'}, {'103':'g'}]);
+
+// //Самий популярний варіант
+
+// function numObj(s){
+//   return s.map(n => {
+//     return { [n]: String.fromCharCode(n) };
+//   });
+// }
+
+//==============================================
+/**Add property to every object in array/ */
+
+/**Your task is to add a new property usersAnswer to every object in the array questions.
+ * The value of usersAnswer should be set to null. The solution should work for array of any length./ */
+
+// var questions = [
+//   {
+//     question: "What's the currency of the USA?",
+//     choices: ['US dollar', 'Ruble', 'Horses', 'Gold'],
+//     corAnswer: 0,
+//   },
+//   {
+//     question: 'Where was the American Declaration of Independence signed?',
+//     choices: ['Philadelphia', 'At the bottom', "Frankie's Pub", 'China'],
+//     corAnswer: 0,
+//   },
+// ];
+
+// questions.map(question => (question.usersAnswer = null));
+// console.table(questions);
+
+//===============================================================
+/**Break camelCase/ */
+
+/**Complete the solution so that the function will break up camel
+ * casing, using a space between words./ */
+// complete the function
+// function solution(string) {
+//   return string.split('').reduce((acc, letter, i) => {
+//     return string.charAt(i) === string.charAt(i).toUpperCase()
+//       ? acc + ' ' + letter
+//       : acc + letter;
+//   });
+// }
+
+// console.log(solution('camelCasing')); //  ==  "camel Casing"
+
+//===============================================================
+/**Convert string to camel case/ */
+
+/**Complete the method/function so that it converts dash/underscore
+ * delimited words into camel casing. The first word within the output
+ * should be capitalized only if the original word was capitalized
+ * (known as Upper Camel Case, also often referred to as Pascal case)./ */
+
+// const toCamelCase = str =>
+//   str
+//     .split(/-|_/)
+//     .reduce((acc, word) => acc + word.charAt(0).toUpperCase() + word.slice(1));
+// // .filter(letter => letter !== '-' && letter !== '_')
+// // .join('');
+
+// console.log(toCamelCase('the-stealth-warrior')); // returns "theStealthWarrior"
+
+// console.log(toCamelCase('The_Stealth_Warrior')); // returns "TheStealthWarrior"
+
+//===============================================================
+/**Convert all the cases!/ */
+
+/**In this kata, you will make a function that converts between camelCase,
+ * snake_case, and kebab-case./ */
+
+//не завершено!!!!!!!!!!!!!!
+
+// function changeCase(identifier, targetCase) {
+
+//   if (targetCase === 'camel') {
+//     return identifier
+//       .split(/-|_/)
+//       .reduce(
+//         (acc, word) => acc + word.charAt(0).toUpperCase() + word.slice(1),
+//       );
+//   }
+
+//   if (targetCase === 'snake') {
+//     return identifier
+//       .split('')
+//       .reduce((acc, letter, i) => {
+//         return identifier.charAt(i) === identifier.charAt(i).toUpperCase()
+//           ? acc + '_' + letter
+//           : acc + letter;
+//       })
+//       .toLowerCase();
+//   }
+
+//   if (targetCase === 'kebab') {
+//     if (identifier.includes('-') && identifier.includes('_')) {
+//       return undefined;
+//     }
+
+//     if (identifier.includes('_')) {
+//       return identifier
+//         .split('')
+//         .map(letter => letter.replace('_', '-'))
+//         .join('');
+//     }
+
+//     return identifier
+//       .split('')
+//       .reduce((acc, letter, i) => {
+//         return identifier.charAt(i) === identifier.charAt(i).toUpperCase()
+//           ? acc + '-' + letter
+//           : acc + letter;
+//       })
+//       .toLowerCase();
+//   }
+// }
+
+// console.log(changeCase('snakeCase', 'snake'));
+// //('snake_case');
+// console.log(changeCase('some-lisp-name', 'camel'));
+// //"someLispName"
+// console.log(changeCase('map_to_all', 'kebab'));
+// //"map-to-all"
+// console.log(changeCase('doHTMLRequest', 'kebab'));
+// //('do-h-t-m-l-request');
+// console.log(changeCase('invalid-inPut_bad', 'kebab'));
+// //undefined;
+// console.log(changeCase('valid-input', 'huh???'));
+// //undefined;
+// console.log(changeCase('', 'camel'));
+// //('');
