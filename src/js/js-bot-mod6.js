@@ -113,7 +113,7 @@
 //       newArr.push(numbers[i]);
 //     }
 //   }
-//   console.log(newArr);
+
 //   return newArr;
 //   // Пиши код выше этой строки
 // }
@@ -271,7 +271,7 @@
 //===========23======================
 
 // // Пиши код ниже этой строки
-// const getInactiveUsers = (users) => {
+// const getInactiveUsers = users => {
 //   return users.filter(({ isActive }) => !isActive);
 // };
 // // Пиши код выше этой строки

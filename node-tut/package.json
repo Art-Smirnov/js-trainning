@@ -1,0 +1,19 @@
+{
+  "name": "node-tut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+
+  }
+}

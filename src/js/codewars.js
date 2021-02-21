@@ -1416,7 +1416,6 @@ All inputs will be arrays of numbers. All character codes are valid lower case l
 //не завершено!!!!!!!!!!!!!!
 
 // function changeCase(identifier, targetCase) {
-
 //   if (targetCase === 'camel') {
 //     return identifier
 //       .split(/-|_/)
@@ -1473,3 +1472,469 @@ All inputs will be arrays of numbers. All character codes are valid lower case l
 // //undefined;
 // console.log(changeCase('', 'camel'));
 // //('');
+
+//===============================================
+/**Testing 1-2-3/ */
+
+/**Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+
+Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+The numbering starts at 1. The format is n: string. Notice the colon and space in between./ */
+
+// var number = function (array) {
+//   return array.map((item, i) => `${i + 1}: ${item}`);
+// };
+
+// console.log(number([])); // => []
+// console.log(number(['a', 'b', 'c'])); // => ["1: a", "2: b", "3: c"]
+
+/**[BF] To UpperCase/ */
+
+//якісь непонятки з кодворсом
+
+// function runBF(string) {
+//   return string.split('').reduce((acc, letter, i) => {
+//     return string.charAt(i) !== string.charAt(i).toUpperCase()
+//       ? acc + letter.toUpperCase()
+//       : acc + letter;
+//   });
+// }
+
+// console.log(runBF('Hello'));
+
+//================================================================
+
+/**Rearange Number to Get its Maximum/ */
+
+/**Create function that takes one positive three digit integer and
+ * rearranges its digits to get maximum possible number. Assume that
+ * argument is integer. Return null (nil for ruby) if argument is not valid./ */
+
+// var maxRedigit = function (...num) {
+//   if (
+//     num.toString().split('').includes('-') ||
+//     num.join('') === '0' ||
+//     num.toString().split('').length <= 2 ||
+//     num.toString().split('').length > 3
+//   ) {
+//     return null;
+//   }
+
+//   return Number(
+//     [...num]
+//       .toString()
+//       .split('')
+//       .sort((a, b) => b - a)
+//       .join(''),
+//   );
+// };
+
+// console.log(maxRedigit('83-3'));
+// console.log(maxRedigit('123'));
+// console.log(maxRedigit(99));
+// console.log(maxRedigit(1110));
+
+// //найкращий варіант
+
+// var maxRedigit = function (num) {
+//   if (num < 100 || num > 999) return null;
+//   return +num
+//     .toString()
+//     .split('')
+//     .sort((a, b) => b - a)
+//     .join('');
+// };
+
+/**Where my anagrams at? */
+
+/**What is an anagram? Well, two words are anagrams of each other if they
+ * both contain the same letters. */
+
+/**Write a function that will find all the anagrams of a word from a list.
+ * You will be given two inputs a word and an array with words. You should
+ * return an array of all the anagrams or an empty array if there are none. */
+
+// function anagrams(word, words) {
+//   return words.filter(
+//     w => w.split('').sort().join('') === word.split('').sort().join(''),
+//   );
+// }
+// console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada'])); // => ['aabb', 'bbaa']
+
+// console.log(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer'])); // => ['carer', 'racer']
+
+// console.log(anagrams('laser', ['lazing', 'lazy', 'lacer'])); //=> []
+
+//===============================
+/**Where is my parent!?(cry) */
+/**Place all people in alphabetical order where Mothers are followed by their children, i.e. "aAbaBb" => "AaaBbb". */
+
+// function findChildren(dancingBrigade) {
+//   return dancingBrigade
+//     .toLowerCase()
+//     .split('')
+//     .sort()
+//     .map((l, i, arr) => (l !== arr[i - 1] ? l.toUpperCase() : l))
+//     .join('');
+// }
+
+// console.log(findChildren('beeeEBb'));
+// console.log(findChildren('uwwWUueEe'));
+
+//====================================================
+/**Anagram difference */
+
+/**Given two words, how many letters do you have to remove from them to make them anagrams? */
+
+//не завершено
+
+// function anagramDifference(w1, w2) {
+//   let firstWordsLettersMismatch = w1.split('').reduce((acc, letter) => {
+//     if (!w2.split('').includes(letter)) {
+//       acc += 1;
+//     }
+//     return acc;
+//   }, 0);
+
+//   const n = w1.split('').filter((letter) => letter !== );
+
+//   const secondWordsLettersMismatch = w2.split('').reduce((acc, letter) => {
+//     if (!w1.split('').includes(letter)) {
+//       acc += 1;
+//     }
+//     return acc;
+//   }, 0);
+//   console.log(firstWordsLettersMismatch);
+//   console.log(secondWordsLettersMismatch.toString().split('').length);
+
+//   return firstWordsLettersMismatch + secondWordsLettersMismatch;
+// }
+// // console.log(anagramDifference('ab', 'cd')); //4
+// // console.log(anagramDifference('', '')); //0
+// // console.log(anagramDifference('d', '')); //1
+// console.log(anagramDifference('aab', 'a')); //2
+
+//================================================================
+
+/**Decrypt this school cipher */
+
+/**School students Alice and Bob send messages to each other. 
+ * To ensure that their messages are not readable by teachers 
+ * they encrypt text with simple algorythm. Every message contains 
+ * only latin letters (lowercase and uppercase), digits from 0 to 9 and space symbol.
+
+So, the encryption algorythm is:
+
+Reverse the whole string.
+Replace every letter with it ASCII code in quotes (A to '65', h to '104' and so on).
+Insert digits and spaces as is. */
+
+//не завершено
+
+// const decrypt = str => {
+//   return str
+//     .split("'")
+//     .filter(e => e !== '')
+//     .map(e => {
+//       console.log(e.charAt(0));
+//     });
+// };
+
+// console.log(decrypt("'101''99''105''108''65'")); // "Alice"
+// console.log(decrypt('30 71')); // "17 03"
+
+//================================================================
+
+/**Pete, the baker */
+
+/**Write a function cakes(), which takes the recipe (object) and the available
+ * ingredients (also an object) and returns the maximum number of cakes Pete can
+ *  bake (integer). For simplicity there are no units for the amounts (e.g. 1
+ * lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not
+ * present in the objects, can be considered as 0. */
+
+// function cakes(recipe, available) {
+//   let result = [];
+//   return Object.keys(recipe).reduce((acc, ingredient, i) => {
+//     if (!Object.keys(available).includes(ingredient)) {
+//       return 0;
+//     }
+//     result.push(available[ingredient] / recipe[ingredient]);
+//     return Math.floor(Math.min(...result));
+//   }, 0);
+// }
+
+// console.log(
+//   cakes(
+//     { flour: 500, sugar: 200, eggs: 1 },
+//     { flour: 1200, sugar: 1200, eggs: 5, milk: 200 },
+//   ),
+// ); //2
+
+// console.log(
+//   cakes(
+//     { apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 },
+//     { sugar: 500, flour: 2000, milk: 2000 },
+//   ),
+// ); //0
+
+//===============================
+
+/**Remove All The Marked Elements of a List */
+
+/**Define a method/function that removes from a given array of integers
+ * all the values contained in a second array. */
+
+// const remove = function (integer_list, values_list) {
+//   return integer_list.filter(num => !values_list.includes(num));
+// };
+
+// const integer_list = [1, 1, 2, 3, 1, 2, 3, 4];
+// const values_list = [1, 3];
+// console.log(remove(integer_list, values_list)); // [2, 2, 4]);
+
+//======================================================
+/**Simple Substitution Cipher Helper */
+
+/**A simple substitution cipher replaces one character from an alphabet
+ * with a character from an alternate alphabet, where each character's position
+ * in an alphabet is mapped to the alternate alphabet for encoding or decoding. */
+
+// function SubstitutionCipher(abc1, abc2) {
+//   this.encode = function (str) {
+//     return str.split('').reduce((acc, letter) => {
+//       if (!abc2.includes(letter)) {
+//         return (acc += letter);
+//       }
+
+//       return (acc += abc2[abc1.indexOf(letter)]);
+//     }, '');
+//   };
+//   this.decode = function (str) {
+//     return str.split('').reduce((acc, letter) => {
+//       if (!abc1.includes(letter)) {
+//         return (acc += letter);
+//       }
+//       return (acc += abc1[abc2.indexOf(letter)]);
+//     }, '');
+//   };
+// }
+
+// var abc1 = 'abcdefghijklmnopqrstuvwxyz';
+// var abc2 = 'etaoinshrdlucmfwypvbgkjqxz';
+
+// var sub = new SubstitutionCipher(abc1, abc2);
+// console.log(sub.encode('abc')); // => "eta"
+// console.log(sub.encode('xyz')); // => "qxz"
+// console.log(sub.encode('aeiou')); // => "eirfg"
+// console.log(sub.encode('aeiou8')); // => "eirfg8"
+
+// console.log(sub.decode('eta')); // => "abc"
+// console.log(sub.decode('qxz')); // => "xyz"
+// console.log(sub.decode('eirfg')); // => "aeiou"
+// console.log(sub.decode('eir_fg')); // => "aei_ou"
+
+// //most popular solution
+// function SubstitutionCipher(f, t) {
+//   this.encode = function (s) {
+//     return s.split('').map(function(_){ return t[f.indexOf(_)] || _; }).join('');
+//   }
+//   this.decode = function (s) {
+//     return s.split('').map(function(_){ return f[t.indexOf(_)] || _; }).join('');
+//   }
+// }
+
+//==========================================================================
+
+/**Caesar Cipher Helper */
+
+/**Write a class that, when given a string, will return an uppercase string with each
+ * letter shifted forward in the alphabet by however many spots the cipher was initialized to. */
+
+//НЕ ЗАВЕРШЕНО!!!!!!!!!!!!!!!!!!
+
+// const CaesarCipher = function (shift) {
+//   const a = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz';
+//   this.encode = function (str) {
+//     return str
+//       .toLowerCase()
+//       .split('')
+//       .map(el => a.split('')[a.indexOf(el) + shift])
+//       .join('')
+//       .toUpperCase();
+//   };
+
+//   this.decode = function (str) {
+//     return str
+//       .toLowerCase()
+//       .split('')
+//       .map(el => a.split('')[a.indexOf(el) - shift])
+//       .join('')
+//       .toUpperCase();
+//   };
+// };
+
+// var c = new CaesarCipher(5);
+// console.log(c.encode('Codewars')); // returns 'HTIJBFWX'
+// console.log(c.decode('BFKKQJX')); // returns 'WAFFLES'
+
+//===============================
+/**Pete, the baker (part 2) */
+
+/**Pete is now mixing the cake mixture. He has the recipe, containing 
+ * the required ingredients for one cake. He also might have added some 
+ * of the ingredients already, but something is missing. Can you help 
+ * him to find out, what he has to add to the mixture?
+
+Requirements:
+
+Pete only wants to bake whole cakes. And ingredients, that were added
+ once to the mixture, can't be removed from that. That means: if he 
+ already added the amount of flour for 2.8 cakes, he needs to add at 
+ least the amount of flour for 0.2 cakes, in order to have enough flour for 3 cakes.
+If Pete already added all ingredients for an integer amount of cakes,
+ you don't need to add anything, just return an empty hash then.
+If Pete didn't add any ingredients at all, you need to add all ingredients
+ for exactly one cake.
+For simplicity we ignore all units and just concentrate on the numbers. E.g.
+ 250g of flour is simply 250 (units) of flour and 1 lb of sugar is also simply 1 (unit) of sugar.
+Ingredients, which don't have to be added to the mixture (missing amount = 
+  0), must not be present in the result. */
+
+// не завершено!!!!!!!!!!!!!!!!
+
+// var recipe = { flour: 200, eggs: 1, sugar: 100 };
+
+// function getMissingIngredients(recipe, added) {
+//   console.log(added);
+//   if (Object.keys(added).length === 0) {
+//     return recipe;
+//   }
+
+// }
+
+// console.log(getMissingIngredients(recipe, { flour: 50, eggs: 1 })); // must return {flour: 150, sugar: 100}
+// console.log(getMissingIngredients(recipe, {})); // must return {flour: 200, eggs: 1, sugar: 100}
+// console.log(getMissingIngredients(recipe, { flour: 500, sugar: 200 })); // must return {flour: 100, eggs: 3, sugar: 100}
+
+/**Stop gninnipS My sdroW! */
+
+/**Write a function that takes in a string of one or more words, and returns the same string,
+ * but with all five or more letter words reversed (Just like the name of this Kata). Strings
+ * passed in will consist of only letters and spaces. Spaces will be included only when more
+ * than one word is present. */
+
+// function spinWords(str) {
+//   return str
+//     .split(' ')
+//     .map(word => (word.length < 5 ? word : word.split('').reverse().join('')))
+//     .join(' ');
+// }
+
+// console.log(spinWords('Hey fellow warriors')); // // => returns "Hey wollef sroirraw"
+
+// console.log(spinWords('This is a test')); //=> returns "This is a test"
+
+// console.log(spinWords('This is another test')); //=> returns "This is rehtona test"
+
+//========================================
+/**Scramblies */
+
+/**Complete the function scramble(str1, str2) that returns true if a portion of str1 characters
+ * can be rearranged to match str2, otherwise returns false. */
+
+//не завершено!!!!!!!!!!!!!
+
+// function scramble(str1, str2) {
+//   return str2.split('').reduce((acc, letter) => {
+//     let arr = str1.split('');
+//     if()
+//   }, '');
+// }
+
+// console.log(scramble('rkqodlw', 'world')); // ==> True
+// console.log(scramble('rkqodlw', 'worldd')); // ==> false
+// console.log(scramble('cedewaraaossoqqyt', 'codewars')); //==> True
+// console.log(scramble('katas', 'steak')); //==> False
+
+/**Switcheroo */
+
+/**Given a string made up of letters a, b, and/or c, switch the position
+ *  of letters a and b (change a to b and vice versa). Leave any incidence of c untouched. */
+
+// function switcheroo(x) {
+//   return x
+//     .split('')
+//     .map(letter => {
+//       if (letter === 'a') return 'b';
+
+//       if (letter === 'b') return 'a';
+
+//       return letter;
+//     })
+//     .join('');
+// }
+
+// console.log(switcheroo('abc')); // 'bac'
+
+//=====================================================
+
+/**Divide and Conquer */
+
+/**Given a mixed array of number and string representations of
+ * integers, add up the string integers and subtract this from the total of the non-string integers. */
+
+// function divCon(x) {
+//   let stringTotal = 0;
+//   let numberTotal = 0;
+//   return x.reduce((acc, el) => {
+//     if (typeof el === 'number') {
+//       numberTotal += el;
+//     }
+//     if (typeof el === 'string') {
+//       stringTotal += Number(el);
+//     }
+
+//     return numberTotal - stringTotal;
+//   }, 0);
+// }
+
+// console.log(divCon([9, 3, '7', '3'])); // 2
+
+// //найкращтй варіант
+
+// function divCon(x) {
+//   return x.reduce(
+//     (acc, cur) => (typeof cur === 'number' ? acc + cur : acc - Number(cur)),
+//     0,
+//   );
+// }
+
+//=============================================================
+/**Spoonerize Me */
+
+/*/Your task is to create a function that takes a string of two words, separated
+ by a space: words and returns a spoonerism of those words in a string,*/
+
+//незавершено
+// function spoonerize(...words) {
+//   console.log(words);
+//   const arr = words.split(' ');
+//   arr[0].split('')[0] = arr[1].split('')[0];
+
+//   // return words.split(' ').map((word, i) => {
+//   //   i;
+//   // });
+// }
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  get info() {
+    return '${this.name} age is ${this.age}';
+  }
+}
+var john = new Person('john', 34);
+Test.assertEquals(john.info, 'johns age is 34');
