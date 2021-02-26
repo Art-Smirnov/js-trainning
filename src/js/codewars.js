@@ -1962,3 +1962,20 @@ Moving Zeros To The End */
 //   return filtered;
 // };
 // console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, 'a'])); // returns[false,1,1,2,1,3,"a",0,0]
+
+/**Find the odd int */
+
+/**Given an array of integers, find the one that appears an odd number of times.
+
+There will always be only one integer that appears an odd number of times. */
+
+// function findOdd(A) {
+//   return A.find((num, i, arr) => arr.filter(x => x === num).length % 2 !== 0);
+// }
+
+// console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])); //5
+
+//найкращий варіант
+// const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+
+//===============================================================
