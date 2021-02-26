@@ -1929,3 +1929,36 @@ Ingredients, which don't have to be added to the mixture (missing amount =
 // }
 
 //========================================================
+/**7 kyu
+Odd or Even? */
+
+/**Given a list of integers, determine whether the sum of its elements is odd or even.
+
+Give your answer as a string matching "odd" or "even".
+
+If the input array is empty consider it as: [0] (array with a zero). */
+//не завершено
+// function oddOrEven(array) {
+//   if (array.length === 0) {
+//     return 'even';
+//   }
+//   return array.reduce((sum, num) => sum + num, 0) % 2 === 0 ? 'even' : 'odd';
+// }
+// console.log(oddOrEven([-1023, 1, -2])); //even
+// console.log(oddOrEven([])); //even
+
+/**5 kyu
+Moving Zeros To The End */
+
+/**Write an algorithm that takes an array and moves all of the zeros to the end,
+ *  preserving the order of the other elements. */
+
+// var moveZeros = function (arr) {
+//   const filtered = arr.filter(x => x !== 0);
+//   const difference = arr.length - filtered.length;
+//   for (let i = 0; i < difference; i++) {
+//     filtered.push(0);
+//   }
+//   return filtered;
+// };
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, 'a'])); // returns[false,1,1,2,1,3,"a",0,0]
