@@ -1979,3 +1979,58 @@ There will always be only one integer that appears an odd number of times. */
 // const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
 
 //===============================================================
+
+/**6 kyu
+Find The Parity Outlier */
+
+/**You are given an array (which will have a length of at least 3, but could
+ * be very large) containing integers. The array is either entirely comprised
+ * of odd integers or entirely comprised of even integers except for a single
+ * integer N. Write a method that takes the array as an argument and returns
+ * this "outlier" N. */
+
+// function findOutlier(integers) {
+//   return integers.filter(num => num % 2 === 0).length === 1
+//     ? +integers.filter(num => num % 2 === 0).join('')
+//     : +integers.filter(num => num % 2 !== 0).join('');
+// }
+// console.log(findOutlier([0, 1, 2])); // 1)
+// console.log(findOutlier([1, 2, 3])); //, 2)
+// console.log(findOutlier([2, 6, 8, 10, 3])); //, 3)
+// console.log(findOutlier([0, 0, 3, 0, 0])); //, 3)
+// console.log(findOutlier([1, 1, 0, 1, 1])); //, 0)
+
+//===============================================================
+
+/**6 kyu
+Counting Duplicates */
+// function duplicateCount(text) {
+//   const result = text
+//     .toLowerCase()
+//     .split('')
+//     .filter((letter, index, array) => array.indexOf(letter) !== index);
+
+//   const unique = new Set([...result]);
+//   return [...unique].length;
+// }
+// console.log(duplicateCount('')); // 0);
+// console.log(duplicateCount('abcde')); // 0);
+// console.log(duplicateCount('aabbcde')); // 2);
+// console.log(duplicateCount('aabBcde')); // 2,"should ignore case");
+// console.log(duplicateCount('Indivisibility')); // 1)
+// console.log(duplicateCount('Indivisibilities')); // 2, "characters may not be adjacent")
+
+function iqTest(numbers) {
+  return numbers.split(' ').filter((num, i, arr) => num % 2 === 0).length === 1
+    ? arr.indexOf(num) + 1
+    : numbers
+        .split(' ')
+        .reduce(
+          (acc, num, i, arr) =>
+            num % 2 !== 0 ? (acc = arr.indexOf(num) + 1) : acc,
+          0,
+        );
+}
+
+console.log(iqTest('2 4 7 8 10')); //3);
+console.log(iqTest('1 2 2')); // 1);
