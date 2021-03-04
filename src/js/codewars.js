@@ -2020,17 +2020,72 @@ Counting Duplicates */
 // console.log(duplicateCount('Indivisibility')); // 1)
 // console.log(duplicateCount('Indivisibilities')); // 2, "characters may not be adjacent")
 
-function iqTest(numbers) {
-  return numbers.split(' ').filter((num, i, arr) => num % 2 === 0).length === 1
-    ? arr.indexOf(num) + 1
-    : numbers
-        .split(' ')
-        .reduce(
-          (acc, num, i, arr) =>
-            num % 2 !== 0 ? (acc = arr.indexOf(num) + 1) : acc,
-          0,
-        );
-}
+/**6 kyu
+Unique In Order */
 
-console.log(iqTest('2 4 7 8 10')); //3);
-console.log(iqTest('1 2 2')); // 1);
+// var uniqueInOrder = function (iterable) {
+//   const result = [];
+//   const array = [...iterable].reduce((acc, item, index, array) => {
+//     return item !== array[index + 1] ? result.push(item) : acc;
+//   }, 0);
+
+//   return result;
+// };
+// console.log(uniqueInOrder('AAAABBBCCDAABBB')); // ['A', 'B', 'C', 'D', 'A', 'B']
+// console.log(uniqueInOrder('ABBCcAD')); // ['A', 'B', 'C', 'c', 'A', 'D']
+// console.log(uniqueInOrder([1, 2, 2, 3, 3])); // [1,2,3]
+
+//========================================================
+
+/**6 kyu
+Extract the IDs from the data set */
+
+// var data = {
+//   id: 1,
+//   items: [{ id: 2 }, { id: 3, items: [{ id: 4 }, { id: 5 }] }],
+// };
+
+// function extractIds(data) {
+//   const result = [];
+//   getId(data);
+
+//   function getId(o) {
+//     for (let prop in o) {
+//       if (typeof o[prop] === 'object') {
+//         getId(o[prop]);
+//       }
+//       if (prop === 'id') {
+//         result.push(o[prop]);
+//       }
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(extractIds(data));
+
+//==================================================
+function isValidIP(str) {
+  console.log(str.split('.'));
+  return str.split('.').length !== 4
+    ? false
+    : str.split('.').every(el => Number(el) >= 0 && Number(el) <= 255);
+}
+console.log(isValidIP('0.0.0.0')); // true);
+console.log(isValidIP('12.255.56.1')); // true);
+console.log(isValidIP('137.255.156.100')); // true);
+
+console.log(isValidIP('')); // false);
+console.log(isValidIP('abc.def.ghi.jkl')); // false);
+console.log(isValidIP('123.456.789.0')); // false);
+console.log(isValidIP('12.34.56')); // false);
+console.log(isValidIP('01.02.03.04')); // false);
+console.log(isValidIP('256.1.2.3')); // false);
+console.log(isValidIP('1.2.3.4.5')); // false);
+console.log(isValidIP('123,45,67,89')); // false);
+console.log(isValidIP('1e0.1e1.1e2.2e2')); // false);
+console.log(isValidIP(' 1.2.3.4')); // false);
+console.log(isValidIP('1.2.3.4 ')); // false);
+console.log(isValidIP('12.34.56.-7')); // false);
+console.log(isValidIP('1.2.3.4\n')); // false);
+console.log(isValidIP('\n1.2.3.4')); // false);
