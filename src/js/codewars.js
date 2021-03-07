@@ -2090,24 +2090,111 @@ Extract the IDs from the data set */
 // console.log(isValidIP('1.2.3.4\n')); // false);
 // console.log(isValidIP('\n1.2.3.4')); // false);
 
-const date = new Date();
+//=======================================================
 
-// проверим количество мс с с начала эпохи Unix
-console.log(`Время в мс с начала эпохи Unix: ${date.getTime()}`);
-// "Время в мс с начала эпохи Unix: ....  значения будут меняться :-)
-// "Время в мс с начала эпохи Unix: 1504721892483"
+/**6 kyu
+WeIrD StRiNg CaSe */
 
-let result = 'Date: ';
-result += date.getFullYear() + '/'; // год
-result += date.getMonth() + '/'; // месяц, начиная с 0
-result += date.getDate() + '. Day of week: '; // день недели, начиная с 1
-result += date.getDay() + '.'; // день , начиная с 0
+// function toWeirdCase(string) {
+//   return string
+//     .split(' ')
+//     .map(word =>
+//       word
+//         .split('')
+//         .map((letter, i) =>
+//           i % 2 === 0 ? letter.toUpperCase() : letter.toLowerCase(),
+//         )
+//         .join(''),
+//     )
+//     .join(' ');
+// }
+// console.log(toWeirdCase('String')); //=> returns "StRiNg"
+// console.log(toWeirdCase('Weird string case')); //=> returns "WeIrD StRiNg CaSe"
 
-result += ' Time: ' + date.getHours() + ':'; // часы
-result += date.getMinutes() + ':'; // минуты
-result += date.getSeconds() + ':'; // секунды
-result += date.getMilliseconds() + ''; // милисекунды
+//=============================================================
 
-// строка должна показать текущее время и дату
-console.log(result); // "Date: 2017/8/6. Day of week: 3. Time: 21:18:12:483"
-// ...  значения будут меняться :-)
+/**5 kyu
+Extract the domain name from a URL */
+
+// function domainName(url) {
+//   return url
+//     .split('//')
+//     .join('')
+//     .split('.com')
+//     .join('')
+//     .split('/')
+//     .join('')
+//     .split('http:')
+//     .join('')
+//     .split('https:')
+//     .join('')
+//     .split('www.')
+//     .join('')
+//     .split('kata')
+//     .join('')
+//     .split('users')
+//     .join('')
+//     .split('error')
+//     .join('')
+//     .split('.')[0];
+// }
+// console.log(domainName('http://github.com/carbonfive/raygun')); // "github"
+// console.log(domainName('http://www.zombie-bites.com')); // "zombie-bites"
+// console.log(domainName('https://www.cnet.com')); // "cnet"
+
+//==============================================================
+
+/**6 kyu
+Magic Highschool: Your first potion */
+
+//хз шо нетак
+
+// function getIngredients(recipes, final) {
+//   return recipes
+//     .find(({ result }) => result === final)
+//     .ingredients.reduce((acc, item) => {
+//       console.log();
+//       const k = item[0];
+//       return (acc = {
+//         ...acc,
+//         [k]: item[1],
+//       });
+//     }, {});
+// }
+
+// var recipes = [
+//   {
+//     ingredients: [
+//       ['troll nail', 2],
+//       ['dewdrop', 4],
+//     ],
+//     result: 'foot-smelling potion',
+//   },
+//   {
+//     ingredients: [
+//       ['foot-smelling potion', 3],
+//       ['siren teardrop', 1],
+//     ],
+//     result: 'invisibility potion',
+//   },
+//   {
+//     ingredients: [
+//       ['reindeer hair', 2],
+//       ['pine essence', 1],
+//       ['moonshine essence', 2],
+//     ],
+//     result: 'winterheat potion',
+//   },
+//   {
+//     ingredients: [
+//       ['pine resin', 3],
+//       ['pure alcohol', 2],
+//     ],
+//     result: 'pine essence',
+//   },
+// ];
+
+// console.log(getIngredients(recipes, 'invisibility potion')); // {"dewdrop": 12, "troll nail": 6, "siren teardrop": 1}, "Failed brewing an Invisibility Potion");
+// console.log(getIngredients(recipes, 'pine essence')); // {"pine resin": 3, "pure alcohol": 2}, "Failed brewing some pine essence");
+
+//===========================================================
