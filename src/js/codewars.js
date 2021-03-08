@@ -2198,3 +2198,42 @@ Magic Highschool: Your first potion */
 // console.log(getIngredients(recipes, 'pine essence')); // {"pine resin": 3, "pure alcohol": 2}, "Failed brewing some pine essence");
 
 //===========================================================
+/**6 kyu
+Replace With Alphabet Position */
+
+// function alphabetPosition(text) {
+//   const alphabet = [...Array(26)].map((q, w) => String.fromCharCode(w + 97));
+//   return text
+//     .replace(/ /g, '')
+//     .replace(/'/g, '')
+//     .replace(/\./g, '')
+//     .toLowerCase()
+//     .split('')
+//     .filter(letter => alphabet.includes(letter))
+//     .map(letter => alphabet.indexOf(letter) + 1).join` `;
+// }
+
+// console.log(alphabetPosition("The sunset sets at twelve o' clock.")); // "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11");
+// console.log(alphabetPosition('The narwhal bacons at midnight.')); // "20 8 5 14 1 18 23 8 1 12 2 1 3 15 14 19 1 20 13 9 4 14 9 7 8 20");
+// console.log(alphabetPosition('w_r7i@*/')); // '23 18 9'
+
+//====================================================================
+/**6 kyu
+Equal Sides Of An Array */
+
+// function findEvenIndex(arr) {
+//   return arr.reduce((acc, num, index, array) => {
+//     if (
+//       array.slice(0, index).reduce((a, b) => a + b, 0) ===
+//       array.slice(index + 1).reduce((a, b) => a + b, 0)
+//     ) {
+//       acc = index;
+//     }
+//     return acc;
+//   }, -1);
+// }
+
+// console.log(findEvenIndex([1, 2, 3, 4, 3, 2, 1])); //3, "The array was: [1,2,3,4,3,2,1] \n");
+// console.log(findEvenIndex([1, 100, 50, -51, 1, 1])); //1, "The array was: [1,100,50,-51,1,1] \n");
+// console.log(findEvenIndex([1, 2, 3, 4, 5, 6])); //-1, "The array was: [1,2,3,4,5,6] \n");
+// console.log(findEvenIndex([20, 10, 30, 10, 10, 15, 35])); //3, "The array was: [20,10,30,10,10,15,35] \n");
