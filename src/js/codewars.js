@@ -2237,3 +2237,288 @@ Equal Sides Of An Array */
 // console.log(findEvenIndex([1, 100, 50, -51, 1, 1])); //1, "The array was: [1,100,50,-51,1,1] \n");
 // console.log(findEvenIndex([1, 2, 3, 4, 5, 6])); //-1, "The array was: [1,2,3,4,5,6] \n");
 // console.log(findEvenIndex([20, 10, 30, 10, 10, 15, 35])); //3, "The array was: [20,10,30,10,10,15,35] \n");
+
+/**6 kyu
+Consecutive strings */
+
+//хз що нетак
+
+// function longestConsec(strarr, k) {
+//   if (strarr.length === 0 || k > strarr.length || k <= 0) return '';
+//   const arr = [];
+//   for (let i = 0; i < strarr.length - k + 1; i++) {
+//     const concWord = [...strarr].splice(i, k).join('');
+//     arr.push(concWord);
+//   }
+
+//   return arr.sort((a, b) => b.length - a.length)[0];
+//   // let firstLongestWrd = '';
+//   // console.log(arr);
+//   // for (let i = arr.length - 1; i >= 0; i--) {
+//   //   if (arr[i].length >= firstLongestWrd.length) {
+//   //     firstLongestWrd = arr[i];
+//   //   }
+//   // }
+//   // return firstLongestWrd;
+// }
+
+// console.log(
+//   longestConsec(['tree', 'foling', 'trashy', 'blue', 'abcdef', 'uvwxyz'], 2),
+// ); // "folingtrashy")
+// console.log(
+//   longestConsec(
+//     [
+//       'ejjjjmmtthh',
+//       'zxxuueeg',
+//       'aanlljrrrxx',
+//       'dqqqaaabbb',
+//       'oocccffuucccjjjkkkjyyyeehh',
+//     ],
+//     1,
+//   ),
+// ); // "oocccffuucccjjjkkkjyyyeehh")
+// console.log(longestConsec([], 3)); // "")
+// console.log(
+//   longestConsec(
+//     [
+//       'itvayloxrp',
+//       'wkppqsztdkmvcuwvereiupccauycnjutlv',
+//       'vweqilsfytihvrzlaodfixoyxvyuyvgpck',
+//     ],
+//     2,
+//   ),
+// ); // "wkppqsztdkmvcuwvereiupccauycnjutlvvweqilsfytihvrzlaodfixoyxvyuyvgpck")
+// console.log(
+//   longestConsec(['wlwsasphmxx', 'owiaxujylentrklctozmymu', 'wpgozvxxiu'], 2),
+// ); // "wlwsasphmxxowiaxujylentrklctozmymu")
+// console.log(
+//   longestConsec(['zone', 'abigail', 'theta', 'form', 'libe', 'zas'], -2),
+//   '',
+// );
+// console.log(longestConsec(['it', 'wkppv', 'ixoyx', '3452', 'zzzzzzzzzzzz'], 3)); // "ixoyx3452zzzzzzzzzzzz")
+// console.log(
+//   longestConsec(['it', 'wkppv', 'ixoyx', '3452', 'zzzzzzzzzzzz'], 15),
+// ); // "")
+// console.log(longestConsec(['it', 'wkppv', 'ixoyx', '3452', 'zzzzzzzzzzzz'], 0)); // "")
+
+//================================================================
+
+/**6 kyu
+Find the unique number */
+
+// function findUniq(arr) {
+//   return +arr
+//     .sort()
+//     .filter((item, i) => !(arr[i] == arr[i + 1] || arr[i - 1] == arr[i]))
+//     .join('');
+// }
+// console.log(findUniq([0, 1, 0])); // 1);
+// console.log(findUniq([1, 1, 1, 2, 1, 1])); // 2);
+// console.log(findUniq([3, 10, 3, 3, 3])); // 10);
+
+//====================================================================
+/**6 kyu
+Count the smiley faces! */
+
+// function countSmileys(arr) {
+//   if (arr.length == 0) return 0;
+
+//   return arr.reduce((acc, item) => {
+//     if (item.length === 2) {
+//       const validEyes = item.split('')[0] === ':' || item.split('')[0] === ';';
+//       const validSmile = item.split('')[1] === ')' || item.split('')[1] === 'D';
+//       if (validEyes && validSmile) {
+//         acc += 1;
+//       }
+//     }
+//     if (item.length === 3) {
+//       const validEyes = item.split('')[0] === ':' || item.split('')[0] === ';';
+//       const validSmile = item.split('')[2] === ')' || item.split('')[2] === 'D';
+//       const validNose = item.split('')[1] === '-' || item.split('')[1] === '~';
+//       if (validEyes && validSmile && validNose) {
+//         acc += 1;
+//       }
+//     }
+
+//     return acc;
+//   }, 0);
+// }
+
+// console.log(countSmileys([])); // 0);
+// console.log(countSmileys([':D', ':~)', ';~D', ':)'])); // 4);
+// console.log(countSmileys([':)', ':(', ':D', ':O', ':;'])); // 2);
+// console.log(countSmileys([';]', ':[', ';*', ':$', ';-D'])); // 1);
+
+//=================================================================
+/**6 kyu
+Split Strings */
+// function solution(str) {
+//   const result = [];
+//   for (let i = 0; i < str.length; i += 2) {
+//     const l = str[i + 1] === undefined ? '_' : str[i + 1];
+
+//     result.push(str[i] + l);
+//   }
+//   return result;
+// }
+
+// console.log(solution('abcdef')); // ["ab", "cd", "ef"]);
+// console.log(solution('abcdefg')); // ["ab", "cd", "ef", "g_"]);
+// console.log(solution('')); // []);
+
+//================================================================
+/**6 kyu
+Valid Phone Number */
+
+// function validPhoneNumber(phoneNumber) {
+//   const arr = phoneNumber.split('');
+//   if (
+//     arr[0] === '(' &&
+//     arr[4] === ')' &&
+//     arr[5] === ' ' &&
+//     arr[9] === '-' &&
+//     phoneNumber.length === 14
+//   ) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// console.log(validPhoneNumber('(123) 456-7890')); // true);
+// console.log(validPhoneNumber('(1111)555 2345')); // false);
+// console.log(validPhoneNumber('(098) 123 4567')); // false);
+
+//==============================================================
+/**Extract last names of people named Michael */
+
+// function getMichaelLastName(inputText) {
+//   return inputText
+//     .replace(/[.,?-]/g, '')
+//     .split(' ')
+//     .reduce((acc, word, i, arr) => {
+//       if (
+//         word === 'Michael' &&
+//         arr[i + 1].charAt(0) === arr[i + 1].charAt(0).toUpperCase()
+//       ) {
+//         acc.push(arr[i + 1]);
+//       }
+//       return acc;
+//     }, []);
+// }
+// const inputText =
+//   "Michael, how are you? - Cool, how is John Williamns and Michael Jordan? I don't know but Michael Johnson is fine. Michael do you still score points with LeBron James, Michael Green AKA Star and Michael Wood?";
+
+// console.log(getMichaelLastName(inputText)); // ["Jordan","Johnson","Green","Wood"]);
+// // word.charAt(0) === word.charAt(0).toUpperCase()
+
+//==================================================================
+/**6 kyu
+Make the Deadfish swim */
+// function parse(data) {
+//   let counter = 0;
+//   const result = [];
+//   data.split('').forEach(element => {
+//     if (element === 'i') {
+//       counter += 1;
+//     }
+//     if (element === 'd') {
+//       counter -= 1;
+//     }
+//     if (element === 's') {
+//       counter *= counter;
+//     }
+//     if (element === 'o') {
+//       result.push(counter);
+//     }
+//   });
+//   return result;
+// }
+
+// console.log(parse('iiisdoso')); // [ 8, 64 ] );
+// console.log(parse('iiisxxxdoso')); // [ 8, 64 ] );
+
+//====================================================================
+/**5 kyu
+Make the sum... if you can. */
+
+//не завершено!!!!!!!!!!!!!
+
+// function add(number1, number2) {
+//   if (number1 === undefined) {
+//     number1 = 0;
+//   }
+//   if (number1 === '+') {
+//     number1 = 0;
+//   }
+//   if (number2 === undefined) {
+//     number2 = 0;
+//   }
+//   // const result = +number1 + +number2;
+//   {
+//     if (number2 == 0) return number1;
+//     else return add(number1 ^ number2, (number1 & number2) << 1);
+//   }
+//   // return parseFloat(result.toFixed(2));
+// }
+
+// console.log(add('21', '21')); // 42);
+// console.log(add(1994, 1994)); // 3988);
+// console.log(add(true, false)); // 1);
+// console.log(add(4, undefined)); // 4);
+// console.log(add(0, 0)); // 0);
+// console.log(add(1.5, 1.6)); // => 3.1 );
+// console.log(add(1.001, 1)); // => 2
+
+//============================================================
+/**6 kyu
+Data Reverse */
+
+// function dataReverse(data) {
+//   const result = [];
+//   for (let i = 0; i < data.length; i += 8) {
+//     result.push([...data].splice(i, 8));
+//   }
+//   if (result.length === 1) return [];
+//   return result
+//     .reverse()
+//     .join()
+//     .split(',')
+//     .map(number => +number);
+// }
+
+// console.log(
+//   dataReverse([
+//     1,
+//     1,
+//     1,
+//     1,
+//     1,
+//     1,
+//     1,
+//     1,
+//     0,
+//     0,
+//     0,
+//     0,
+//     0,
+//     0,
+//     0,
+//     0,
+//     0,
+//     0,
+//     0,
+//     0,
+//     1,
+//     1,
+//     1,
+//     1,
+//     1,
+//     0,
+//     1,
+//     0,
+//     1,
+//     0,
+//     1,
+//     0,
+//   ]),
+// );
