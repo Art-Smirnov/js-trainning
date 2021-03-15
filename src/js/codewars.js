@@ -2524,3 +2524,82 @@ Data Reverse */
 // );
 
 //=========================================================
+/**6 kyu
+T.T.T.17: Split odd and even */
+
+// function splitOddAndEven(numbers) {
+//   return String(numbers)
+//     .split('')
+//     .reduce((acc, val, i, arr) => {
+//       const current = +val % 2 === 0;
+//       const prev = arr[i - 1] % 2 === 0;
+//       current === prev ? (acc += val) : (acc += `,${val}`);
+//       return acc;
+//     })
+//     .split(',')
+//     .map(num => +num);
+// }
+
+// console.log(splitOddAndEven(123)); //  [1,2,3]
+
+// console.log(splitOddAndEven(223)); //  [22,3]
+
+// console.log(splitOddAndEven(111)); //  [111]
+
+// console.log(splitOddAndEven(13579)); //  [13579]
+
+// console.log(splitOddAndEven(135246)); //  [135,246]
+
+// console.log(splitOddAndEven(123456)); //  [1,2,3,4,5,6]
+
+//========================================================
+
+/**6 kyu
+Follow that Spy */
+
+//не завершено
+// function findRoutes(routes) {
+//   const first = routes.find((route, i, arr) => {
+//     return arr.every(r => route[0] !== r[1]);
+//   });
+
+//   // console.dir(first[1]);
+//   const result = routes.reduce((acc, route) => {
+//     console.log(acc[0]);
+//     if (acc[acc.length - 1] === route[0]) {
+//       acc.push(route[1]);
+//     }
+//     return acc;
+//   }, first);
+// }
+// console.log(
+//   findRoutes([
+//     ['Chicago', 'Winnipeg'],
+//     ['Halifax', 'Montreal'],
+//     ['Montreal', 'Toronto'],
+//     ['Toronto', 'Chicago'],
+//     ['Winnipeg', 'Seattle'],
+//   ]),
+// ); //  "Halifax, Montreal, Toronto, Chicago, Winnipeg, Seattle"
+
+//==============================================================
+/**6 kyu
+Simple Sentences */
+// function makeSentence(parts) {
+//   return (
+//     parts.reduce((acc, part, i, arr) => {
+//       if (part === ',') {
+//         return (acc += `,`);
+//       }
+//       if (part === '.') {
+//         return (acc += '');
+//       }
+//       if (i === 0) {
+//         return part;
+//       }
+//       acc += ` ${part}`;
+//       return acc;
+//     }, '') + '.'
+//   );
+// }
+// console.log(makeSentence(['hello', ',', 'my', 'dear'])); // returns 'hello, my dear.'
