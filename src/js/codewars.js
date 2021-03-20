@@ -1461,7 +1461,7 @@ All inputs will be arrays of numbers. All character codes are valid lower case l
 // console.log(changeCase('snakeCase', 'snake'));
 // //('snake_case');
 // console.log(changeCase('some-lisp-name', 'camel'));
-// //"someLispName"
+//"someLispName"
 // console.log(changeCase('map_to_all', 'kebab'));
 // //"map-to-all"
 // console.log(changeCase('doHTMLRequest', 'kebab'));
@@ -2559,18 +2559,24 @@ Follow that Spy */
 
 //не завершено
 // function findRoutes(routes) {
-//   const first = routes.find((route, i, arr) => {
-//     return arr.every(r => route[0] !== r[1]);
-//   });
+//   const first = routes.find((route, i, arr) =>
+//     arr.every(r => route[0] !== r[1]),
+//   );
 
-//   // console.dir(first[1]);
-//   const result = routes.reduce((acc, route) => {
-//     console.log(acc[0]);
-//     if (acc[acc.length - 1] === route[0]) {
-//       acc.push(route[1]);
-//     }
-//     return acc;
-//   }, first);
+//   return routes
+//     .reduce((acc, route, i, arr) => {
+//       const val = arr.reduce((a, e) => {
+//         if (acc[acc.length - 1] === e[0]) {
+//           a = e;
+//         }
+//         return a;
+//       }, '');
+//       if (acc[acc.length - 1] === val[0]) {
+//         acc.push(val[1]);
+//       }
+//       return acc;
+//     }, first)
+//     .join(', ');
 // }
 // console.log(
 //   findRoutes([
@@ -2603,3 +2609,261 @@ Simple Sentences */
 //   );
 // }
 // console.log(makeSentence(['hello', ',', 'my', 'dear'])); // returns 'hello, my dear.'
+
+//==============================================================
+
+/**6 kyu
+Find within array */
+
+// var findInArray = function (array, iterator) {
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (iterator(array[i], i)) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// };
+
+// var trueIfEven = function (v, i) {
+//   return v % 2 === 0;
+// };
+// var neverTrue = function (v, i) {
+//   return false;
+// };
+// var trueIfValueEqualsIndex = function (v, i) {
+//   return v === i;
+// };
+// var trueIfLengthEqualsIndex = function (v, i) {
+//   return v.length === i;
+// };
+
+// console.log(findInArray([], trueIfEven)); // -1)
+// console.log(findInArray([1, 3, 5, 6, 7], trueIfEven)); // 3)
+// console.log(findInArray([2, 4, 6, 8], trueIfEven)); // 0)
+// console.log(findInArray([2, 4, 6, 8], neverTrue)); // -1)
+// console.log(findInArray([13, 5, 3, 1, 4, 5], trueIfValueEqualsIndex)); // 4)
+// console.log(
+//   findInArray(
+//     ['one', 'two', 'three', 'four', 'five', 'six'],
+//     trueIfLengthEqualsIndex,
+//   ),
+// ); // 4)
+// console.log(findInArray(['bc', 'af', 'd', 'e'], trueIfLengthEqualsIndex)); // -1)
+
+//=============================================================================
+/**6 kyu
+Multiplication Tables */
+
+// function multiplicationTable(row, col) {
+//   const array = [];
+
+//   for (let i = 0; i < row; i++) {
+//     const innerArray = [];
+//     for (let j = 1; j < col + 1; j += 1) {
+//       innerArray.push((i + 1) * j);
+//     }
+//     array.push(innerArray);
+//   }
+//   return array;
+// }
+
+// console.log(multiplicationTable(2, 2)); // [[1,2],[2,4]])
+// console.log(multiplicationTable(3, 3)); // [[1,2,3],[2,4,6],[3,6,9]])
+// console.log(multiplicationTable(3, 4)); // [[1,2,3,4],[2,4,6,8],[3,6,9,12]])
+// console.log(multiplicationTable(4, 4)); // [[1,2,3,4],[2,4,6,8],[3,6,9,12],[4,8,12,16]])
+// console.log(multiplicationTable(2, 5)); // [[1,2,3,4,5],[2,4,6,8,10]])
+
+//============================================
+/**6 kyu
+Aspect Ratio Cropping - Part 2*/
+
+//хз що не так
+
+// function aspectRatio(x, y, constant) {
+//   if (constant === 'height') {
+//     return [Math.ceil((y / 9) * 16), y];
+//   }
+//   if (constant === 'width') {
+//     return [x, Math.ceil((x / 16) * 9)];
+//   }
+//   if (constant === 'diagonal') {
+//     const diagonal = Math.ceil(Math.sqrt(x * x + y * y));
+
+//     const height = Math.ceil(
+//       (diagonal * 9) / Math.sqrt(Math.pow(16, 2) + Math.pow(9, 2)),
+//     );
+//     return [Math.floor((height / 9) * 16), height];
+//   }
+
+//   if (constant === 'area') {
+//     const area = x * y;
+//     const width = Math.ceil(Math.sqrt((16 * area) / 9));
+//     return [width, Math.floor(area / width) + 1];
+//   }
+// }
+// console.log(aspectRatio(374, 280, 'height')); // [498 ,280]);
+// console.log(aspectRatio(374, 280, 'width')); //[374 ,211]);
+// console.log(aspectRatio(374, 280, 'diagonal')); // [408 ,230]);
+// console.log(aspectRatio(374, 280, 'area')); // [432 ,243]);
+
+//=================================================================
+/**6 kyu
+Detect Pangram */
+
+// function isPangram(string) {
+//   // return string.replace(/[0-9\W]/gi, '').length;
+//   return (
+//     [
+//       ...new Set(
+//         string
+//           .replace(/[0-9\W]/gi, '')
+//           .toLowerCase()
+//           .split(''),
+//       ),
+//     ].join('').length === 26
+//   );
+// }
+
+// var string = 'The quick brown fox jumps over the lazy dog.';
+// console.log(isPangram(string)); // true)
+// var string = 'This is not a pangram.';
+// console.log(isPangram(string)); // false)
+
+//=================================================================
+/**6 kyu
+Are they the "same"? */
+
+// function comp(array1, array2) {
+//   if (array1 === null || array2 === null) return false;
+//   return (
+//     array2.sort((a, b) => b - a).join('') ===
+//     array1
+//       .map(num => Math.pow(num, 2))
+//       .sort((a, b) => b - a)
+//       .join('')
+//   );
+// }
+
+// const a1 = [4, 0, 4, 10, 2, 9, 6, 7, 3, 8, 3, 0, 7, 1, 0, 5];
+// const a2 = [9, 49, 1, 100, 0, 9, 81, 36, 16, 4, 1, 64, 16, 0, 49, 25];
+// console.log(comp(a1, a2)); // false);
+
+//===============================================================
+/**6 kyu
+Find the missing letter */
+
+// function findMissingLetter(array) {
+//   const alphabet = [
+//     'a',
+//     'b',
+//     'c',
+//     'd',
+//     'e',
+//     'f',
+//     'g',
+//     'h',
+//     'i',
+//     'j',
+//     'k',
+//     'l',
+//     'm',
+//     'n',
+//     'o',
+//     'p',
+//     'q',
+//     'r',
+//     's',
+//     't',
+//     'u',
+//     'v',
+//     'w',
+//     'x',
+//     'y',
+//     'z',
+//   ];
+
+//   const upperAlphabet = [
+//     'A',
+//     'B',
+//     'C',
+//     'D',
+//     'E',
+//     'F',
+//     'G',
+//     'H',
+//     'I',
+//     'J',
+//     'K',
+//     'L',
+//     'M',
+//     'N',
+//     'O',
+//     'P',
+//     'Q',
+//     'R',
+//     'S',
+//     'T',
+//     'U',
+//     'V',
+//     'W',
+//     'X',
+//     'Y',
+//     'Z',
+//   ];
+
+//   const arr = array.reduce((acc, letter) => {
+//     if (/[A-Z]/.test(letter)) {
+//       acc.push(upperAlphabet.indexOf(letter));
+//     }
+//     if (/[a-z]/.test(letter)) {
+//       acc.push(alphabet.indexOf(letter));
+//     }
+
+//     return acc;
+//   }, []);
+
+//   return /[A-Z]/.test(array[0])
+//     ? upperAlphabet[
+//         +Array.from(Array(Math.max(...arr)).keys())
+//           .map((n, i) =>
+//             arr.indexOf(i) < 0 && i > Math.min(...arr) ? i : null,
+//           )
+//           .filter(f => f)
+//           .join('')
+//       ]
+//     : alphabet[
+//         +Array.from(Array(Math.max(...arr)).keys())
+//           .map((n, i) =>
+//             arr.indexOf(i) < 0 && i > Math.min(...arr) ? i : null,
+//           )
+//           .filter(f => f)
+//           .join('')
+//       ];
+// }
+
+// console.log(findMissingLetter(['a', 'b', 'c', 'd', 'f'])); // 'e');
+// console.log(findMissingLetter(['O', 'Q', 'R', 'S'])); // 'P');
+
+//================================================================
+/**6 kyu
+Pairs of Bears */
+
+//не завершено
+// function bears(x, s) {
+//   const arr = s.split('');
+
+//   const newArr = [];
+//   for (let i = 0; i < arr.length; i += 1) {
+//     // console.log(i);
+//     if (arr[i] === 'B' && arr[i + 1] === '8') {
+//       return;
+//     }
+//   }
+
+//   console.log(newArr);
+// }
+// console.log(bears(7, '8j8mBliB8gimjB8B8jlB')); // ["B8 B8 B8",false]);
+// console.log(bears(3, '88Bifk8hB8BB8BBBB888chl8BhBfd')); // ["8B B8 B8 B8 8B",true]);
+// console.log(bears(8, '8')); // ["",false]);
+
+// //=================================================================
