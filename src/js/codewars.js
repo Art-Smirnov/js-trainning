@@ -2868,3 +2868,14 @@ Pairs of Bears */
 
 // //=================================================================
 
+function expressionMatter(a, b, c) {
+  const arr = [];
+
+  arr.push(a * (b + c));
+  arr.push(a * b * c);
+  arr.push(a + b * c);
+  arr.push((a + b) * c);
+  console.log(arr);
+  return arr.sort((a, b) => b - a)[0];
+}
+console.log(expressionMatter(1, 1, 1)); // 3);
