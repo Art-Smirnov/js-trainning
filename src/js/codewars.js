@@ -2867,15 +2867,40 @@ Pairs of Bears */
 // console.log(bears(8, '8')); // ["",false]);
 
 // //=================================================================
+/**6 kyu
+Meeting */
 
-function expressionMatter(a, b, c) {
-  const arr = [];
+// function meeting(s) {
+//   const result = s
+//     .split(';')
+//     .map(el => el.toUpperCase().split(':').reverse())
+//     .sort((a, b) => {
+//       const result = a[0].localeCompare(b[0]);
+//       return result !== 0 ? result : a[1].localeCompare(b[1]);
+//     })
+//     .join(')(')
+//     .replace(/\,/g, ', ');
 
-  arr.push(a * (b + c));
-  arr.push(a * b * c);
-  arr.push(a + b * c);
-  arr.push((a + b) * c);
-  console.log(arr);
-  return arr.sort((a, b) => b - a)[0];
-}
-console.log(expressionMatter(1, 1, 1)); // 3);
+//   return `(${result})`;
+// }
+
+// console.log(
+//   meeting(
+//     'Alexis:Wahl;John:Bell;Victoria:Schwarz;Abba:Dorny;Grace:Meta;Ann:Arno;Madison:STAN;Alex:Cornwell;Lewis:Kern;Megan:Stan;Alex:Korn',
+//   ),
+// );
+// // "(ARNO, ANN)(BELL, JOHN)(CORNWELL, ALEX)(DORNY, ABBA)(KERN, LEWIS)(KORN, ALEX)(META, GRACE)(SCHWARZ, VICTORIA)(STAN, MADISON)(STAN, MEGAN)(WAHL, ALEXIS)");
+// console.log(
+//   meeting(
+//     'John:Gates;Michael:Wahl;Megan:Bell;Paul:Dorries;James:Dorny;Lewis:Steve;Alex:Meta;Elizabeth:Russel;Anna:Korn;Ann:Kern;Amber:Cornwell',
+//   ),
+// );
+// //"(BELL, MEGAN)(CORNWELL, AMBER)(DORNY, JAMES)(DORRIES, PAUL)(GATES, JOHN)(KERN, ANN)(KORN, ANNA)(META, ALEX)(RUSSEL, ELIZABETH)(STEVE, LEWIS)(WAHL, MICHAEL)");
+// console.log(
+//   meeting(
+//     'Alex:Arno;Alissa:Cornwell;Sarah:Bell;Andrew:Dorries;Ann:Kern;Haley:Arno;Paul:Dorny;Madison:Kern',
+//   ),
+// );
+// //"(ARNO, ALEX)(ARNO, HALEY)(BELL, SARAH)(CORNWELL, ALISSA)(DORNY, PAUL)(DORRIES, ANDREW)(KERN, ANN)(KERN, MADISON)");
+
+//===============================
