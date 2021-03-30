@@ -2904,3 +2904,140 @@ Meeting */
 // //"(ARNO, ALEX)(ARNO, HALEY)(BELL, SARAH)(CORNWELL, ALISSA)(DORNY, PAUL)(DORRIES, ANDREW)(KERN, ANN)(KERN, MADISON)");
 
 //===============================
+/**6 kyu
+Duplicate Encoder */
+
+// function duplicateEncode(word) {
+//   return word
+//     .toLowerCase()
+//     .split('')
+//     .map((word, i, arr) =>
+//       arr.filter(el => el === word).length > 1 ? ')' : '(',
+//     )
+//     .join('');
+// }
+// console.log(duplicateEncode('din')); //"(((");
+// console.log(duplicateEncode('recede')); //"()()()");
+// console.log(duplicateEncode('Success')); //")())())","should ignore case");
+// console.log(duplicateEncode('(( @')); //"))((");
+
+/**6 kyu
+Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented? */
+
+// function allContinents(list) {
+//   const continents = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+//   const devsContinents = list.map(({ continent }) => continent);
+//   return continents.every(continent => devsContinents.includes(continent));
+// }
+
+// var list1 = [
+//   {
+//     firstName: 'Fatima',
+//     lastName: 'A.',
+//     country: 'Algeria',
+//     continent: 'Africa',
+//     age: 25,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Agustín',
+//     lastName: 'M.',
+//     country: 'Chile',
+//     continent: 'Americas',
+//     age: 37,
+//     language: 'C',
+//   },
+//   {
+//     firstName: 'Jing',
+//     lastName: 'X.',
+//     country: 'China',
+//     continent: 'Asia',
+//     age: 39,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Laia',
+//     lastName: 'P.',
+//     country: 'Andorra',
+//     continent: 'Europe',
+//     age: 55,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Oliver',
+//     lastName: 'Q.',
+//     country: 'Australia',
+//     continent: 'Oceania',
+//     age: 65,
+//     language: 'PHP',
+//   },
+// ];
+
+// var list2 = [
+//   {
+//     firstName: 'Fatima',
+//     lastName: 'A.',
+//     country: 'Algeria',
+//     continent: 'Africa',
+//     age: 25,
+//     language: 'JavaScript',
+//   },
+// ];
+
+// console.log(allContinents(list1)); // true);
+// console.log(allContinents(list2)); // false);
+
+//==============================
+/**6 kyu
+Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details */
+function askForMissingDetails(list) {
+  return list
+    .filter(
+      obj =>
+        obj.firstName === null ||
+        obj.lastName === null ||
+        obj.country === null ||
+        obj.continent === null ||
+        obj.age === null ||
+        obj.language === null,
+    )
+    .reduce((acc, obj, i, arr) => {
+      let target = '';
+      for (const key in obj) {
+        if (obj[key] === null) {
+          target = key;
+        }
+      }
+      obj.question = `Hi, could you please provide your ${target}.`;
+      acc.push(obj);
+      return acc;
+    }, []);
+}
+var list1 = [
+  {
+    firstName: null,
+    lastName: 'I.',
+    country: 'Argentina',
+    continent: 'Americas',
+    age: 35,
+    language: 'Java',
+  },
+  {
+    firstName: 'Lukas',
+    lastName: 'X.',
+    country: 'Croatia',
+    continent: 'Europe',
+    age: 35,
+    language: null,
+  },
+  {
+    firstName: 'Madison',
+    lastName: 'U.',
+    country: 'United States',
+    continent: 'Americas',
+    age: 32,
+    language: 'Ruby',
+  },
+];
+
+console.log(askForMissingDetails(list1));
