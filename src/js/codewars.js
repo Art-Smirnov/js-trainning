@@ -2990,54 +2990,66 @@ Coding Meetup #8 - Higher-Order Functions Series - Will all continents be repres
 //==============================
 /**6 kyu
 Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details */
-function askForMissingDetails(list) {
-  return list
-    .filter(
-      obj =>
-        obj.firstName === null ||
-        obj.lastName === null ||
-        obj.country === null ||
-        obj.continent === null ||
-        obj.age === null ||
-        obj.language === null,
-    )
-    .reduce((acc, obj, i, arr) => {
-      let target = '';
-      for (const key in obj) {
-        if (obj[key] === null) {
-          target = key;
-        }
-      }
-      obj.question = `Hi, could you please provide your ${target}.`;
-      acc.push(obj);
-      return acc;
-    }, []);
-}
-var list1 = [
-  {
-    firstName: null,
-    lastName: 'I.',
-    country: 'Argentina',
-    continent: 'Americas',
-    age: 35,
-    language: 'Java',
-  },
-  {
-    firstName: 'Lukas',
-    lastName: 'X.',
-    country: 'Croatia',
-    continent: 'Europe',
-    age: 35,
-    language: null,
-  },
-  {
-    firstName: 'Madison',
-    lastName: 'U.',
-    country: 'United States',
-    continent: 'Americas',
-    age: 32,
-    language: 'Ruby',
-  },
-];
+// function askForMissingDetails(list) {
+//   return list
+//     .filter(
+//       obj =>
+//         obj.firstName === null ||
+//         obj.lastName === null ||
+//         obj.country === null ||
+//         obj.continent === null ||
+//         obj.age === null ||
+//         obj.language === null,
+//     )
+//     .reduce((acc, obj, i, arr) => {
+//       let target = '';
+//       for (const key in obj) {
+//         if (obj[key] === null) {
+//           target = key;
+//         }
+//       }
+//       obj.question = `Hi, could you please provide your ${target}.`;
+//       acc.push(obj);
+//       return acc;
+//     }, []);
+// }
+// var list1 = [
+//   {
+//     firstName: null,
+//     lastName: 'I.',
+//     country: 'Argentina',
+//     continent: 'Americas',
+//     age: 35,
+//     language: 'Java',
+//   },
+//   {
+//     firstName: 'Lukas',
+//     lastName: 'X.',
+//     country: 'Croatia',
+//     continent: 'Europe',
+//     age: 35,
+//     language: null,
+//   },
+//   {
+//     firstName: 'Madison',
+//     lastName: 'U.',
+//     country: 'United States',
+//     continent: 'Americas',
+//     age: 32,
+//     language: 'Ruby',
+//   },
+// ];
 
-console.log(askForMissingDetails(list1));
+// console.log(askForMissingDetails(list1));
+
+//========================================================
+/**6 kyu
+Character counts */
+String.prototype.characterCount = function (charsToCount) {
+  if (this === '') {
+    return undefined;
+  }
+};
+
+'booop-booop-deee-doo-dooop'.characterCount('ado'); //[0,3,11]
+// ''.characterCount('ado'); undfined
