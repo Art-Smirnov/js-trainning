@@ -3043,13 +3043,39 @@ Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details */
 // console.log(askForMissingDetails(list1));
 
 //========================================================
-/**6 kyu
-Character counts */
-String.prototype.characterCount = function (charsToCount) {
-  if (this === '') {
-    return undefined;
-  }
-};
+/**function stringExpansion(s) {
+  // Good luck!
+} */
 
-'booop-booop-deee-doo-dooop'.characterCount('ado'); //[0,3,11]
-// ''.characterCount('ado'); undfined
+// function stringExpansion(s) {
+//   let num = 1;
+//   return s.split('').reduce((acc, el, i, arr) => {
+//     if (Number.isInteger(+el)) {
+//       num = el;
+//     } else {
+//       for (let i = 0; i < num; i++) {
+//         acc += el;
+//       }
+//     }
+//     return acc;
+//   }, '');
+// }
+
+// console.log(stringExpansion('3abc')); //'aaabbbccc');
+// console.log(stringExpansion('3D2a5d2f')); //'DDDaadddddff');
+// console.log(stringExpansion('0d0a0v0t0y')); //'');
+// console.log(stringExpansion('3d332f2a')); //'dddffaa');
+// console.log(stringExpansion('abcde')); //'abcde');
+// console.log(stringExpansion('a2bcde')); //'abbccddee');
+
+//========================================================
+/**6 kyu
+Count characters in your string */
+// function count(string) {
+//   const obj = {};
+//   return string.split('').reduce((acc, el) => {
+//     !obj.hasOwnProperty(el) ? (obj[el] = 1) : (obj[el] += 1);
+//     return obj;
+//   }, {});
+// }
+// console.log(count('aba')); //{ a: 2, b: 1 });
