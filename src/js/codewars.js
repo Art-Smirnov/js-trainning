@@ -3079,3 +3079,52 @@ Count characters in your string */
 //   }, {});
 // }
 // console.log(count('aba')); //{ a: 2, b: 1 });
+
+//===========================================================
+/**Beta
+Count letters in a string */
+
+// function countLetters(string) {
+//   return typeof string === 'string'
+//     ? string
+//         .toLowerCase()
+//         .split('')
+//         .filter(el => el.match(/[a-z]/i))
+//         .reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {})
+//     : null;
+// }
+
+// console.log(countLetters('He3llo Wor6ld')); // { d:1 e:1 h:1 l:3 o:2 r:1 w:1 }
+
+//================================================
+/**6 kyu
+Coding Meetup #15 - Higher-Order Functions Series - Find the odd names */
+// function findOddNames(list) {
+//   return list.filter(({ firstName }) => {
+//     const num = firstName
+//       .split('')
+//       .reduce((acc, el) => acc + el.charCodeAt(), 0);
+//     return num % 2 !== 0;
+//   });
+// }
+
+// var list1 = [
+//   {
+//     firstName: 'Aba',
+//     lastName: 'N.',
+//     country: 'Ghana',
+//     continent: 'Africa',
+//     age: 21,
+//     language: 'Python',
+//   },
+//   {
+//     firstName: 'Abb',
+//     lastName: 'O.',
+//     country: 'Israel',
+//     continent: 'Asia',
+//     age: 39,
+//     language: 'Java',
+//   },
+// ];
+
+// console.log(findOddNames(list1));
