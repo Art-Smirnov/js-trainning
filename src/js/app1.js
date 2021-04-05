@@ -33,75 +33,73 @@
 //   }
 // };
 
-// arrForEach(users, user => {
-//   console.log(user.name);
-// });
-// var contacts = [
-//   {
-//     firstName: 'Akira',
-//     lastName: 'Laine',
-//     number: '0543236543',
-//     likes: ['Pizza', 'Coding', 'Brownie Points'],
-//   },
-//   {
-//     firstName: 'Harry',
-//     lastName: 'Potter',
-//     number: '0994372684',
-//     likes: ['Hogwarts', 'Magic', 'Hagrid'],
-//   },
-//   {
-//     firstName: 'Sherlock',
-//     lastName: 'Holmes',
-//     number: '0487345643',
-//     likes: ['Intriguing Cases', 'Violin'],
-//   },
-//   {
-//     firstName: 'Kristian',
-//     lastName: 'Vos',
-//     number: 'unknown',
-//     likes: ['JavaScript', 'Gaming', 'Foxes'],
-//   },
-// ];
+//========================================================================================
+/**freeCodeCamp */
+var contacts = [
+  {
+    firstName: 'Akira',
+    lastName: 'Laine',
+    number: '0543236543',
+    likes: ['Pizza', 'Coding', 'Brownie Points'],
+  },
+  {
+    firstName: 'Harry',
+    lastName: 'Potter',
+    number: '0994372684',
+    likes: ['Hogwarts', 'Magic', 'Hagrid'],
+  },
+  {
+    firstName: 'Sherlock',
+    lastName: 'Holmes',
+    number: '0487345643',
+    likes: ['Intriguing Cases', 'Violin'],
+  },
+  {
+    firstName: 'Kristian',
+    lastName: 'Vos',
+    number: 'unknown',
+    likes: ['JavaScript', 'Gaming', 'Foxes'],
+  },
+];
 
-// function lookUpProfile(name, prop) {
-//   // Only change code below this line
-//   contacts.map(contact => contact.firstName);
-
-//   // Only change code above this line
+// function lookUpProfile(firstName, prop) {
+//   var result = 'No such contact';
+//   for (var i = 0; i < contacts.length; i++) {
+//     if (firstName === contacts[i].firstName) {
+//       if (contacts[i][prop]) {
+//         result = contacts[i][prop];
+//       } else {
+//         result = 'No such property';
+//       }
+//     }
+//   }
+//   return result;
 // }
 
-// console.log(lookUpProfile('Akira', 'likes'));
+function lookUpProfile(name, prop) {
+  return contacts.reduce((acc, contact) => {
+    acc = 'No such contact';
 
-// var contacts = [
-//   {
-//     firstName: 'Akira',
-//     lastName: 'Laine',
-//     number: '0543236543',
-//     likes: ['Pizza', 'Coding', 'Brownie Points'],
-//   },
-//   {
-//     firstName: 'Harry',
-//     lastName: 'Potter',
-//     number: '0994372684',
-//     likes: ['Hogwarts', 'Magic', 'Hagrid'],
-//   },
-//   {
-//     firstName: 'Sherlock',
-//     lastName: 'Holmes',
-//     number: '0487345643',
-//     likes: ['Intriguing Cases', 'Violin'],
-//   },
-//   {
-//     firstName: 'Kristian',
-//     lastName: 'Vos',
-//     number: 'unknown',
-//     likes: ['JavaScript', 'Gaming', 'Foxes'],
-//   },
-// ];
+    if (name === contact.firstName) {
+      if (contacts[prop]) {
+        acc = contacts[i][prop];
+      } else {
+        acc = 'No such property';
+      }
+    }
+    return acc;
+    // if (contact.firstName === name && contact.hasOwnProperty(prop)) {
+    //   acc = contact.firstName;
+    // }
 
-// const yourMassage = function (position) {
-//   return `${this.firstName}, Ваш контакт под номером ${position}`;
-// };
+    // if (contact.firstName !== name) {
+    //   acc = 'No such contact';
+    // }
+    // if (!contact.hasOwnProperty(prop)) {
+    //   acc = 'No such property';
+    // }
+    // return acc;
+  }, '');
+}
 
-// const names = contacts.map((contact, i) => yourMassage.call(contact, i + 1));
-// console.log(names);
+console.log(lookUpProfile('Akira', 'likes'));
