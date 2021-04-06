@@ -3129,3 +3129,138 @@ Coding Meetup #15 - Higher-Order Functions Series - Find the odd names */
 
 // console.log(findOddNames(list1));
 //=================================================
+/**Coding Meetup #10 - Higher-Order Functions Series - Create usernames */
+
+// function addUsername(list) {
+//   const result = [];
+//   return list.reduce((acc, el) => {
+//     const obj = {
+//       ...el,
+//       username:
+//         el.firstName.toLowerCase() +
+//         el.lastName[0].toLowerCase() +
+//         (new Date().getFullYear() - el.age - 1),
+//     };
+
+//     result.push(obj);
+//     return result;
+//   }, []);
+// }
+
+// var list1 = [
+//   {
+//     firstName: 'Emily',
+//     lastName: 'N.',
+//     country: 'Ireland',
+//     continent: 'Europe',
+//     age: 30,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Nor',
+//     lastName: 'E.',
+//     country: 'Malaysia',
+//     continent: 'Asia',
+//     age: 20,
+//     language: 'Clojure',
+//   },
+// ];
+
+// const list2 = [
+//   {
+//     firstName: 'Sofia',
+//     lastName: 'P.',
+//     country: 'Italy',
+//     continent: 'Europe',
+//     age: 41,
+//     language: 'Clojure',
+//   },
+//   {
+//     firstName: 'Kseniya',
+//     lastName: 'T.',
+//     country: 'Belarus',
+//     continent: 'Europe',
+//     age: 29,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Jing',
+//     lastName: 'X.',
+//     country: 'China',
+//     continent: 'Asia',
+//     age: 39,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Noa',
+//     lastName: 'A.',
+//     country: 'Israel',
+//     continent: 'Asia',
+//     age: 40,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Andrei',
+//     lastName: 'E.',
+//     country: 'Romania',
+//     continent: 'Europe',
+//     age: 59,
+//     language: 'C',
+//   },
+//   {
+//     firstName: 'Maria',
+//     lastName: 'S.',
+//     country: 'Peru',
+//     continent: 'Americas',
+//     age: 60,
+//     language: 'C',
+//   },
+//   {
+//     firstName: 'Lukas',
+//     lastName: 'X.',
+//     country: 'Croatia',
+//     continent: 'Europe',
+//     age: 75,
+//     language: 'Python',
+//   },
+//   {
+//     firstName: 'Chloe',
+//     lastName: 'K.',
+//     country: 'Guernsey',
+//     continent: 'Europe',
+//     age: 88,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Viktoria',
+//     lastName: 'W.',
+//     country: 'Bulgaria',
+//     continent: 'Europe',
+//     age: 98,
+//     language: 'PHP',
+//   },
+//   {
+//     firstName: 'Piotr',
+//     lastName: 'B.',
+//     country: 'Poland',
+//     continent: 'Europe',
+//     age: 128,
+//     language: 'JavaScript',
+//   },
+// ];
+
+// console.log(addUsername(list1));
+// console.log(addUsername(list2));
+
+//================================================
+/**6 kyu
+Your order, please */
+function order(words) {
+  return words
+    .split(' ')
+    .sort((a, b) => +a.match(/\d+/)[0] - +b.match(/\d+/)[0])
+    .join(' ');
+}
+console.log(order('is2 Thi1s T4est 3a')); // "Thi1s is2 3a T4est")
+console.log(order('4of Fo1r pe6ople g3ood th5e the2')); // "Fo1r the2 g3ood 4of th5e pe6ople")
+console.log(order('')); // "", "empty input should return empty string" )

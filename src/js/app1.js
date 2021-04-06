@@ -76,30 +76,30 @@ var contacts = [
 //   return result;
 // }
 
-function lookUpProfile(name, prop) {
-  return contacts.reduce((acc, contact) => {
-    acc = 'No such contact';
+// function lookUpProfile(name, prop) {
+//   return contacts.reduce((acc, contact) => {
+//     acc = 'No such contact';
 
-    if (name === contact.firstName) {
-      if (contacts[prop]) {
-        acc = contacts[i][prop];
-      } else {
-        acc = 'No such property';
-      }
-    }
-    return acc;
-    // if (contact.firstName === name && contact.hasOwnProperty(prop)) {
-    //   acc = contact.firstName;
-    // }
+//     if (name === contact.firstName) {
+//       if (contacts[prop]) {
+//         acc = contacts[i][prop];
+//       } else {
+//         acc = 'No such property';
+//       }
+//     }
+//     return acc;
+//     // if (contact.firstName === name && contact.hasOwnProperty(prop)) {
+//     //   acc = contact.firstName;
+//     // }
 
-    // if (contact.firstName !== name) {
-    //   acc = 'No such contact';
-    // }
-    // if (!contact.hasOwnProperty(prop)) {
-    //   acc = 'No such property';
-    // }
-    // return acc;
-  }, '');
-}
+//     // if (contact.firstName !== name) {
+//     //   acc = 'No such contact';
+//     // }
+//     // if (!contact.hasOwnProperty(prop)) {
+//     //   acc = 'No such property';
+//     // }
+//     // return acc;
+//   }, '');
+// }
 
-console.log(lookUpProfile('Akira', 'likes'));
+// console.log(lookUpProfile('Akira', 'likes'));
