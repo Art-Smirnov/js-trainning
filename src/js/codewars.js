@@ -3255,12 +3255,24 @@ Coding Meetup #15 - Higher-Order Functions Series - Find the odd names */
 //================================================
 /**6 kyu
 Your order, please */
-function order(words) {
-  return words
-    .split(' ')
-    .sort((a, b) => +a.match(/\d+/)[0] - +b.match(/\d+/)[0])
-    .join(' ');
+// function order(words) {
+//   return words
+//     .split(' ')
+//     .sort((a, b) => +a.match(/\d+/)[0] - +b.match(/\d+/)[0])
+//     .join(' ');
+// }
+// console.log(order('is2 Thi1s T4est 3a')); // "Thi1s is2 3a T4est")
+// console.log(order('4of Fo1r pe6ople g3ood th5e the2')); // "Fo1r the2 g3ood 4of th5e pe6ople")
+// console.log(order('')); // "", "empty input should return empty string" )
+const s = [5, 7, 2];
+function editInPlace() {
+  // Only change code below this line
+
+  s[0] = 2;
+  s[2] = 7;
+  return s;
+
+  // Only change code above this line
 }
-console.log(order('is2 Thi1s T4est 3a')); // "Thi1s is2 3a T4est")
-console.log(order('4of Fo1r pe6ople g3ood th5e the2')); // "Fo1r the2 g3ood 4of th5e pe6ople")
-console.log(order('')); // "", "empty input should return empty string" )
+
+console.log(editInPlace());
