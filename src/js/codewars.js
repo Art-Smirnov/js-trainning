@@ -3264,15 +3264,184 @@ Your order, please */
 // console.log(order('is2 Thi1s T4est 3a')); // "Thi1s is2 3a T4est")
 // console.log(order('4of Fo1r pe6ople g3ood th5e the2')); // "Fo1r the2 g3ood 4of th5e pe6ople")
 // console.log(order('')); // "", "empty input should return empty string" )
-const s = [5, 7, 2];
-function editInPlace() {
-  // Only change code below this line
 
-  s[0] = 2;
-  s[2] = 7;
-  return s;
+//======================================================================
+/**6 kyu
+Words to Hex */
 
-  // Only change code above this line
+// function wordsToHex(words) {
+//   return words.split(' ').map(el => {
+//     let result = '#';
+//     for (let i = 0; i < 3; i++) {
+//       if (el[i] === undefined) {
+//         return (result += 0).padEnd(7, '0');
+//       }
+//       result += el[i].charCodeAt(0).toString(16);
+//     }
+//     return result.padEnd(7, '0');
+//   });
+// }
+
+// console.log(wordsToHex('Hello, my name is Gary and I like cheese.')); // ['#48656c', '#6d7900', '#6e616d','#697300','#476172','#616e64','#490000','#6c696b','#636865']);
+// console.log(wordsToHex('0123456789')); // [ '#303132' ]);
+// console.log(wordsToHex('ThisIsOneLongSentenceThatConsistsOfWords')); // [ '#546869' ]);
+// console.log(wordsToHex('Blah blah blah blaaaaaaaaaaaah')); // [ '#426c61', '#626c61', '#626c61', '#626c61' ]);
+// console.log(wordsToHex('&&&&& $$$$$ ^^^^^ @@@@@ ()()()()(')); // [ '#262626', '#242424', '#5e5e5e', '#404040', '#282928' ])
+
+/**5 kyu
+RGB To Hex Conversion */
+
+// function rgb(r, g, b) {
+//   return [r, g, b]
+//     .map(el => {
+//       if (el < 0) {
+//         return '00';
+//       }
+//       if (el > 255) {
+//         return 'ff';
+//       }
+//       if (el.toString(16).length === 1) {
+//         return '0' + el.toString(16);
+//       }
+//       return el.toString(16);
+//     })
+//     .join('')
+//     .toUpperCase();
+// }
+
+// console.log(rgb(0, 0, 0)); // '000000')
+// console.log(rgb(0, 0, -20)); // '000000')
+// console.log(rgb(300, 255, 255)); // 'FFFFFF')
+// console.log(rgb(173, 255, 47)); // 'ADFF2F')
+
+/**5 kyu
+Convert A Hex String To RGB */
+// function hexStringToRGB(hexString) {
+//   return hexString
+//     .replace(
+//       /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
+//       (m, r, g, b) => '#' + r + r + g + g + b + b,
+//     )
+//     .substring(1)
+//     .match(/.{2}/g)
+//     .reduce((acc, el, i) => {
+//       if (i === 0) {
+//         acc.r = parseInt(el, 16);
+//       }
+//       if (i === 1) {
+//         acc.g = parseInt(el, 16);
+//       }
+//       if (i === 2) {
+//         acc.b = parseInt(el, 16);
+//       }
+//       return acc;
+//     }, {});
+// }
+
+// console.log(hexStringToRGB('#FF9933')); // {r:255, g:153, b:51});
+// console.log(hexStringToRGB('#03f'));
+
+/**6 kyu
+Inside Out Strings */
+
+// function insideOut(x) {
+//   return x
+//     .split(' ')
+//     .map(el => {
+//       if (el.length <= 3) {
+//         return el;
+//       }
+
+//       if (el.length % 2 === 0) {
+//         const middle = Math.ceil(el.length / 2);
+//         const s1 = el.slice(0, middle);
+//         const s2 = el.slice(middle);
+//         console.log(s1);
+//         return (
+//           s1.split('').reverse().join('') + s2.split('').reverse().join('')
+//         );
+//       }
+
+//       if (el.length % 2 !== 0) {
+//         const middle = Math.ceil(el.length / 2);
+//         const s1 = el.slice(0, middle - 1);
+//         const s2 = el.slice(middle);
+//         const s3 = el.slice(middle - 1, middle);
+//         return (
+//           s1.split('').reverse().join('') + s3 + s2.split('').reverse().join('')
+//         );
+//       }
+//     })
+//     .join(' ');
+// }
+
+// console.log(insideOut('man i need a taxi up to ubud')); // 'man i ende a atix up to budu');
+
+// console.log(insideOut('take me to semynak')); // 'atek me to mesykan');
+
+//========================================================
+
+/**6 kyu
+Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diverse? */
+
+function isLanguageDiverse(list) {
+  const pythonDevs = list.reduce((acc, { language }) => {
+    if (language === 'Python') {
+      acc += 1;
+    }
+    return acc;
+  }, 0);
+  console.log(pythonDevs);
 }
+var list1 = [
+  {
+    firstName: 'Daniel',
+    lastName: 'J.',
+    country: 'Aruba',
+    continent: 'Americas',
+    age: 42,
+    language: 'Python',
+  },
+  {
+    firstName: 'Kseniya',
+    lastName: 'T.',
+    country: 'Belarus',
+    continent: 'Europe',
+    age: 22,
+    language: 'Ruby',
+  },
+  {
+    firstName: 'Sou',
+    lastName: 'B.',
+    country: 'Japan',
+    continent: 'Asia',
+    age: 43,
+    language: 'Ruby',
+  },
+  {
+    firstName: 'Hanna',
+    lastName: 'L.',
+    country: 'Hungary',
+    continent: 'Europe',
+    age: 95,
+    language: 'JavaScript',
+  },
+  {
+    firstName: 'Jayden',
+    lastName: 'P.',
+    country: 'Jamaica',
+    continent: 'Americas',
+    age: 18,
+    language: 'JavaScript',
+  },
+  {
+    firstName: 'Joao',
+    lastName: 'D.',
+    country: 'Portugal',
+    continent: 'Europe',
+    age: 25,
+    language: 'JavaScript',
+  },
+];
 
-console.log(editInPlace());
+console.log(isLanguageDiverse(list1));
