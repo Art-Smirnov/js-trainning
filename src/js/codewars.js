@@ -3385,14 +3385,59 @@ Inside Out Strings */
 Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diverse? */
 
 function isLanguageDiverse(list) {
-  const pythonDevs = list.reduce((acc, { language }) => {
-    if (language === 'Python') {
-      acc += 1;
-    }
-    return acc;
-  }, 0);
-  console.log(pythonDevs);
+  const arr = list.reduce(
+    (acc, { language }) => {
+      if (language === 'Python') {
+        acc[0] += 1;
+      }
+      if (language === 'Ruby') {
+        acc[1] += 1;
+      }
+      if (language === 'JavaScript') {
+        acc[2] += 1;
+      }
+      return acc;
+    },
+    [0, 0, 0],
+  );
+  console.log(arr);
+  return Math.max(...arr) > Math.min(...arr) ? false : true;
 }
+var list3 = [
+  {
+    firstName: 'Daniel',
+    lastName: 'J.',
+    country: 'Aruba',
+    continent: 'Americas',
+    age: 42,
+    language: 'Python',
+  },
+  {
+    firstName: 'Kseniya',
+    lastName: 'T.',
+    country: 'Belarus',
+    continent: 'Europe',
+    age: 22,
+    language: 'Ruby',
+  },
+  {
+    firstName: 'Jayden',
+    lastName: 'P.',
+    country: 'Jamaica',
+    continent: 'Americas',
+    age: 18,
+    language: 'JavaScript',
+  },
+  {
+    firstName: 'Joao',
+    lastName: 'D.',
+    country: 'Portugal',
+    continent: 'Europe',
+    age: 25,
+    language: 'JavaScript',
+  },
+];
+
 var list1 = [
   {
     firstName: 'Daniel',
@@ -3444,4 +3489,4 @@ var list1 = [
   },
 ];
 
-console.log(isLanguageDiverse(list1));
+console.log(isLanguageDiverse(list3));
