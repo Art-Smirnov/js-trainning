@@ -3384,109 +3384,160 @@ Inside Out Strings */
 /**6 kyu
 Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diverse? */
 
-function isLanguageDiverse(list) {
-  const arr = list.reduce(
-    (acc, { language }) => {
-      if (language === 'Python') {
-        acc[0] += 1;
-      }
-      if (language === 'Ruby') {
-        acc[1] += 1;
-      }
-      if (language === 'JavaScript') {
-        acc[2] += 1;
-      }
-      return acc;
-    },
-    [0, 0, 0],
-  );
-  console.log(arr);
-  return Math.max(...arr) > Math.min(...arr) ? false : true;
-}
-var list3 = [
-  {
-    firstName: 'Daniel',
-    lastName: 'J.',
-    country: 'Aruba',
-    continent: 'Americas',
-    age: 42,
-    language: 'Python',
-  },
-  {
-    firstName: 'Kseniya',
-    lastName: 'T.',
-    country: 'Belarus',
-    continent: 'Europe',
-    age: 22,
-    language: 'Ruby',
-  },
-  {
-    firstName: 'Jayden',
-    lastName: 'P.',
-    country: 'Jamaica',
-    continent: 'Americas',
-    age: 18,
-    language: 'JavaScript',
-  },
-  {
-    firstName: 'Joao',
-    lastName: 'D.',
-    country: 'Portugal',
-    continent: 'Europe',
-    age: 25,
-    language: 'JavaScript',
-  },
-];
+// function isLanguageDiverse(list) {
+//   const arr = list.reduce(
+//     (acc, { language }) => {
+//       if (language === 'Python') {
+//         acc[0] += 1;
+//       }
+//       if (language === 'Ruby') {
+//         acc[1] += 1;
+//       }
+//       if (language === 'JavaScript') {
+//         acc[2] += 1;
+//       }
+//       return acc;
+//     },
+//     [0, 0, 0],
+//   );
+//   console.log(arr);
+//   return Math.max(...arr) > Math.min(...arr) ? false : true;
+// }
+// var list3 = [
+//   {
+//     firstName: 'Daniel',
+//     lastName: 'J.',
+//     country: 'Aruba',
+//     continent: 'Americas',
+//     age: 42,
+//     language: 'Python',
+//   },
+//   {
+//     firstName: 'Kseniya',
+//     lastName: 'T.',
+//     country: 'Belarus',
+//     continent: 'Europe',
+//     age: 22,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Jayden',
+//     lastName: 'P.',
+//     country: 'Jamaica',
+//     continent: 'Americas',
+//     age: 18,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Joao',
+//     lastName: 'D.',
+//     country: 'Portugal',
+//     continent: 'Europe',
+//     age: 25,
+//     language: 'JavaScript',
+//   },
+// ];
 
-var list1 = [
-  {
-    firstName: 'Daniel',
-    lastName: 'J.',
-    country: 'Aruba',
-    continent: 'Americas',
-    age: 42,
-    language: 'Python',
-  },
-  {
-    firstName: 'Kseniya',
-    lastName: 'T.',
-    country: 'Belarus',
-    continent: 'Europe',
-    age: 22,
-    language: 'Ruby',
-  },
-  {
-    firstName: 'Sou',
-    lastName: 'B.',
-    country: 'Japan',
-    continent: 'Asia',
-    age: 43,
-    language: 'Ruby',
-  },
-  {
-    firstName: 'Hanna',
-    lastName: 'L.',
-    country: 'Hungary',
-    continent: 'Europe',
-    age: 95,
-    language: 'JavaScript',
-  },
-  {
-    firstName: 'Jayden',
-    lastName: 'P.',
-    country: 'Jamaica',
-    continent: 'Americas',
-    age: 18,
-    language: 'JavaScript',
-  },
-  {
-    firstName: 'Joao',
-    lastName: 'D.',
-    country: 'Portugal',
-    continent: 'Europe',
-    age: 25,
-    language: 'JavaScript',
-  },
-];
+// var list1 = [
+//   {
+//     firstName: 'Daniel',
+//     lastName: 'J.',
+//     country: 'Aruba',
+//     continent: 'Americas',
+//     age: 42,
+//     language: 'Python',
+//   },
+//   {
+//     firstName: 'Kseniya',
+//     lastName: 'T.',
+//     country: 'Belarus',
+//     continent: 'Europe',
+//     age: 22,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Sou',
+//     lastName: 'B.',
+//     country: 'Japan',
+//     continent: 'Asia',
+//     age: 43,
+//     language: 'Ruby',
+//   },
+//   {
+//     firstName: 'Hanna',
+//     lastName: 'L.',
+//     country: 'Hungary',
+//     continent: 'Europe',
+//     age: 95,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Jayden',
+//     lastName: 'P.',
+//     country: 'Jamaica',
+//     continent: 'Americas',
+//     age: 18,
+//     language: 'JavaScript',
+//   },
+//   {
+//     firstName: 'Joao',
+//     lastName: 'D.',
+//     country: 'Portugal',
+//     continent: 'Europe',
+//     age: 25,
+//     language: 'JavaScript',
+//   },
+// ];
 
-console.log(isLanguageDiverse(list3));
+// console.log(isLanguageDiverse(list3));
+
+//==================================================
+//не завершено
+// /**5 kyu
+// flatten() */
+// function flatten(...x) {
+//   let result = [];
+//   x.forEach(el => (Array.isArray(el) ? (result = [...result, ...flatten(el)]) : result.push(el)));
+//   return result;
+// }
+
+// console.log(flatten(1, [2, 3], 4, 5, [6, [7]])); // returns [1, 2, 3, 4, 5, 6, 7]
+// console.log(flatten('a', ['b', 2], 3, null, [[4], ['c']])); // returns ['a', 'b', 2, 3, null, 4, 'c']
+
+//=======================================
+
+/**6 kyu
+Good vs Evil */
+//не завершено
+// function goodVsEvil(good, evil) {
+//   const totalGood = good.split(' ').reduce((acc, l) => acc + Number(l), 0);
+//   const totalEvil = evil.split(' ').reduce((acc, l) => acc + Number(l), 0);
+
+//   if (totalGood > totalEvil) {
+//     return 'Battle Result: Good triumphs over Evil';
+//   }
+//   if (totalGood < totalEvil) {
+//     return 'Battle Result: Evil eradicates all trace of Good';
+//   }
+//   if (totalGood === totalEvil) {
+//     return 'Battle Result: No victor on this battle field';
+//   }
+// }
+
+// console.log(goodVsEvil('1 1 1 1 1 1', '1 1 1 1 1 1 1')); // 'Battle Result: Evil eradicates all trace of Good', 'Evil should win' );
+// console.log(goodVsEvil('0 0 0 0 0 10', '0 1 1 1 1 0 0')); // 'Battle Result: Good triumphs over Evil', 'Good should win' );
+// console.log(goodVsEvil('1 0 0 0 0 0', '1 0 0 0 0 0 0')); // 'Battle Result: No victor on this battle field', 'Should be a tie' );
+
+//===================================================
+/**6 kyu
+All Star Code Challenge #15 */
+
+// function rotate(str) {
+//   const result = [];
+//   str.split('').forEach((el, i, arr) => {
+//     arr.push(arr.shift());
+//     result.push(arr.join(''));
+//   });
+//   return result;
+// }
+// console.log(rotate('Hello')); // => ["elloH", "lloHe", "loHel", "oHell", "Hello"]
