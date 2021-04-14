@@ -3541,3 +3541,9 @@ All Star Code Challenge #15 */
 //   return result;
 // }
 // console.log(rotate('Hello')); // => ["elloH", "lloHe", "loHel", "oHell", "Hello"]
+
+let quoteSample = 'The five boxing wizards jump quickly.';
+let nonAlphabetRegex = /\W/g; // Change this line
+let result = quoteSample.match(nonAlphabetRegex).length;
+
+console.log(result);
