@@ -3493,11 +3493,11 @@ Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diver
 
 //==================================================
 //не завершено
-// /**5 kyu
-// flatten() */
+/**5 kyu  
+flatten() */
 // function flatten(...x) {
 //   let result = [];
-//   x.forEach(el => (Array.isArray(el) ? (result = [...result, ...flatten(el)]) : result.push(el)));
+//   Array.from(x).forEach(el => (Array.isArray(el) ? (result = [...result, ...flatten(el)]) : result.push(el)));
 //   return result;
 // }
 
@@ -3542,8 +3542,19 @@ All Star Code Challenge #15 */
 // }
 // console.log(rotate('Hello')); // => ["elloH", "lloHe", "loHel", "oHell", "Hello"]
 
-let quoteSample = 'The five boxing wizards jump quickly.';
-let nonAlphabetRegex = /\W/g; // Change this line
-let result = quoteSample.match(nonAlphabetRegex).length;
+//=============================================
 
-console.log(result);
+/**6 kyu
+Bit Counting */
+// var countBits = function (n) {
+//   return n
+//     .toString(2)
+//     .split('')
+//     .filter(el => el === '1').length;
+// };
+
+// console.log(countBits(0)); // 0);
+// console.log(countBits(4)); // 1);
+// console.log(countBits(7)); // 3);
+// console.log(countBits(9)); // 2);
+// console.log(countBits(10)); // 2);
